@@ -84,7 +84,7 @@ export default function ChatMessage({
         setStreamUrl(undefined);
         if (JSON.parse(event.data)?.error) {
           setErrorData({
-            title: "Error on Streaming",
+            title: "工作流处理错误",
             list: [JSON.parse(event.data)?.error],
           });
         }
@@ -175,7 +175,7 @@ export default function ChatMessage({
         },
         onError: () => {
           setErrorData({
-            title: "Error updating messages.",
+            title: "更新消息时出错。",
           });
         },
       },
@@ -203,7 +203,7 @@ export default function ChatMessage({
       {
         onError: () => {
           setErrorData({
-            title: "Error updating messages.",
+            title: "更新消息时出错。",
           });
         },
       },

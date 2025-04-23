@@ -94,7 +94,7 @@ export default function IOModal({
       {
         onSuccess: () => {
           setSuccessData({
-            title: "Session deleted successfully.",
+            title: "已成功删除会话.",
           });
           deleteSession(session_id);
           if (visibleSession === session_id) {
@@ -103,7 +103,7 @@ export default function IOModal({
         },
         onError: () => {
           setErrorData({
-            title: "Error deleting Session.",
+            title: "删除 Session 时出错.",
           });
         },
       },
@@ -325,7 +325,7 @@ export default function IOModal({
                   <ShadTooltip
                     styleClasses="z-50"
                     side="right"
-                    content="Hide sidebar"
+                    content="隐藏侧边栏"
                   >
                     <Button
                       variant="ghost"
@@ -373,7 +373,7 @@ export default function IOModal({
                 <ShadTooltip
                   styleClasses="z-50"
                   side="right"
-                  content="Built with Langflow"
+                  content="使用 Langflow 构建"
                 >
                   <Button
                     variant="primary"

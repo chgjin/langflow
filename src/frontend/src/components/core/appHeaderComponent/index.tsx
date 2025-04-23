@@ -114,7 +114,7 @@ export default function AppHeader(): JSX.Element {
           onClose={() => setActiveState(null)}
         >
           <ShadTooltip
-            content="Notifications and errors"
+            content="通知和错误"
             side="bottom"
             styleClasses="z-10"
           >
@@ -141,7 +141,7 @@ export default function AppHeader(): JSX.Element {
                   className="side-bar-button-size ml-1 h-4 w-4 text-muted-foreground"
                   strokeWidth={2}
                 />
-                <span className="hidden whitespace-nowrap">Notifications</span>
+                <span className="hidden whitespace-nowrap">通知</span>
               </Button>
             </AlertDropdown>
           </ShadTooltip>
@@ -152,7 +152,7 @@ export default function AppHeader(): JSX.Element {
         />
         {ENABLE_DATASTAX_LANGFLOW && (
           <>
-            <ShadTooltip content="Docs" side="bottom" styleClasses="z-10">
+            <ShadTooltip content="文档" side="bottom" styleClasses="z-10">
               <Button
                 variant="ghost"
                 className="flex text-sm font-medium"
@@ -172,7 +172,7 @@ export default function AppHeader(): JSX.Element {
                 </span>
               </Button>
             </ShadTooltip>
-            <ShadTooltip content="Settings" side="bottom" styleClasses="z-10">
+            <ShadTooltip content="设置" side="bottom" styleClasses="z-10">
               <Button
                 data-testid="user-profile-settings"
                 variant="ghost"

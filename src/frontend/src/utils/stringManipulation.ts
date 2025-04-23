@@ -38,7 +38,7 @@ function toUpperCase(str: string): string {
 function noBlank(str: string): string {
   const trim = str.trim();
   if (trim === "") {
-    throw new Error("String is blank");
+    throw new Error("字符串为空");
   }
   return trim;
 }
@@ -109,7 +109,7 @@ export function parseString(
           break;
       }
     } catch (error) {
-      throw new Error(`Error in parser ${parser}`);
+      throw new Error(`解析器错误 ${parser}`);
     }
   }
 

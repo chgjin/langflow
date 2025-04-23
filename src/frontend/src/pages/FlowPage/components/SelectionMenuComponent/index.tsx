@@ -88,7 +88,7 @@ export default function SelectionMenu({
                   className="text-primary"
                   disabled={disable}
                 />
-                Group
+                组
               </Button>
             </ShadTooltip>
           ) : (
@@ -109,7 +109,7 @@ export default function SelectionMenu({
                 className="text-primary"
                 disabled={disable}
               />
-              Group
+              组
             </Button>
           )}
         </div>

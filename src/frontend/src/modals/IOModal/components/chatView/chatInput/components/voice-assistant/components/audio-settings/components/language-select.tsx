@@ -22,8 +22,8 @@ const LanguageSelect = ({
   return (
     <div className="grid w-full items-center gap-2">
       <span className="flex w-full items-center text-sm">
-        Preferred Language
-        <ShadTooltip content="Select the language for speech recognition">
+        首选语言
+        <ShadTooltip content="选择语音识别的语言">
           <div>
             <IconComponent
               name="Info"

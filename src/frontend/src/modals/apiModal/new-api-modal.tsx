@@ -52,15 +52,15 @@ export default function ApiModal({
             autoLogin ? undefined : (
               <>
                 <span className="pr-2">
-                  API access requires an API key. You can{" "}
+                  API 访问需要 API Key。 您可以设置中{" "}
                   <a
                     href="/settings/api-keys"
                     className="text-accent-pink-foreground"
                   >
                     {" "}
-                    create an API key
+                    创建 API Key
                   </a>{" "}
-                  in settings.
+
                 </span>
               </>
             )
@@ -85,7 +85,7 @@ export default function ApiModal({
                   name="SlidersHorizontal"
                   className="h-3.5 w-3.5"
                 />
-                <span>Tweaks ({Object.keys(tweaks)?.length}) </span>
+                <span>调整 ({Object.keys(tweaks)?.length}) </span>
               </Button>
               <Separator orientation="vertical" className="ml-2 h-8" />
             </div>

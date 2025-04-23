@@ -40,10 +40,10 @@ export default function DictAreaModal({
         onChange(jsonValue);
         setOpen(false);
       } catch (error) {
-        console.error("Error getting JSON:", error);
+        console.error("获取 JSON 时出错:", error);
         setErrorData({
-          title: "Error getting dictionary",
-          list: ["Check your dictionary format"],
+          title: "获取字典时出错",
+          list: ["检查字典格式"],
         });
       }
     }
@@ -69,20 +69,20 @@ export default function DictAreaModal({
   const IteractiveReader = () => {
     return (
       <span>
-        Customize your dictionary, adding or editing key-value pairs as needed.
-        Supports adding new{" "}
+        自定义您的字典，根据需要添加或编辑键值对。
+        支持添加新的{" "}
         <span
           onClick={() => handleChangeType("object")}
           className="cursor-pointer underline"
         >
-          objects &#123; &#125;
+          对象 &#123; &#125;
         </span>{" "}
-        or{" "}
+        或{" "}
         <span
           onClick={() => handleChangeType("array")}
           className="cursor-pointer underline"
         >
-          arrays [].
+          数组 [].
         </span>
       </span>
     );

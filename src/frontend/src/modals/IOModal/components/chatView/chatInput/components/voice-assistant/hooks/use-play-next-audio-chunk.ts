@@ -20,7 +20,7 @@ export const usePlayNextAudioChunk = (
         audio: audioBuffer.getChannelData(0),
       });
     } catch (error) {
-      console.error("Error playing audio:", error);
+      console.error("播放音频时出错:", error);
       isPlayingRef.current = false;
     }
   }

@@ -111,7 +111,7 @@ export default function InputGlobalComponent({
               className={cn("mr-2 h-4 w-4 text-primary")}
               aria-hidden="true"
             />
-            <span>Add New Variable</span>
+            <span>添加新变量</span>
           </CommandItem>
         </GlobalVariableModal>
       }

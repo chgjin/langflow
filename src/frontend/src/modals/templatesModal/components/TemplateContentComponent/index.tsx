@@ -59,7 +59,7 @@ export default function TemplateContentComponent({
     addFlow({ flow: example }).then((id) => {
       navigate(`/flow/${id}/folder/${folderIdUrl}`);
     });
-    track("New Flow Created", { template: `${example.name} Template` });
+    track("已创建新工作流", { template: `${example.name} 模板` });
   };
 
   const handleClearSearch = () => {
@@ -102,14 +102,14 @@ export default function TemplateContentComponent({
         ) : (
           <div className="flex flex-col items-center justify-center px-4 py-12 text-center">
             <p className="text-sm text-secondary-foreground">
-              No templates found.{" "}
+              未找到模板。{" "}
               <a
                 className="cursor-pointer underline underline-offset-4"
                 onClick={handleClearSearch}
               >
-                Clear your search
+                清除您的搜索
               </a>{" "}
-              and try a different query.
+              并尝试其他查询。
             </p>
           </div>
         )}

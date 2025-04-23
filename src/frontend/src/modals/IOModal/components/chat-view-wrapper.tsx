@@ -72,7 +72,7 @@ export const ChatViewWrapper = ({
             playgroundPage ? "right-2 top-4" : "absolute right-12 top-2 h-8",
           )}
         >
-          <ShadTooltip side="bottom" styleClasses="z-50" content="New Chat">
+          <ShadTooltip side="bottom" styleClasses="z-50" content="新对话">
             <Button
               className="mr-2 h-[32px] w-[32px] hover:bg-secondary-hover"
               variant="ghost"

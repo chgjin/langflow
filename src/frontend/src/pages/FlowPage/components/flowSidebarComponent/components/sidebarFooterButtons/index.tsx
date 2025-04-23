@@ -25,7 +25,7 @@ const SidebarMenuButtons = ({
                 className="h-4 w-4 text-muted-foreground"
               />
               <span className="flex-1 group-data-[state=open]/collapsible:font-semibold">
-                Discover more components
+                发现更多组件
               </span>
               <ForwardedIconComponent
                 name="SquareArrowOutUpRight"
@@ -52,7 +52,7 @@ const SidebarMenuButtons = ({
             className="h-4 w-4 text-muted-foreground"
           />
           <span className="group-data-[state=open]/collapsible:font-semibold">
-            New Custom Component
+            新建自定义组件
           </span>
         </Button>
       </SidebarMenuButton>

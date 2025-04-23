@@ -29,7 +29,7 @@ const StoreApiKeyPage = () => {
 
   const { mutate: addApiKey } = usePostAddApiKey({
     onSuccess: () => {
-      setSuccessData({ title: "API key saved successfully" });
+      setSuccessData({ title: "已成功保存 API 密钥" });
       setHasApiKey(true);
       setValidApiKey(true);
       setLoadingApiKey(false);
@@ -37,7 +37,7 @@ const StoreApiKeyPage = () => {
     },
     onError: (error) => {
       setErrorData({
-        title: "API key save error",
+        title: "API 密钥保存错误",
         list: [(error as any)?.response?.data?.detail],
       });
       setHasApiKey(false);
@@ -62,14 +62,14 @@ const StoreApiKeyPage = () => {
       <div className="flex w-full items-start gap-6">
         <div className="flex w-full flex-col">
           <h2 className="flex items-center text-lg font-semibold tracking-tight">
-            Langflow Store
+            Langflow 商店
             <ForwardedIconComponent
               name="Store"
               className="ml-2 h-5 w-5 text-primary"
             />
           </h2>
           <p className="text-sm text-muted-foreground">
-            Manage access to the Langflow Store.
+            管理对 Langflow Store 的访问。
           </p>
         </div>
       </div>

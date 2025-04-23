@@ -249,7 +249,7 @@ const SettingsVoiceModal = ({
                   <span className="flex items-center text-sm">
                     OpenAI API Key
                     <span className="ml-1 text-destructive">*</span>
-                    <ShadTooltip content="OpenAI API key is required to use the voice assistant.">
+                    <ShadTooltip content="需要 OpenAI API 密钥才能使用语音助手。">
                       <div>
                         <IconComponent
                           name="Info"
@@ -269,7 +269,7 @@ const SettingsVoiceModal = ({
                         popoverWidth="16rem"
                         placeholder={getPlaceholder(
                           false,
-                          "Enter your OpenAI API key",
+                          "输入您的 OpenAI API 密钥",
                         )}
                         id="openai-api-key"
                         options={
@@ -304,7 +304,7 @@ const SettingsVoiceModal = ({
                         onClick={() => setIsEditingOpenAIKey(true)}
                         size="md"
                       >
-                        Edit
+                        编辑
                       </Button>
                     </>
                   )}
@@ -319,7 +319,7 @@ const SettingsVoiceModal = ({
                       className="w-full"
                       data-testid="voice-assistant-settings-modal-cancel-button"
                     >
-                      Cancel
+                      取消
                     </Button>
                     <Button
                       onClick={() => handleClickSaveApiKey(openaiApiKey)}
@@ -338,7 +338,7 @@ const SettingsVoiceModal = ({
                     <div className="grid w-full items-center gap-2">
                       <span className="flex items-center text-sm">
                         ElevenLabs API Key
-                        <ShadTooltip content="If you have an ElevenLabs API key, you can select ElevenLabs voices.">
+                        <ShadTooltip content="如果您有 ElevenLabs API key，则可以选择 ElevenLabs 语音。">
                           <div>
                             <IconComponent
                               name="Info"
@@ -356,7 +356,7 @@ const SettingsVoiceModal = ({
                         popoverWidth="16rem"
                         placeholder={getPlaceholder(
                           false,
-                          "Enter your ElevenLabs API key",
+                          "输入您的 ElevenLabs API key",
                         )}
                         id="eleven-labs-api-key"
                         options={

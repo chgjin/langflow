@@ -1999,12 +1999,12 @@
       "zoom": 0.7924384570705768
     }
   },
-  "description": "Research Pokémon with a specialized Agent and the Pokédex API.",
+  "description": "使用专门的代理和 Pokédex API 研究 Pokémon。",
   "endpoint_name": null,
   "id": "e062c7a2-5f48-41bc-b22e-6473777d4473",
   "is_component": false,
   "last_tested_version": "1.2.0",
-  "name": "Pokédex Agent",
+  "name": "Pokédex 代理",
   "tags": [
     "agents"
   ]

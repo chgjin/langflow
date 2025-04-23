@@ -18,7 +18,7 @@ export function useAddComponent() {
       type: string,
       position?: { x: number; y: number },
     ) => {
-      track("Component Added", { componentType: component.display_name });
+      track("已添加组件", { componentType: component.display_name });
 
       const {
         height,

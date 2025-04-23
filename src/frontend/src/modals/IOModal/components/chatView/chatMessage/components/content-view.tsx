@@ -66,7 +66,7 @@ export const ErrorView = ({
                             {content.component && (
                               <>
                                 <span>
-                                  An error occured in the{" "}
+                                  发生错误{" "}
                                   <span
                                     className={cn(
                                       closeChat ?? "cursor-pointer underline",
@@ -80,15 +80,14 @@ export const ErrorView = ({
                                   >
                                     <strong>{content.component}</strong>
                                   </span>{" "}
-                                  Component, stopping your flow. See below for
-                                  more details.
+                                  组件，停止您的工作流。有关更多详细信息，请参阅下文。
                                 </span>
                               </>
                             )}
                           </div>
                           <div>
                             <h3 className="pb-3 font-semibold">
-                              Error details:
+                              错误详细信息:
                             </h3>
                             {content.field && (
                               <p className="pb-1">Field: {content.field}</p>
@@ -171,12 +170,12 @@ export const ErrorView = ({
                             {content.solution && (
                               <div className="mt-4">
                                 <h3 className="pb-3 font-semibold">
-                                  Steps to fix:
+                                  修复步骤:
                                 </h3>
                                 <ol className="list-decimal pl-5">
-                                  <li>Check the component settings</li>
-                                  <li>Ensure all required fields are filled</li>
-                                  <li>Re-run your flow</li>
+                                  <li>检查组件设置</li>
+                                  <li>确保填写所有必填字段</li>
+                                  <li>重新运行工作流</li>
                                 </ol>
                               </div>
                             )}

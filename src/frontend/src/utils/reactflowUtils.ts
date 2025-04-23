@@ -518,7 +518,7 @@ export function updateIds(
 export function validateNode(node: AllNodeType, edges: Edge[]): Array<string> {
   if (!node.data?.node?.template || !Object.keys(node.data.node.template)) {
     return [
-      "We've noticed a potential issue with a Component in the flow. Please review it and, if necessary, submit a bug report with your exported flow file. Thank you for your help!",
+      "我们注意到工作流中的组件存在潜在问题。请查看它，并在必要时提交错误报告以及您导出的工作流文件。感谢您的帮助！",
     ];
   }
 
@@ -562,14 +562,14 @@ export function validateNode(node: AllNodeType, edges: Edge[]): Array<string> {
           `${displayName || type} (${getFieldTitle(
             template,
             t,
-          )}) contains duplicate keys with the same values.`,
+          )}) 包含具有相同值的重复键。`,
         );
       if (hasEmptyKey(template[t].value))
         errors.push(
           `${displayName || type} (${getFieldTitle(
             template,
             t,
-          )}) field must not be empty.`,
+          )}) 字段不能为空。`,
         );
     }
     return errors;
@@ -586,7 +586,7 @@ Array<{ id: string; errors: Array<string> }> {
       {
         id: "",
         errors: [
-          "No components found in the flow. Please add at least one component to the flow.",
+          "在工作流中找不到组件。请向工作流中添加至少一个组件。",
         ],
       },
     ];
@@ -1195,7 +1195,7 @@ export function validateSelection(
   let errorsArray: Array<string> = [];
   // check if there is more than one node
   if (clonedSelection.nodes.length < 2) {
-    errorsArray.push("Please select more than one component");
+    errorsArray.push("请选择多个组件");
   }
   if (
     clonedSelection.nodes.some(
@@ -1204,7 +1204,7 @@ export function validateSelection(
         isOutputNode(node.data as NodeDataType),
     )
   ) {
-    errorsArray.push("Select non-input/output components only");
+    errorsArray.push("仅选择非输入/输出组件");
   }
   //check if there are two or more nodes with free outputs
   if (
@@ -1212,7 +1212,7 @@ export function validateSelection(
       (n) => !clonedSelection.edges.some((e) => e.source === n.id),
     ).length > 1
   ) {
-    errorsArray.push("Select only one component with free outputs");
+    errorsArray.push("仅选择一个具有自由输出的元件");
   }
 
   // check if there is any node that does not have any connection
@@ -1223,7 +1223,7 @@ export function validateSelection(
         !clonedSelection.edges.some((edge) => edge.source === node.id),
     )
   ) {
-    errorsArray.push("Select only connected components");
+    errorsArray.push("仅选择连接的零部件");
   }
   return errorsArray;
 }
@@ -1713,7 +1713,7 @@ export function extractFieldsFromComponenents(data: APIObjectType) {
 
   // Check if data exists
   if (!data) {
-    console.warn("[Types] Data is undefined in extractFieldsFromComponenents");
+    console.warn("[Types] 数据在 extractFieldsFromComponenents 中未定义");
     return fields;
   }
 
@@ -1721,7 +1721,7 @@ export function extractFieldsFromComponenents(data: APIObjectType) {
     // Check if data[key] exists
     if (!data[key]) {
       console.warn(
-        `[Types] data["${key}"] is undefined in extractFieldsFromComponenents`,
+        `[Types] data[“${key}”] 在 extractFieldsFromComponenents 中未定义`,
       );
       return;
     }
@@ -1730,7 +1730,7 @@ export function extractFieldsFromComponenents(data: APIObjectType) {
       // Check if data[key][kind] exists
       if (!data[key][kind]) {
         console.warn(
-          `[Types] data["${key}"]["${kind}"] is undefined in extractFieldsFromComponenents`,
+          `[Types] data["${key}"]["${kind}"] 在 extractFieldsFromComponenents 中未定义`,
         );
         return;
       }
@@ -1738,7 +1738,7 @@ export function extractFieldsFromComponenents(data: APIObjectType) {
       // Check if template exists
       if (!data[key][kind].template) {
         console.warn(
-          `[Types] data["${key}"]["${kind}"].template is undefined in extractFieldsFromComponenents`,
+          `[Types] data["${key}"]["${kind}"].template 在 extractFieldsFromComponenents 中未定义`,
         );
         return;
       }
@@ -1820,7 +1820,7 @@ export function downloadFlow(
 
     downloadLink.click();
   } catch (error) {
-    console.error("Error downloading flow:", error);
+    console.error("下载工作流时出错:", error);
   }
 }
 

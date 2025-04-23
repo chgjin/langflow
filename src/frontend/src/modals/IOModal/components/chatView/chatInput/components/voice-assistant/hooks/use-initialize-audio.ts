@@ -23,7 +23,7 @@ export const useInitializeAudio = async (
 
     startConversation();
   } catch (error) {
-    console.error("Failed to initialize audio:", error);
-    setStatus("Error: Failed to initialize audio");
+    console.error("无法初始化音频:", error);
+    setStatus("Error: 无法初始化音频");
   }
 };

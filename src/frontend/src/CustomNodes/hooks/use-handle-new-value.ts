@@ -90,14 +90,14 @@ const useHandleOnNewValue = ({
       }
 
       if (!template) {
-        setErrorData({ title: "Template not found in the component" });
+        setErrorData({ title: "在组件中找不到模板" });
         return;
       }
 
       const parameter = template[name];
 
       if (!parameter) {
-        setErrorData({ title: "Parameter not found in the template" });
+        setErrorData({ title: "在模板中找不到参数" });
         return;
       }
 

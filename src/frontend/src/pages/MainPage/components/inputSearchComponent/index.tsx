@@ -23,11 +23,11 @@ const InputSearchComponent = ({
 
   const getSearchPlaceholder = () => {
     if (pagePath.includes("flows")) {
-      return "Search Flows";
+      return "搜索工作流";
     } else if (pagePath.includes("components")) {
-      return "Search Components";
+      return "搜索组件";
     } else {
-      return "Search Flows and Components";
+      return "搜索工作流和组件";
     }
   };
 

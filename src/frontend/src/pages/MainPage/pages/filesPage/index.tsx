@@ -55,12 +55,12 @@ export const FilesPage = () => {
         files: files,
       });
       setSuccessData({
-        title: `File${filesIds.length > 1 ? "s" : ""} uploaded successfully`,
+        title: `文件${filesIds.length > 1 ? "s" : ""} 上传成功`,
       });
     } catch (error: any) {
       setErrorData({
-        title: "Error uploading file",
-        list: [error.message || "An error occurred while uploading the file"],
+        title: "上传文件时出错",
+        list: [error.message || "上传文件时出错"],
       });
     }
   };
@@ -108,7 +108,7 @@ export const FilesPage = () => {
             {params.data.progress !== undefined &&
             params.data.progress === -1 ? (
               <span className="text-[13px] text-primary">
-                Upload failed,{" "}
+                上传失败,{" "}
                 <span
                   className="cursor-pointer text-accent-pink-foreground underline"
                   onClick={(e) => {
@@ -118,7 +118,7 @@ export const FilesPage = () => {
                     }
                   }}
                 >
-                  try again?
+                  再试一次？
                 </span>
               </span>
             ) : (
@@ -197,7 +197,7 @@ export const FilesPage = () => {
 
   const UploadButtonComponent = useMemo(() => {
     return (
-      <ShadTooltip content="Upload File" side="bottom">
+      <ShadTooltip content="上传文件" side="bottom">
         <Button
           className="!px-3 md:!px-4 md:!pl-3.5"
           onClick={async () => {
@@ -243,7 +243,7 @@ export const FilesPage = () => {
                   </SidebarTrigger>
                 </div>
               </div>
-              My Files
+              我的文件
             </div>
             {files && files.length !== 0 ? (
               <div className="flex justify-between">
@@ -252,7 +252,7 @@ export const FilesPage = () => {
                     icon="Search"
                     data-testid="search-store-input"
                     type="text"
-                    placeholder={`Search files...`}
+                    placeholder={`搜索文件...`}
                     className="mr-2 w-full"
                     value={quickFilterText || ""}
                     onChange={(event) => {
@@ -313,13 +313,13 @@ export const FilesPage = () => {
               ) : (
                 <CardsWrapComponent
                   onFileDrop={onFileDrop}
-                  dragMessage="Drop files to upload"
+                  dragMessage="拖放文件以上传"
                 >
                   <div className="flex h-full w-full flex-col items-center justify-center gap-8 pb-8">
                     <div className="flex flex-col items-center gap-2">
-                      <h3 className="text-2xl font-semibold">No files</h3>
+                      <h3 className="text-2xl font-semibold">无文件</h3>
                       <p className="text-lg text-secondary-foreground">
-                        Upload files or import from your preferred cloud.
+                        上传文件或从首选云导入。
                       </p>
                     </div>
                     <div className="flex items-center gap-2">

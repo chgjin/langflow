@@ -57,10 +57,10 @@ export default function FlowLogsModal({
 
   return (
     <BaseModal open={open} setOpen={setOpen} size="x-large">
-      <BaseModal.Header description="Inspect component executions.">
+      <BaseModal.Header description="检查组件执行。">
         <div className="flex w-full justify-between">
           <div className="flex h-fit w-32 items-center">
-            <span className="pr-2">Logs</span>
+            <span className="pr-2">日志</span>
             <IconComponent name="ScrollText" className="mr-2 h-4 w-4" />
           </div>
           <div className="flex h-fit w-32 items-center"></div>

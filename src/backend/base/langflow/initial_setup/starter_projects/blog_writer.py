@@ -28,8 +28,8 @@ Blog:
 
     text_input = TextInputComponent(_display_name="Instructions")
     text_input.set(
-        input_value="Use the references above for style to write a new blog/tutorial about Langflow and AI. "
-        "Suggest non-covered topics."
+        input_value="使用上面的参考资料作为样式来编写有关 Langflow 和 AI 的新博客/教程。 "
+        "建议未涵盖的主题。"
     )
 
     prompt_component = PromptComponent()

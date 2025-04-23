@@ -223,7 +223,7 @@ def create_app():
             if not content_type or "multipart/form-data" not in content_type or "boundary=" not in content_type:
                 return JSONResponse(
                     status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
-                    content={"detail": "Content-Type header must be 'multipart/form-data' with a boundary parameter."},
+                    content={"detail": "Content-Type 标头必须是带有 boundary 参数的 'multipart/form-data'。"},
                 )
 
             boundary = content_type.split("boundary=")[-1].strip()
@@ -231,7 +231,7 @@ def create_app():
             if not re.match(r"^[\w\-]{1,70}$", boundary):
                 return JSONResponse(
                     status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
-                    content={"detail": "Invalid boundary format"},
+                    content={"detail": "边界格式无效"},
                 )
 
             body = await request.body()
@@ -245,7 +245,7 @@ def create_app():
             if not body.startswith(boundary_start) or not body.endswith((boundary_end, boundary_end_no_newline)):
                 return JSONResponse(
                     status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
-                    content={"detail": "Invalid multipart formatting"},
+                    content={"detail": "无效的多部分格式"},
                 )
 
         return await call_next(request)

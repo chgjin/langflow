@@ -46,15 +46,15 @@ const NoInputView: React.FC<NoInputViewProps> = ({
         )}
 
         <p className="text-muted-foreground">
-          Add a{" "}
+          添加{" "}
           <a
             className="underline underline-offset-4"
             target="_blank"
             href="https://docs.langflow.org/components-io#chat-input"
           >
-            Chat Input
+            聊天输入
           </a>{" "}
-          component to your flow to send messages.
+          组件以发送消息。
         </p>
       </div>
     </div>

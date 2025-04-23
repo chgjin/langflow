@@ -44,7 +44,7 @@ type BuildVerticesParams = {
 };
 
 function getInactiveVertexData(vertexId: string): VertexBuildTypeAPI {
-  // Build VertexBuildTypeAPI
+  // 构建 VertexBuildTypeAPI
   let inactiveData = {
     results: {},
     outputs: {},
@@ -86,7 +86,7 @@ export async function updateVerticesOrder(
   runId?: string;
   verticesToRun: string[];
 }> {
-  logFlowLoad("Updating vertices order");
+  logFlowLoad("更新顶点顺序");
   return new Promise(async (resolve, reject) => {
     const setErrorData = useAlertStore.getState().setErrorData;
     let orderResponse;
@@ -98,15 +98,15 @@ export async function updateVerticesOrder(
         nodes,
         edges,
       );
-      logFlowLoad("Got vertices order response:", orderResponse);
+      logFlowLoad("获取顶点顺序响应:", orderResponse);
     } catch (error: any) {
-      logFlowLoad("Error getting vertices order:", error);
+      logFlowLoad("获取顶点顺序时出错:", error);
       setErrorData({
         title: MISSED_ERROR_ALERT,
         list: [error.response?.data?.detail ?? "Unknown Error"],
       });
       useFlowStore.getState().setIsBuilding(false);
-      throw new Error("Invalid components");
+      throw new Error("无效的组件");
     }
     // orderResponse.data.ids,
     // for each id we need to build the VertexLayerElementType object as
@@ -137,7 +137,7 @@ export async function updateVerticesOrder(
 export async function buildFlowVerticesWithFallback(
   params: BuildVerticesParams,
 ) {
-  logFlowLoad("Starting flow load");
+  logFlowLoad("开始加载工作流");
   try {
     // Use the event_delivery parameter directly
     return await buildFlowVertices({ ...params });
@@ -193,7 +193,7 @@ async function pollBuildEvents(
       const errorData = await response.json().catch(() => ({}));
       throw new Error(
         errorData.detail ||
-          "Langflow was not able to connect to the server. Please make sure your connection is working properly.",
+          "Langflow 无法连接到服务器。请确保您的连接正常工作。",
       );
     }
 
@@ -323,17 +323,17 @@ export async function buildFlowVertices({
         },
         onError: (statusCode) => {
           if (statusCode === 404) {
-            throw new Error("Flow not found");
+            throw new Error("找不到工作流");
           }
-          throw new Error("Error processing build events");
+          throw new Error("处理生成事件时出错");
         },
         onNetworkError: (error: Error) => {
           if (error.name === "AbortError") {
             onBuildStopped && onBuildStopped();
             return;
           }
-          onBuildError!("Error Building Component", [
-            "Network error. Please check the connection to the server.",
+          onBuildError!("构建组件时出错", [
+            "网络错误。请检查与服务器的连接。",
           ]);
         },
         buildController,
@@ -356,9 +356,9 @@ export async function buildFlowVertices({
 
     if (!buildResponse.ok) {
       if (buildResponse.status === 404) {
-        throw new Error("Flow not found");
+        throw new Error("找不到工作流");
       }
-      throw new Error("Error starting build process");
+      throw new Error("启动构建过程时出错");
     }
 
     const { job_id } = await buildResponse.json();
@@ -376,7 +376,7 @@ export async function buildFlowVertices({
           },
         });
       } catch (error) {
-        console.error("Error canceling build:", error);
+        console.error("取消构建时出错:", error);
       }
     });
     useFlowStore.getState().setBuildController(buildController);
@@ -403,17 +403,17 @@ export async function buildFlowVertices({
         },
         onError: (statusCode) => {
           if (statusCode === 404) {
-            throw new Error("Build job not found");
+            throw new Error("未找到生成作业");
           }
-          throw new Error("Error processing build events");
+          throw new Error("处理生成事件时出错");
         },
         onNetworkError: (error: Error) => {
           if (error.name === "AbortError") {
             onBuildStopped && onBuildStopped();
             return;
           }
-          onBuildError!("Error Building Component", [
-            "Network error. Please check the connection to the server.",
+          onBuildError!("构建组件时出错", [
+            "网络错误。请检查与服务器的连接。",
           ]);
         },
         buildController,
@@ -436,14 +436,14 @@ export async function buildFlowVertices({
       );
     }
   } catch (error: unknown) {
-    console.error("Build process error:", error);
+    console.error("构建过程错误:", error);
     if (error instanceof Error && error.name === "AbortError") {
       onBuildStopped && onBuildStopped();
       return;
     }
-    onBuildError!("Error Building Flow", [
+    onBuildError!("构建工作流时出错", [
       (error as Error).message ||
-        "Langflow was not able to connect to the server. Please make sure your connection is working properly.",
+        "Langflow 无法连接到服务器。请确保您的连接正常工作。",
     ]);
     throw error;
   }
@@ -616,7 +616,7 @@ async function onEvent(
         useMessagesStore.getState().addMessage(data);
         // Use a falsy check to correctly determine if the source ID is missing.
         if (!data?.properties?.source?.id) {
-          onBuildError && onBuildError("Error Building Flow", [data.text]);
+          onBuildError && onBuildError("构建工作流时出错", [data.text]);
         }
       }
       buildResults.push(false);
@@ -813,7 +813,7 @@ async function buildVertex({
           return [outputs.message.errorMessage];
         });
         onBuildError!(
-          "Error Building Component",
+          "构建组件时出错",
           errorMessages,
           verticesIds.map((id) => ({ id })),
         );
@@ -829,13 +829,13 @@ async function buildVertex({
     let errorMessage: string | string[] =
       (error as AxiosError<any>).response?.data?.detail ||
       (error as AxiosError<any>).response?.data?.message ||
-      "An unexpected error occurred while building the Component. Please try again.";
+      "构建组件时发生意外错误。请重试。";
     errorMessage = tryParseJson(errorMessage as string) ?? errorMessage;
     if (!Array.isArray(errorMessage)) {
       errorMessage = [errorMessage];
     }
     onBuildError!(
-      "Error Building Component",
+      "构建组件时出错",
       errorMessage,
       verticesIds.map((id) => ({ id })),
     );

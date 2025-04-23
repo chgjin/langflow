@@ -36,7 +36,7 @@ export default function DeleteConfirmationModal({
         <DialogHeader>
           <DialogTitle>
             <div className="flex items-center">
-              <span className="pr-2">Delete</span>
+              <span className="pr-2">删除</span>
               <Trash2
                 className="h-6 w-6 pl-1 text-foreground"
                 strokeWidth={1.5}
@@ -45,7 +45,7 @@ export default function DeleteConfirmationModal({
           </DialogTitle>
         </DialogHeader>
         <span>
-          Are you sure you want to delete the selected{" "}
+          是否确实要删除选定的{" "}
           {description ?? "component"}?<br></br>
           {note && (
             <>
@@ -53,7 +53,7 @@ export default function DeleteConfirmationModal({
               <br></br>
             </>
           )}
-          Note: This action is irreversible.
+          注意: 此作是不可逆的。
         </span>
         <DialogFooter>
           <DialogClose asChild>
@@ -63,7 +63,7 @@ export default function DeleteConfirmationModal({
               variant="outline"
               data-testid="btn_cancel_delete_confirmation_modal"
             >
-              Cancel
+              取消
             </Button>
           </DialogClose>
           <DialogClose asChild>
@@ -75,7 +75,7 @@ export default function DeleteConfirmationModal({
               }}
               data-testid="btn_delete_delete_confirmation_modal"
             >
-              Delete
+              删除
             </Button>
           </DialogClose>
         </DialogFooter>

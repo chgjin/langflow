@@ -52,7 +52,7 @@ export default function FlowSettingsModal({
         ?.then(() => {
           setOpen(false);
           setIsSaving(false);
-          setSuccessData({ title: "Changes saved successfully" });
+          setSuccessData({ title: "已成功保存更改" });
         })
         .catch(() => {
           setIsSaving(false);
@@ -96,7 +96,7 @@ export default function FlowSettingsModal({
       onSubmit={handleClick}
     >
       <BaseModal.Header description={SETTINGS_DIALOG_SUBTITLE}>
-        <span className="pr-2">Details</span>
+        <span className="pr-2">工作流属性</span>
         <IconComponent name="SquarePen" className="mr-2 h-4 w-4" />
       </BaseModal.Header>
       <BaseModal.Content>
@@ -113,7 +113,7 @@ export default function FlowSettingsModal({
 
       <BaseModal.Footer
         submit={{
-          label: "Save",
+          label: "保存",
           dataTestId: "save-flow-settings",
           disabled: disableSave,
           loading: isSaving,

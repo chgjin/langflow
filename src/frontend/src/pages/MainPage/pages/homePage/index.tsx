@@ -149,27 +149,27 @@ const HomePage = ({ type }) => {
                     )
                   ) : flowType === "flows" ? (
                     <div className="pt-2 text-center text-sm text-secondary-foreground">
-                      No flows in this folder.{" "}
+                      此文件夹中没有工作流.{" "}
                       <a
                         onClick={() => setNewProjectModal(true)}
                         className="cursor-pointer underline"
                       >
-                        Create a new flow
+                        创建新工作流
                       </a>
-                      , or browse the store.
+                      , 或浏览商店.
                     </div>
                   ) : (
                     <div className="pt-2 text-center text-sm text-secondary-foreground">
-                      No saved or custom components. Learn more about{" "}
+                      没有保存或自定义的组件。进一步了解{" "}
                       <a
                         href="https://docs.langflow.org/components-custom-components"
                         target="_blank"
                         rel="noreferrer"
                         className="underline"
                       >
-                        creating custom components
+                        创建自定义组件
                       </a>
-                      , or browse the store.
+                      , 或浏览商店.
                     </div>
                   )}
                 </div>

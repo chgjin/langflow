@@ -18,7 +18,7 @@ export default function getRandomName(
     if (retry < maxRetries) {
       return getRandomName(retry + 1, noSpace, maxRetries);
     } else {
-      console.warn("Max retries reached, returning as is");
+      console.warn("达到最大重试次数，按原样返回");
     }
   }
 

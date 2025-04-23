@@ -1,23 +1,20 @@
 export const getModalPropsApiKey = () => {
   const modalProps = {
-    title: "Create API Key",
-    description: "Create a secret API Key to use Langflow API.",
-    inputPlaceholder: "My API Key",
-    buttonText: "Generate API Key",
+    title: "创建 API key",
+    description: "创建密钥 API key以使用 Langflow API。",
+    inputPlaceholder: "我的 API key",
+    buttonText: "生成 API key",
     generatedKeyMessage: (
       <>
         {" "}
-        Please save this secret key somewhere safe and accessible. For security
-        reasons, <strong>you won't be able to view it again</strong> through
-        your account. If you lose this secret key, you'll need to generate a new
-        one.
+        请将此密钥保存在安全且可访问的地方。出于安全原因，通过您的帐户<strong>无法次查看它</strong>。如果您丢失了此密钥，则需要生成一个新的密钥。
       </>
     ),
     showIcon: true,
     inputLabel: (
       <>
-        <span className="text-sm">Description</span>{" "}
-        <span className="text-xs text-muted-foreground">(optional)</span>
+        <span className="text-sm">描述</span>{" "}
+        <span className="text-xs text-muted-foreground">（可选）</span>
       </>
     ),
   };

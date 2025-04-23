@@ -96,7 +96,7 @@ export default function SecretKeyModal({
       setApiKeyValue(token);
       setRenderKey(true);
     } catch (error) {
-      console.error("Error generating token:", error);
+      console.error("生成令牌时出错:", error);
     }
   };
 
@@ -155,7 +155,7 @@ export default function SecretKeyModal({
       </BaseModal.Content>
       <BaseModal.Footer
         submit={{
-          label: renderKey ? "Done" : (modalConfigProps?.buttonText ?? ""),
+          label: renderKey ? "完成" : (modalConfigProps?.buttonText ?? ""),
         }}
       />
     </BaseModal>

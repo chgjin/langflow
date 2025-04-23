@@ -287,11 +287,11 @@ export default function Page({
       (e as unknown as Event).stopImmediatePropagation();
       takeSnapshot();
       if (lastSelection.edges?.length) {
-        track("Component Connection Deleted");
+        track("已删除组件连接");
       }
       if (lastSelection.nodes?.length) {
         lastSelection.nodes.forEach((n) => {
-          track("Component Deleted", { componentType: n.data.type });
+          track("已删除组件", { componentType: n.data.type });
         });
       }
       deleteNode(lastSelection.nodes.map((node) => node.id));
@@ -333,7 +333,7 @@ export default function Page({
     (params: Connection) => {
       takeSnapshot();
       onConnect(params);
-      track("New Component Connection Added");
+      track("添加了新的组件连接");
     },
     [takeSnapshot, onConnect],
   );
@@ -593,7 +593,7 @@ export default function Page({
                 <CanvasControls>
                   <CustomControlButton
                     iconName="sticky-note"
-                    tooltipText="Add Note"
+                    tooltipText="添加注释"
                     onClick={() => {
                       setIsAddingNote(true);
                       const shadowBox = document.getElementById("shadow-box");
@@ -622,7 +622,7 @@ export default function Page({
                   name="PanelRightClose"
                   className="h-4 w-4"
                 />
-                <span className="text-foreground">Components</span>
+                <span className="text-foreground">组件</span>
               </SidebarTrigger>
             </Panel>
             <div className={cn(componentsToUpdate.length === 0 && "hidden")}>

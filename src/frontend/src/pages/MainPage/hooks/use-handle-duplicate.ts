@@ -35,7 +35,7 @@ const useDuplicateFlows = ({
 
       await postAddFlow(newFlow);
       setSuccessData({
-        title: `${newFlow.is_component ? "Component" : "Flow"} duplicated successfully`,
+        title: `${newFlow.is_component ? "组件" : "工作流"} 已成功复制`,
       });
     });
   };

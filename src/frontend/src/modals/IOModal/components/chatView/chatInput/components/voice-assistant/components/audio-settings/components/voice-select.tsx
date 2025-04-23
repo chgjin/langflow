@@ -28,7 +28,7 @@ const VoiceSelect = ({
     <div className="grid w-full items-center gap-2">
       <span className="flex w-full items-center text-sm">
         Voice
-        <ShadTooltip content="You can select ElevenLabs voices if you have an ElevenLabs API key. Otherwise, you can only select OpenAI voices.">
+        <ShadTooltip content="如果您有 ElevenLabs API key，则可以选择 ElevenLabs 语音。否则，您只能选择 OpenAI 语音。">
           <div>
             <IconComponent
               name="Info"
@@ -41,7 +41,7 @@ const VoiceSelect = ({
 
       <Select value={voice} onValueChange={handleSetVoice}>
         <SelectTrigger className="h-9 w-full">
-          <SelectValue placeholder="Select" />
+          <SelectValue placeholder="选择" />
         </SelectTrigger>
         <SelectContent className="max-h-[200px]">
           <SelectGroup>

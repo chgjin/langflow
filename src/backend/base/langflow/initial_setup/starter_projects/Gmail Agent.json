@@ -1587,12 +1587,12 @@
       "zoom": 0.9609155689915785
     }
   },
-  "description": "Interact with Gmail to send emails, create drafts, and fetch messages",
+  "description": "与 Gmail 交互以发送电子邮件、创建草稿和获取邮件",
   "endpoint_name": null,
   "id": "580794d2-0d2f-4dc3-bff0-c58dd62264ec",
   "is_component": false,
   "last_tested_version": "1.2.0",
-  "name": "Gmail Agent",
+  "name": "Gmail 助理",
   "tags": [
     "agents"
   ]

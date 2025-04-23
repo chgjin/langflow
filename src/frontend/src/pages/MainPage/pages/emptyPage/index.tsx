@@ -15,7 +15,7 @@ export const EmptyPage = ({ setOpenModal }: EmptyPageProps) => {
 
   return (
     <CardsWrapComponent
-      dragMessage={`Drop your flows or components here`}
+      dragMessage={`将工作流或组件拖放到此处`}
       onFileDrop={handleFileDrop}
     >
       <div className="m-0 h-full w-full bg-secondary p-0">
@@ -26,13 +26,13 @@ export const EmptyPage = ({ setOpenModal }: EmptyPageProps) => {
               className="pt-5 font-chivo text-2xl font-semibold text-foreground"
               data-testid="mainpage_title"
             >
-              {folders?.length > 1 ? "Empty folder" : "Start building"}
+              {folders?.length > 1 ? "空文件夹" : "开始构建"}
             </h3>
             <p
               data-testid="empty-folder-description"
               className="pb-5 text-sm text-secondary-foreground"
             >
-              Begin with a template, or start from scratch.
+              可以使用模板，或从头开始。
             </p>
             <Button
               variant="default"
@@ -46,7 +46,7 @@ export const EmptyPage = ({ setOpenModal }: EmptyPageProps) => {
                 className="h-4 w-4"
               />
               <span className="hidden whitespace-nowrap font-semibold md:inline">
-                New Flow
+                新建工作流
               </span>
             </Button>
           </div>

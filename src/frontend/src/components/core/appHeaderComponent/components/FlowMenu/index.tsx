@@ -128,7 +128,7 @@ export const MenuBar = ({}: {}): JSX.Element => {
 
   function handleReloadComponents() {
     queryClient.prefetchQuery({ queryKey: ["useGetTypes"] }).then(() => {
-      setSuccessData({ title: "Components reloaded successfully" });
+      setSuccessData({ title: "组件重新加载成功" });
     });
   }
 
@@ -145,14 +145,14 @@ export const MenuBar = ({}: {}): JSX.Element => {
         id="menu_status_saved_flow_button"
         className="shrink-0 text-xs font-medium text-accent-emerald-foreground"
       >
-        Saved
+        已保存
       </div>
     );
   }
 
   const handleSave = () => {
     saveFlow().then(() => {
-      setSuccessData({ title: "Saved successfully" });
+      setSuccessData({ title: "保存成功" });
     });
   };
 
@@ -206,19 +206,19 @@ export const MenuBar = ({}: {}): JSX.Element => {
       setCurrentFlow(newFlow);
       saveFlow(newFlow)
         .then(() => {
-          setSuccessData({ title: "Flow name updated successfully" });
+          setSuccessData({ title: "工作流名称更新成功" });
         })
         .catch((error) => {
           setErrorData({
-            title: "Error updating flow name",
+            title: "更新工作流名称时出错",
             list: [(error as Error).message],
           });
           setFlowName(currentFlowName ?? "");
         });
     } else if (isInvalidName) {
       setErrorData({
-        title: "Invalid flow name",
-        list: ["Name already exists"],
+        title: "工作流名称无效",
+        list: ["名称已存在"],
       });
       setFlowName(currentFlowName ?? "");
     } else {
@@ -353,7 +353,7 @@ export const MenuBar = ({}: {}): JSX.Element => {
               />
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-44 bg-white dark:bg-background">
-              <DropdownMenuLabel>Options</DropdownMenuLabel>
+              <DropdownMenuLabel>选项</DropdownMenuLabel>
               <DropdownMenuItem
                 onClick={() => {
                   handleAddFlow();
@@ -363,7 +363,7 @@ export const MenuBar = ({}: {}): JSX.Element => {
                 id="menu_new_flow_button"
               >
                 <IconComponent name="Plus" className="header-menu-options" />
-                New
+                新建
               </DropdownMenuItem>
 
               <DropdownMenuItem
@@ -378,7 +378,7 @@ export const MenuBar = ({}: {}): JSX.Element => {
                   name="SquarePen"
                   className="header-menu-options"
                 />
-                Edit Details
+                编辑详细信息
               </DropdownMenuItem>
               {!autoSaving && (
                 <DropdownMenuItem
@@ -388,7 +388,7 @@ export const MenuBar = ({}: {}): JSX.Element => {
                   id="menu_save_flow_button"
                 >
                   <ToolbarSelectItem
-                    value="Save"
+                    value="保存"
                     icon="Save"
                     dataTestId=""
                     shortcut={
@@ -411,7 +411,7 @@ export const MenuBar = ({}: {}): JSX.Element => {
                   name="ScrollText"
                   className="header-menu-options"
                 />
-                Logs
+                日志
               </DropdownMenuItem>
               <DropdownMenuItem
                 className="cursor-pointer"
@@ -419,7 +419,7 @@ export const MenuBar = ({}: {}): JSX.Element => {
                   uploadFlow({ position: { x: 300, y: 100 } })
                     .then(() => {
                       setSuccessData({
-                        title: "Uploaded successfully",
+                        title: "上传成功",
                       });
                     })
                     .catch((error) => {
@@ -433,7 +433,7 @@ export const MenuBar = ({}: {}): JSX.Element => {
                 id="menu_import_flow_button"
               >
                 <IconComponent name="FileUp" className="header-menu-options" />
-                Import
+                导入文件
               </DropdownMenuItem>
               <ExportModal>
                 <div className="header-menubar-item">
@@ -441,7 +441,7 @@ export const MenuBar = ({}: {}): JSX.Element => {
                     name="FileDown"
                     className="header-menu-options"
                   />
-                  Export
+                  导出文件
                 </div>
               </ExportModal>
               <DropdownMenuItem
@@ -453,7 +453,7 @@ export const MenuBar = ({}: {}): JSX.Element => {
                 id="menu_undo_flow_button"
               >
                 <ToolbarSelectItem
-                  value="Undo"
+                  value="撤消"
                   icon="Undo"
                   dataTestId=""
                   shortcut={
@@ -471,7 +471,7 @@ export const MenuBar = ({}: {}): JSX.Element => {
                 id="menu_redo_flow_button"
               >
                 <ToolbarSelectItem
-                  value="Redo"
+                  value="重做"
                   icon="Redo"
                   dataTestId=""
                   shortcut={
@@ -492,7 +492,7 @@ export const MenuBar = ({}: {}): JSX.Element => {
                   name="RefreshCcw"
                   className="header-menu-options"
                 />
-                Refresh All
+                全部刷新
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
@@ -526,20 +526,20 @@ export const MenuBar = ({}: {}): JSX.Element => {
                     hour: "numeric",
                     minute: "numeric",
                   })
-                : "Never")
+                : "从来没有")
             ) : (
               <div className="flex w-48 flex-col gap-1 py-1">
                 <h2 className="text-base font-semibold">
-                  Auto-saving is disabled
+                  自动保存已禁用
                 </h2>
                 <p className="text-muted-foreground">
                   <a
                     href="https://docs.langflow.org/configuration-auto-save"
                     className="text-secondary underline"
                   >
-                    Enable auto-saving
+                    启用自动保存
                   </a>{" "}
-                  to avoid losing progress.
+                  以避免丢失进度。
                 </p>
               </div>
             )
@@ -568,7 +568,7 @@ export const MenuBar = ({}: {}): JSX.Element => {
               }
             >
               <IconComponent name="Square" className="h-4 w-4" />
-              <span>Stop</span>
+              <span>停止</span>
             </button>
           </div>
         </ShadTooltip>

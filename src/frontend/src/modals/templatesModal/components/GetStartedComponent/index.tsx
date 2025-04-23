@@ -19,29 +19,29 @@ export default function GetStartedComponent() {
       bgImage: memoryChatbot,
       bgHorizontalImage: memoryChatbotHorizontal,
       icon: "MessagesSquare",
-      category: "prompting",
-      flow: examples.find((example) => example.name === "Basic Prompting"),
+      category: "会话工作流",
+      flow: examples.find((example) => example.name === "基本对话工作流"),
     },
     {
       bgImage: vectorRag,
       bgHorizontalImage: vectorRagHorizontal,
       icon: "Database",
-      category: "RAG",
-      flow: examples.find((example) => example.name === "Vector Store RAG"),
+      category: "知识库RAG",
+      flow: examples.find((example) => example.name === "知识库RAG"),
     },
     {
       bgImage: multiAgent,
       bgHorizontalImage: multiAgentHorizontal,
       icon: "Bot",
-      category: "Agents",
-      flow: examples.find((example) => example.name === "Simple Agent"),
+      category: "智能体",
+      flow: examples.find((example) => example.name === "简单智能体"),
     },
   ];
 
   return (
     <div className="flex flex-1 flex-col gap-4 md:gap-8">
-      <BaseModal.Header description="Start with templates showcasing Langflow's Prompting, RAG, and Agent use cases.">
-        Get started
+      <BaseModal.Header description="从展示 Langflow 的会话工作流、RAG和智能体用例的模板开始。">
+        开始使用
       </BaseModal.Header>
       <div className="grid flex-1 grid-cols-1 gap-4 lg:grid-cols-3">
         {cardData.map((card, index) => (

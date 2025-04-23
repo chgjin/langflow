@@ -19,26 +19,26 @@ from langflow.template.field.base import Output
 # Enabled detailed thinking for NVIDIA reasoning models.
 #
 # Models are trained with this exact string. Do not update.
-DETAILED_THINKING_PREFIX = "detailed thinking on\n\n"
+DETAILED_THINKING_PREFIX = "详细思考\n\n"
 
 
 class LCModelComponent(Component):
-    display_name: str = "Model Name"
-    description: str = "Model Description"
+    display_name: str = "模型名称"
+    description: str = "模型描述"
     trace_type = "llm"
 
     # Optional output parser to pass to the runnable. Subclasses may allow the user to input an `output_parser`
     output_parser: BaseOutputParser | None = None
 
     _base_inputs: list[InputTypes] = [
-        MessageInput(name="input_value", display_name="Input"),
+        MessageInput(name="input_value", display_name="用户输入"),
         MultilineInput(
             name="system_message",
-            display_name="System Message",
-            info="System message to pass to the model.",
+            display_name="系统消息",
+            info="要传递给模型的 System 消息。",
             advanced=False,
         ),
-        BoolInput(name="stream", display_name="Stream", info=STREAM_INFO_TEXT, advanced=True),
+        BoolInput(name="stream", display_name="流式响应", info=STREAM_INFO_TEXT, advanced=True),
     ]
 
     outputs = [
@@ -69,10 +69,10 @@ class LCModelComponent(Component):
         output_names = [output.name for output in self.outputs]
         for method_name in required_output_methods:
             if method_name not in output_names:
-                msg = f"Output with name '{method_name}' must be defined."
+                msg = f"必须定义名称为 '{method_name}' 的输出。"
                 raise ValueError(msg)
             if not hasattr(self, method_name):
-                msg = f"Method '{method_name}' must be defined."
+                msg = f"必须定义方法 '{method_name}'。"
                 raise ValueError(msg)
 
     def text_response(self) -> Message:
@@ -188,7 +188,7 @@ class LCModelComponent(Component):
     ):
         messages: list[BaseMessage] = []
         if not input_value and not system_message:
-            msg = "The message you want to send to the model is empty."
+            msg = "要发送到模型的消息为空。"
             raise ValueError(msg)
         system_message_added = False
         if input_value:
@@ -213,7 +213,7 @@ class LCModelComponent(Component):
             messages.insert(0, SystemMessage(content=system_message))
         inputs: list | dict = messages or {}
         try:
-            # TODO: Depreciated Feature to be removed in upcoming release
+            # TODO: 在即将发布的版本中将删除的已弃用功能
             if hasattr(self, "output_parser") and self.output_parser is not None:
                 runnable |= self.output_parser
 
@@ -260,7 +260,7 @@ class LCModelComponent(Component):
         """
         try:
             if provider_name not in [model.get("display_name") for model in model_info.values()]:
-                msg = f"Unknown model provider: {provider_name}"
+                msg = f"未知模型提供程序: {provider_name}"
                 raise ValueError(msg)
 
             # Find the component class name from MODEL_INFO in a single iteration
@@ -269,7 +269,7 @@ class LCModelComponent(Component):
                 (None, None),
             )
             if not component_info:
-                msg = f"Component information not found for {provider_name}"
+                msg = f"找不到 {provider_name} 组件信息 "
                 raise ValueError(msg)
             component_inputs = component_info.get("inputs", [])
             # Get the component class from the models module
@@ -282,7 +282,7 @@ class LCModelComponent(Component):
 
             return self.build_llm_model_from_inputs(component, component_inputs)
         except Exception as e:
-            msg = f"Error building {provider_name} language model"
+            msg = f"构建 {provider_name} 语言模型时出错"
             raise ValueError(msg) from e
 
     def build_llm_model_from_inputs(

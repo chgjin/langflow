@@ -57,7 +57,7 @@ const ToolbarModals = memo(
         flow: flowComponent,
         override: true,
       });
-      setSuccessData({ title: `${data.id} successfully overridden!` });
+      setSuccessData({ title: `${data.id} 已成功覆盖!` });
       setShowOverrideModal(false);
     };
 
@@ -70,7 +70,7 @@ const ToolbarModals = memo(
         flow: flowComponent,
         override: true,
       });
-      setSuccessData({ title: "New component successfully saved!" });
+      setSuccessData({ title: "已成功保存新组件!" });
       setShowOverrideModal(false);
     };
 
@@ -96,20 +96,19 @@ const ToolbarModals = memo(
         {showOverrideModal && (
           <ConfirmationModal
             open={showOverrideModal}
-            title="Replace"
+            title="更换"
             onConfirm={handleConfirm}
             onClose={handleClose}
             onCancel={handleCancel}
-            cancelText="Create New"
-            confirmationText="Replace"
+            cancelText="新建"
+            confirmationText="更换"
             size="x-small"
             icon="SaveAll"
             index={6}
           >
             <ConfirmationModal.Content>
               <span>
-                It seems {data.node?.display_name} already exists. Do you want
-                to replace it with the current or create a new one?
+                看起来是 {data.node?.display_name} 已存在。您想用当前版本替换它还是创建一个新版本？
               </span>
             </ConfirmationModal.Content>
           </ConfirmationModal>

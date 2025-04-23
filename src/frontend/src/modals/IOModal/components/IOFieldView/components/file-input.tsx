@@ -109,10 +109,10 @@ export default function IOFileInput({ field, updateValue }: IOFileInputProps) {
           },
           onError: (error) => {
             setErrorData({
-              title: "Error uploading file",
+              title: "上传文件时出错",
               list: [error.response?.data?.detail],
             });
-            console.error("Error occurred while uploading file");
+            console.error("上传文件时出错");
           },
         },
       );

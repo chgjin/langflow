@@ -51,13 +51,13 @@ const ListComponent = ({ flowData }: { flowData: FlowType }) => {
     deleteFlow({ id: [flowData.id] })
       .then(() => {
         setSuccessData({
-          title: "Selected items deleted successfully",
+          title: "已成功删除所选项目",
         });
       })
       .catch(() => {
         setErrorData({
-          title: "Error deleting items",
-          list: ["Please try again"],
+          title: "删除项目时出错",
+          list: ["请重试"],
         });
       });
   };
@@ -172,7 +172,7 @@ const ListComponent = ({ flowData }: { flowData: FlowType }) => {
           description={descriptionModal}
           note={
             !flowData.is_component
-              ? "Deleting the selected flow will remove all associated messages."
+              ? "删除所选工作流将删除所有关联的消息。"
               : ""
           }
         >

@@ -392,12 +392,12 @@ export function VoiceAssistant({
           )}
         >
           <ShadTooltip
-            content={isRecording ? "Mute" : "Unmute"}
+            content={isRecording ? "静音" : "取消静音"}
             delayDuration={500}
           >
             <Button unstyled onClick={handleToggleRecording}>
               <IconComponent
-                name={isRecording ? "Mic" : "MicOff"}
+                name={isRecording ? "麦克风开启" : "麦克风关闭"}
                 strokeWidth={ICON_STROKE_WIDTH}
                 className="h-4 w-4 text-placeholder-foreground"
               />

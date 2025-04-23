@@ -36,7 +36,7 @@ function DataOutputComponent({
     <TableComponent
       autoSizeStrategy={{ type: "fitGridWidth", defaultMinWidth: 100 }}
       key={"dataOutputComponent"}
-      overlayNoRowsTemplate="No data available"
+      overlayNoRowsTemplate="无可用数据"
       paginationInfo={rows.length > 1000 ? rows[1000] : undefined}
       suppressRowClickSelection={true}
       pagination={pagination}

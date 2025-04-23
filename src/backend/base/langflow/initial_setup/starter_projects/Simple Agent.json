@@ -1973,12 +1973,12 @@
       "zoom": 0.5868650751024124
     }
   },
-  "description": "A simple but powerful starter agent.",
+  "description": "一个简单但强大的入门助理。",
   "endpoint_name": null,
   "id": "1c666167-9a1f-47e2-a377-eacb2cbbc364",
   "is_component": false,
   "last_tested_version": "1.2.0",
-  "name": "Simple Agent",
+  "name": "简单智能体",
   "tags": [
     "assistants",
     "agents"

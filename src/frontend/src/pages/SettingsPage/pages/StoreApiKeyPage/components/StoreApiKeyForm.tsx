@@ -42,7 +42,7 @@ const StoreApiKeyFormComponent = ({
       >
         <Card x-chunk="dashboard-04-chunk-2" id="api">
           <CardHeader>
-            <CardTitle>Store API Key</CardTitle>
+            <CardTitle>商店 API Key</CardTitle>
             <CardDescription>
               {(hasApiKey && !validApiKey
                 ? INVALID_API_KEY
@@ -63,11 +63,11 @@ const StoreApiKeyFormComponent = ({
                     value={apikey}
                     isForm
                     password={true}
-                    placeholder="Insert your API Key"
+                    placeholder="录入您的 API Key"
                     className="w-full"
                   />
                   <Form.Message match="valueMissing" className="field-invalid">
-                    Please enter your API Key
+                    请输入您的 API Key
                   </Form.Message>
                 </Form.Field>
               </div>
@@ -90,7 +90,7 @@ const StoreApiKeyFormComponent = ({
                 type="submit"
                 data-testid="api-key-save-button-store"
               >
-                Save
+                保存
               </Button>
             </Form.Submit>
           </CardFooter>

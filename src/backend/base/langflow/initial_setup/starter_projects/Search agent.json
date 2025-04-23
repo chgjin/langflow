@@ -1708,12 +1708,12 @@
       "zoom": 0.9940070432926703
     }
   },
-  "description": "Search the web for information.",
+  "description": "在 Web 上搜索信息。",
   "endpoint_name": null,
   "id": "4f6f37d8-7738-45b0-a2e1-e33edcb30fe9",
   "is_component": false,
   "last_tested_version": "1.2.0",
-  "name": "Search agent",
+  "name": "搜索助理",
   "tags": [
     "web-scraping",
     "agents",

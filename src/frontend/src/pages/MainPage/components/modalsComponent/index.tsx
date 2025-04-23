@@ -29,7 +29,7 @@ const ModalsComponent = ({
         }}
         description="folder"
         note={
-          "Deleting the selected folder will remove all associated flows and components."
+          "删除所选文件夹将删除所有关联的工作流和组件。"
         }
       >
         <></>

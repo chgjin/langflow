@@ -1,8 +1,8 @@
 const NoResultsMessage = ({
   onClearSearch,
-  message = "No components found.",
-  clearSearchText = "Clear your search",
-  additionalText = "or filter and try a different query.",
+  message = "未找到组件。",
+  clearSearchText = "清除您的搜索",
+  additionalText = "或筛选并尝试其他查询。",
 }) => {
   return (
     <div className="flex h-full flex-col items-center justify-center p-3 text-center">

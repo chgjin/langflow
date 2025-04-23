@@ -76,7 +76,7 @@ const HideShowButton = memo(
       className="cursor-pointer"
     >
       <ShadTooltip
-        content={disabled ? null : hidden ? "Show output" : "Hide output"}
+        content={disabled ? null : hidden ? "显示输出" : "隐藏输出"}
       >
         <div>
           <EyeIcon
@@ -437,9 +437,9 @@ function NodeOutputField({
             content={
               displayOutputPreview
                 ? unknownOutput || emptyOutput
-                  ? "Output can't be displayed"
-                  : "Inspect output"
-                : "Please build the component first"
+                  ? "无法显示输出"
+                  : "查看输出"
+                : "请先构建组件"
             }
             styleClasses="z-40"
           >

@@ -58,14 +58,14 @@ export default function PublishDropdown() {
             setCurrentFlow(updatedFlow);
           } else {
             setErrorData({
-              title: "Failed to save flow",
-              list: ["Flows variable undefined"],
+              title: "无法保存工作流",
+              list: ["未知的工作流变量"],
             });
           }
         },
         onError: (e) => {
           setErrorData({
-            title: "Failed to save flow",
+            title: "无法保存工作流",
             list: [e.message],
           });
         },
@@ -113,7 +113,7 @@ export default function PublishDropdown() {
                 name="Code2"
                 className={`${groupStyle} icon-size mr-2`}
               />
-              <span>API access</span>
+              <span>API 访问</span>
             </div>
           </DropdownMenuItem>
           {ENABLE_WIDGET && (
@@ -126,7 +126,7 @@ export default function PublishDropdown() {
                   name="Columns2"
                   className={`${groupStyle} icon-size mr-2`}
                 />
-                <span>Embed into site</span>
+                <span>嵌入网站</span>
               </div>
             </DropdownMenuItem>
           )}
@@ -139,8 +139,8 @@ export default function PublishDropdown() {
                 hasIO
                   ? isPublished
                     ? encodeURI(`${domain}/playground/${flowId}`)
-                    : "Activate to share a public version of this Playground"
-                  : "Add a Chat Input or Chat Output to access your flow"
+                    : "激活以共享此 Playground 的公共版本"
+                  : "添加 Chat Input 或 Chat Output 以访问您的工作流"
               }
             >
               <div
@@ -170,7 +170,7 @@ export default function PublishDropdown() {
                         name="Globe"
                         className={`${groupStyle} icon-size mr-2`}
                       />
-                      <span>Shareable Playground</span>
+                      <span>可共享的 Playground</span>
                     </div>
                   </DropdownMenuItem>
                 </CustomLink>

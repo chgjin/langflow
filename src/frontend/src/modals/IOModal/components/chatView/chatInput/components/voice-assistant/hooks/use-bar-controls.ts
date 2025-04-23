@@ -119,7 +119,7 @@ export const useBarControls = (
             setSoundDetected(soundDetected);
           }
         } catch (error) {
-          console.error("Error detecting sound:", error);
+          console.error("检测声音时出错:", error);
           if (setSoundDetected) {
             setSoundDetected(false);
           }

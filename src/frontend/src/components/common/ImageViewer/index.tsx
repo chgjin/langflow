@@ -78,8 +78,8 @@ export default function ImageViewer({ image }: { image: string }) {
         saveAs(blob, "image.jpg");
       })
       .catch((error) => {
-        setErrorList({ title: "There was an error downloading your image" });
-        console.error("Error downloading image:", error);
+        setErrorList({ title: "下载图片时出错" });
+        console.error("下载图片时出错:", error);
       });
   }
 

@@ -27,9 +27,9 @@ export default function TemplateGetStartedCardComponent({
       addFlow({ flow }).then((id) => {
         navigate(`/flow/${id}/folder/${folderIdUrl}`);
       });
-      track("New Flow Created", { template: `${flow.name} Template` });
+      track("已创建新工作流", { template: `${flow.name} Template` });
     } else {
-      console.error(`Flow template not found`);
+      console.error(`找不到工作流模板`);
     }
   };
 

@@ -50,7 +50,7 @@ const NoteToolbarComponent = memo(function NoteToolbarComponent({
       return openInNewTab(data.node?.documentation);
     }
     setNoticeData({
-      title: `${data.id} docs is not available at the moment.`,
+      title: `${data.id} 文档目前不可用。`,
     });
   }, [data.node?.documentation, data.id, setNoticeData]);
 
@@ -107,7 +107,7 @@ const NoteToolbarComponent = memo(function NoteToolbarComponent({
     <div className="w-26 noflow nowheel nopan nodelete nodrag h-10">
       <span className="isolate inline-flex rounded-md shadow-sm">
         <Popover>
-          <ShadTooltip content="Pick Color">
+          <ShadTooltip content="拾取颜色">
             <PopoverTrigger>
               <div>
                 <div
@@ -136,7 +136,7 @@ const NoteToolbarComponent = memo(function NoteToolbarComponent({
 
         <Select onValueChange={handleSelectChange} value="">
           <SelectTrigger>
-            <ShadTooltip content="Show More" side="top">
+            <ShadTooltip content="更多" side="top">
               <div>
                 <div
                   data-testid="more-options-modal"

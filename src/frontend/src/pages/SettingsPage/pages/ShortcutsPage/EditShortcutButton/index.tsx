@@ -88,14 +88,14 @@ export default function EditShortcutButton({
         setKey(null);
         setOpen(false);
         setSuccessData({
-          title: `${shortcut[0]} shortcut successfully changed`,
+          title: `${shortcut[0]} 快捷方式已成功更改`,
         });
         return;
       }
     }
     setErrorData({
-      title: "Error saving key combination",
-      list: ["This combination already exists!"],
+      title: "保存组合键时出错",
+      list: ["这个组合已经存在了！"],
     });
   }
 
@@ -159,7 +159,7 @@ export default function EditShortcutButton({
 
   return (
     <BaseModal open={open} setOpen={setOpen} size="x-small" disable={disable}>
-      <BaseModal.Header description={"Recording your keyboard"}>
+      <BaseModal.Header description={"录制键盘"}>
         <span className="pr-2"> Key Combination </span>
         <ForwardedIconComponent
           name="Keyboard"

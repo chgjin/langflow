@@ -446,7 +446,7 @@ const NodeToolbarComponent = memo(
             <ToolbarButton
               className={isCustomComponent ? "!bg-accent-pink" : ""}
               icon="Code"
-              label="Code"
+              label="代码"
               onClick={() => setOpenModal(true)}
               shortcut={shortcuts.find((s) =>
                 s.name.toLowerCase().startsWith("code"),
@@ -457,7 +457,7 @@ const NodeToolbarComponent = memo(
           {nodeLength > 0 && (
             <ToolbarButton
               icon="SlidersHorizontal"
-              label="Controls"
+              label="选项"
               onClick={() => setShowModalAdvanced(true)}
               shortcut={shortcuts.find((s) =>
                 s.name.toLowerCase().startsWith("advanced"),
@@ -468,7 +468,7 @@ const NodeToolbarComponent = memo(
           {!hasToolMode && (
             <ToolbarButton
               icon="FreezeAll"
-              label="Freeze"
+              label="冻结"
               onClick={() => {
                 takeSnapshot();
                 FreezeAllVertices({
@@ -514,7 +514,7 @@ const NodeToolbarComponent = memo(
                     toolMode ? "text-primary" : "",
                   )}
                 />
-                <span className="text-[13px] font-medium">Tool Mode</span>
+                <span className="text-[13px] font-medium">工具模式</span>
                 <ToggleShadComponent
                   value={toolMode}
                   editNode={false}
@@ -558,7 +558,7 @@ const NodeToolbarComponent = memo(
               onOpenChange={handleOpenChange}
             >
               <SelectTrigger className="w-62">
-                <ShadTooltip content="Show More" side="top">
+                <ShadTooltip content="更多" side="top">
                   <div data-testid="more-options-modal">
                     <Button
                       className="node-toolbar-buttons h-[2rem] w-[2rem]"
@@ -584,7 +584,7 @@ const NodeToolbarComponent = memo(
                       shortcuts.find((obj) => obj.name === "Save Component")
                         ?.shortcut!
                     }
-                    value={"Save"}
+                    value={"保存为组件"}
                     icon={"SaveAll"}
                     dataTestId="save-button-modal"
                   />
@@ -595,7 +595,7 @@ const NodeToolbarComponent = memo(
                       shortcuts.find((obj) => obj.name === "Duplicate")
                         ?.shortcut!
                     }
-                    value={"Duplicate"}
+                    value={"副本"}
                     icon={"Copy"}
                     dataTestId="copy-button-modal"
                   />
@@ -605,7 +605,7 @@ const NodeToolbarComponent = memo(
                     shortcut={
                       shortcuts.find((obj) => obj.name === "Copy")?.shortcut!
                     }
-                    value={"Copy"}
+                    value={"复制"}
                     icon={"Clipboard"}
                     dataTestId="copy-button-modal"
                   />
@@ -617,7 +617,7 @@ const NodeToolbarComponent = memo(
                         shortcuts.find((obj) => obj.name === "Update")
                           ?.shortcut!
                       }
-                      value={"Restore"}
+                      value={"还原"}
                       icon={"RefreshCcwDot"}
                       dataTestId="update-button-modal"
                     />
@@ -633,7 +633,7 @@ const NodeToolbarComponent = memo(
                         shortcuts.find((obj) => obj.name === "Component Share")
                           ?.shortcut!
                       }
-                      value={"Share"}
+                      value={"分享"}
                       icon={"Share3"}
                       dataTestId="share-button-modal"
                     />
@@ -648,7 +648,7 @@ const NodeToolbarComponent = memo(
                     shortcut={
                       shortcuts.find((obj) => obj.name === "Docs")?.shortcut!
                     }
-                    value={"Docs"}
+                    value={"文档"}
                     icon={"FileText"}
                     dataTestId="docs-button-modal"
                   />
@@ -674,7 +674,7 @@ const NodeToolbarComponent = memo(
                       shortcut={
                         shortcuts.find((obj) => obj.name === "Group")?.shortcut!
                       }
-                      value={"Ungroup"}
+                      value={"取消分组"}
                       icon={"Ungroup"}
                       dataTestId="group-button-modal"
                     />
@@ -687,7 +687,7 @@ const NodeToolbarComponent = memo(
                         shortcuts.find((obj) => obj.name === "Freeze")
                           ?.shortcut!
                       }
-                      value={"Freeze"}
+                      value={"冻结"}
                       icon={"FreezeAll"}
                       dataTestId="freeze-path-button"
                       style={`${frozen ? " text-ice" : ""} transition-all`}
@@ -700,7 +700,7 @@ const NodeToolbarComponent = memo(
                       shortcuts.find((obj) => obj.name === "Download")
                         ?.shortcut!
                     }
-                    value={"Download"}
+                    value={"下载"}
                     icon={"Download"}
                     dataTestId="download-button-modal"
                   />
@@ -711,7 +711,7 @@ const NodeToolbarComponent = memo(
                       name="Trash2"
                       className="relative top-0.5 mr-2 h-4 w-4"
                     />{" "}
-                    <span className="">Delete</span>{" "}
+                    <span className="">删除</span>{" "}
                     <span
                       className={`absolute right-2 top-2 flex items-center justify-center rounded-sm px-1 py-[0.2]`}
                     >
@@ -729,7 +729,7 @@ const NodeToolbarComponent = memo(
                         shortcuts.find((obj) => obj.name === "Tool Mode")
                           ?.shortcut!
                       }
-                      value={"Tool Mode"}
+                      value="工具模式"
                       icon={"Hammer"}
                       dataTestId="tool-mode-button"
                       style={`${toolMode ? "text-primary" : ""} transition-all`}

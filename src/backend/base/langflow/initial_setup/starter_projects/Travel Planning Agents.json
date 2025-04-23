@@ -3875,12 +3875,12 @@
       "zoom": 0.41164535038506667
     }
   },
-  "description": "Create a travel planning chatbot that uses specialized agents to craft personalized trip itineraries.",
+  "description": "创建一个旅行计划聊天机器人，使用专业代理来制作个性化的旅行行程。",
   "endpoint_name": null,
   "id": "bb57ce7a-13e0-40c0-9e7a-7783fd6f32e8",
   "is_component": false,
   "last_tested_version": "1.2.0",
-  "name": "Travel Planning Agents",
+  "name": "旅行策划助理",
   "tags": [
     "agents",
     "openai"
