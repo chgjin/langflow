@@ -4243,12 +4243,12 @@
       "zoom": 0.37106613302179997
     }
   },
-  "description": "This Agent is designed to systematically execute a series of tasks following a meticulously predefined sequence. By adhering to this structured order, the Agent ensures that each task is completed efficiently and effectively, optimizing overall performance and maintaining a high level of accuracy.",
+  "description": "此智能体旨在按照精心预定义的顺序系统地执行一系列任务。通过遵循这种结构化的顺序，Agent 可以确保每项任务都得到高效和有效的完成，从而优化整体性能并保持高水平的准确性。",
   "endpoint_name": null,
   "id": "98e71965-2948-4541-90cc-15352236491c",
   "is_component": false,
   "last_tested_version": "1.2.0",
-  "name": "Sequential Tasks Agents",
+  "name": "顺序任务助理",
   "tags": [
     "assistants",
     "agents",

@@ -4,7 +4,7 @@ import custom from "../customization/config-constants";
 import { languageMap } from "../types/components";
 
 /**
- * invalid characters for flow name
+ * 工作流名称中的无效字符
  * @constant
  */
 export const INVALID_CHARACTERS = [
@@ -25,16 +25,16 @@ export const INVALID_CHARACTERS = [
 ];
 
 /**
- * regex to highlight the variables in the text
+ * 用于突出显示文本中变量的正则表达式
  * @constant regexHighlight
  * @type {RegExp}
  * @default
  * @example
- * {{variable}} or {variable}
+ * {{variable}} 或 {variable}
  * @returns {RegExp}
  * @description
- * This regex is used to highlight the variables in the text.
- * It matches the variables in the text that are between {{}} or {}.
+ * 此正则表达式用于突出显示文本中���变量。
+ * 它匹配文本中包含在 {{}} 或 {} 内的变量。
  */
 
 export const regexHighlight = /\{\{(.*?)\}\}|\{([^{}]+)\}/g;
@@ -64,10 +64,10 @@ export const programmingLanguages: languageMap = {
   sql: ".sql",
   html: ".html",
   css: ".css",
-  // add more file extensions here, make sure the key is same as language prop in CodeBlock.tsx component
+  // 在此处添加更多文件扩展名，确保键与 CodeBlock.tsx 组件中的 language 属性相同
 };
 /**
- * Number maximum of components to scroll on tooltips
+ * 工具提示中滚动组件的最大数量
  * @constant
  */
 export const MAX_LENGTH_TO_SCROLL_TOOLTIP = 200;
@@ -83,174 +83,159 @@ export const MESSAGES_TABLE_ORDER = [
 ];
 
 /**
- * Number maximum of components to scroll on tooltips
+ * 工具提示中滚动组件的最大数量
  * @constant
  */
 export const MAX_WORDS_HIGHLIGHT = 79;
 
 /**
- * Limit of items before show scroll on fields modal
+ * 字段模态框显示滚动条前的项目限制
  * @constant
  */
 export const limitScrollFieldsModal = 10;
 
 /**
- * The base text for subtitle of Export Dialog (Toolbar)
+ * 导出对话框（工具栏）的基本副标题文本
  * @constant
  */
-export const EXPORT_DIALOG_SUBTITLE = "Export flow as JSON file.";
+export const EXPORT_DIALOG_SUBTITLE = "将工作流导出为JSON文件。";
 /**
- * The base text for subtitle of Flow Settings (Menubar)
+ * 工作流设置（菜单栏）的基本副标题文本
  * @constant
  */
-export const SETTINGS_DIALOG_SUBTITLE =
-  "Customize your flow details and settings.";
+export const SETTINGS_DIALOG_SUBTITLE = "自定义您的工作流。";
 
 /**
- * The base text for subtitle of Flow Logs (Menubar)
+ * 工作流日志（菜单栏）的基本副标题文本
  * @constant
  */
-export const LOGS_DIALOG_SUBTITLE =
-  "Explore detailed logs of events and transactions between components.";
+export const LOGS_DIALOG_SUBTITLE = "查看组件之间事件和交互的详细日志。";
 
 /**
- * The base text for subtitle of Code Dialog (Toolbar)
+ * 代码对话框（工具栏）的基本副标题文本
  * @constant
  */
-export const CODE_DIALOG_SUBTITLE =
-  "Export your flow to integrate it using this code.";
+export const CODE_DIALOG_SUBTITLE = "导出您的工作流以便使用此代码进行集成。";
 
 /**
- * The base text for subtitle of Chat Form
+ * 聊天表单的基本副标题文本
  * @constant
  */
-export const CHAT_FORM_DIALOG_SUBTITLE =
-  "Interact with your AI. Monitor inputs, outputs and memories.";
+export const CHAT_FORM_DIALOG_SUBTITLE = "与您的AI交互。监控输入、输出和记忆。";
 
 /**
- * The base text for subtitle of Edit Node Dialog
+ * 编辑节点对话框的基本副标题文本
  * @constant
  */
-export const EDIT_DIALOG_SUBTITLE =
-  "Adjust component's settings and define parameter visibility. Remember to save your changes.";
+export const EDIT_DIALOG_SUBTITLE = "调整组件设置并定义参数可见性。记得保存您的更改。";
 
 /**
- * The base text for subtitle of Code Dialog
+ * 代码对话框的基本副标题文本
  * @constant
  */
-export const CODE_PROMPT_DIALOG_SUBTITLE =
-  "Edit your Python code snippet. Refer to the Langflow documentation for more information on how to write your own component.";
+export const CODE_PROMPT_DIALOG_SUBTITLE = "编辑您的Python代码片段。有关如何编写自己的组件的更多信息，请参阅Langflow文档。";
 
-export const CODE_DICT_DIALOG_SUBTITLE =
-  "Customize your dictionary, adding or editing key-value pairs as needed. Supports adding new objects {} or arrays [].";
+export const CODE_DICT_DIALOG_SUBTITLE = "自定义您的字典，根据需要添加或编辑键值对。支持添加新对象{}或数组[]。";
 
 /**
- * The base text for subtitle of Prompt Dialog
+ * 提示对话框的基本副标题文本
  * @constant
  */
-export const PROMPT_DIALOG_SUBTITLE =
-  "Create your prompt. Prompts can help guide the behavior of a Language Model. Use curly brackets {} to introduce variables.";
+export const PROMPT_DIALOG_SUBTITLE = "创建您的提示。提示可以帮助指导语言模型的行为。使用花括号{}引入变量。";
 
-export const CHAT_CANNOT_OPEN_TITLE = "Chat Cannot Open";
+export const CHAT_CANNOT_OPEN_TITLE = "无法打开聊天";
 
-export const CHAT_CANNOT_OPEN_DESCRIPTION = "This is not a chat flow.";
+export const CHAT_CANNOT_OPEN_DESCRIPTION = "这不是一个聊天工作流。";
 
-export const FLOW_NOT_BUILT_TITLE = "Flow not built";
+export const FLOW_NOT_BUILT_TITLE = "工作流未构建";
 
-export const FLOW_NOT_BUILT_DESCRIPTION =
-  "Please build the flow before chatting.";
+export const FLOW_NOT_BUILT_DESCRIPTION = "请在聊天前构建工作流。";
 
 /**
- * The base text for subtitle of Text Dialog
+ * 文本对话框的基本标题文本
  * @constant
  */
-export const TEXT_DIALOG_TITLE = "Edit text content";
+export const TEXT_DIALOG_TITLE = "编辑文本内容";
 
 /**
- * The base text for subtitle of Import Dialog
+ * 导入对话框的基本副标题文本
  * @constant
  */
-export const IMPORT_DIALOG_SUBTITLE =
-  "Import flows from a JSON file or choose from pre-existing examples.";
+export const IMPORT_DIALOG_SUBTITLE = "从JSON文件导入工作流或从预先存在的示例中选择。";
 
 /**
- * The text that shows when a tooltip is empty
+ * 工具提示为空时显示的文本
  * @constant
  */
-export const TOOLTIP_EMPTY = "No compatible components found.";
+export const TOOLTIP_EMPTY = "未找到兼容的组件。";
 
-export const CSVViewErrorTitle = "CSV output";
+export const CSVViewErrorTitle = "CSV输出";
 
-export const CSVNoDataError = "No data available";
+export const CSVNoDataError = "无可用数据";
 
-export const PDFViewConstant = "Expand the ouptut to see the PDF";
+export const PDFViewConstant = "展开输出以查看PDF";
 
-export const CSVError = "Error loading CSV";
+export const CSVError = "加载CSV错误";
 
-export const PDFLoadErrorTitle = "Error loading PDF";
+export const PDFLoadErrorTitle = "加载PDF错误";
 
-export const PDFCheckFlow = "Please check your flow and try again";
+export const PDFCheckFlow = "请检查您的工作流并重试";
 
-export const PDFErrorTitle = "PDF Output";
+export const PDFErrorTitle = "PDF输出";
 
-export const PDFLoadError = "Run the flow to see the pdf";
+export const PDFLoadError = "运行工作流以查看pdf";
 
-export const IMGViewConstant = "Expand the view to see the image";
+export const IMGViewConstant = "展开视图以查看图片";
 
-export const IMGViewErrorMSG =
-  "Run the flow or inform a valid url to see your image";
+export const IMGViewErrorMSG = "运行工作流或提供有效的URL以查看您的图片";
 
-export const IMGViewErrorTitle = "Image output";
+export const IMGViewErrorTitle = "图片输出";
 
 /**
- * The base text for subtitle of code dialog
+ * 代码对话框的基本副标题文本
  * @constant
  */
-export const EXPORT_CODE_DIALOG =
-  "Generate the code to integrate your flow into an external application.";
+export const EXPORT_CODE_DIALOG = "生成代码以将您的工作流集成到外部应用程序中。";
 
 /**
- * The base text for subtitle of code dialog
+ * 代码对话框的基本副标题文本
  * @constant
  */
-export const COLUMN_DIV_STYLE =
-  " w-full h-full flex overflow-auto flex-col bg-muted px-16 ";
+export const COLUMN_DIV_STYLE = " w-full h-full flex overflow-auto flex-col bg-muted px-16 ";
 
-export const NAV_DISPLAY_STYLE =
-  " w-full flex justify-between py-12 pb-2 px-6 ";
+export const NAV_DISPLAY_STYLE = " w-full flex justify-between py-12 pb-2 px-6 ";
 
 /**
- * The base text for subtitle of code dialog
+ * 代码对话框的基本副标题文本
  * @constant
  */
 export const DESCRIPTIONS: string[] = [
-  "Chain the Words, Master Language!",
-  "Language Architect at Work!",
-  "Empowering Language Engineering.",
-  "Craft Language Connections Here.",
-  "Create, Connect, Converse.",
-  "Smart Chains, Smarter Conversations.",
-  "Bridging Prompts for Brilliance.",
-  "Language Models, Unleashed.",
-  "Your Hub for Text Generation.",
-  "Promptly Ingenious!",
-  "Building Linguistic Labyrinths.",
-  "Langflow: Create, Chain, Communicate.",
-  "Connect the Dots, Craft Language.",
-  "Interactive Language Weaving.",
-  "Generate, Innovate, Communicate.",
-  "Conversation Catalyst Engine.",
-  "Language Chainlink Master.",
-  "Design Dialogues with Langflow.",
-  "Nurture NLP Nodes Here.",
-  "Conversational Cartography Unlocked.",
-  "Design, Develop, Dialogize.",
+  "连接语言，掌握文字！",
+  "语言架构师在工作！",
+  "赋能语言工程。",
+  "在此构建语言连接。",
+  "创建，连接，对话。",
+  "智能链，更智能的对话。",
+  "为卓越架起提示桥梁。",
+  "语言模型，尽情释放。",
+  "您的文本生成中心。",
+  "妙趣横生的提示！",
+  "构建语言迷宫。",
+  "Langflow：创建，链接，沟通。",
+  "连接点，构建语言。",
+  "互动语言编织。",
+  "生成，创新，沟通。",
+  "对话催化引擎。",
+  "语言链接大师。",
+  "用Langflow设计对话。",
+  "在此培育NLP节点。",
+  "对话制图已解锁。",
+  "设计，开发，对话。",
 ];
-export const BUTTON_DIV_STYLE =
-  " flex gap-2 focus:ring-1 focus:ring-offset-1 focus:ring-ring focus:outline-none ";
+export const BUTTON_DIV_STYLE = " flex gap-2 focus:ring-1 focus:ring-offset-1 focus:ring-ring focus:outline-none ";
 
 /**
- * The base text for subtitle of code dialog
+ * 代码对话框的基本副标题文本
  * @constant
  */
 export const ADJECTIVES: string[] = [
@@ -363,7 +348,7 @@ export const ADJECTIVES: string[] = [
   "zealous",
 ];
 /**
- * Nouns for the name of the flow
+ * 工作流名称的名词
  * @constant
  *
  */
@@ -545,35 +530,34 @@ export const NOUNS: string[] = [
 ];
 
 /**
- * Header text for user projects
+ * 用户项目的标题文本
  * @constant
  *
  */
-export const USER_PROJECTS_HEADER = "My Collection";
+export const USER_PROJECTS_HEADER = "我的收藏";
 
 export const DEFAULT_FOLDER = "My Projects";
 
 /**
- * Header text for admin page
+ * 管理员页面的标题文本
  * @constant
  *
  */
-export const ADMIN_HEADER_TITLE = "Admin Page";
+export const ADMIN_HEADER_TITLE = "管理员页面";
 
 /**
- * Header description for admin page
+ * 管理员页面的描述文本
  * @constant
  *
  */
-export const ADMIN_HEADER_DESCRIPTION =
-  "Navigate through this section to efficiently oversee all application users. From here, you can seamlessly manage user accounts.";
+export const ADMIN_HEADER_DESCRIPTION = "浏览此部分以有效监督所有应用程序用户。从这里，您可以无缝管理用户账户。";
 
 export const BASE_URL_API = custom.BASE_URL_API || "/api/v1/";
 
 export const BASE_URL_API_V2 = custom.BASE_URL_API_V2 || "/api/v2/";
 
 /**
- * URLs excluded from error retries.
+ * 排除在错误重试之外的URL
  * @constant
  *
  */
@@ -620,26 +604,21 @@ export const CONTROL_NEW_USER = {
 
 export const tabsCode = [];
 
-export const FETCH_ERROR_MESSAGE = "Couldn't establish a connection.";
-export const FETCH_ERROR_DESCRIPION =
-  "Check if everything is working properly and try again.";
+export const FETCH_ERROR_MESSAGE = "无法建立连接。";
+export const FETCH_ERROR_DESCRIPION = "请检查一切是否正常运行并重试。";
 
-export const TIMEOUT_ERROR_MESSAGE =
-  "Please wait a few moments while the server processes your request.";
-export const TIMEOUT_ERROR_DESCRIPION = "Server is busy.";
+export const TIMEOUT_ERROR_MESSAGE = "请稍等片刻，服务器正在处理您的请求。";
+export const TIMEOUT_ERROR_DESCRIPION = "服务器忙碌中。";
 
-export const SIGN_UP_SUCCESS = "Account created! Await admin activation. ";
+export const SIGN_UP_SUCCESS = "账户已创建！等待管理员激活。";
 
-export const API_PAGE_PARAGRAPH =
-  "Your secret Langflow API keys are listed below. Do not share your API key with others, or expose it in the browser or other client-side code.";
+export const API_PAGE_PARAGRAPH = "您的秘密Langflow API密钥列在下方。不要与他人共享您的API密钥，或在浏览器或其他客户端代码中暴露它。";
 
-export const API_PAGE_USER_KEYS =
-  "This user does not have any keys assigned at the moment.";
+export const API_PAGE_USER_KEYS = "此用户目前没有分配任何密钥。";
 
-export const LAST_USED_SPAN_1 = "The last time this key was used.";
+export const LAST_USED_SPAN_1 = "上次使用此密钥的时间。";
 
-export const LAST_USED_SPAN_2 =
-  "Accurate to within the hour from the most recent usage.";
+export const LAST_USED_SPAN_2 = "最近使用后的小时内是准确的。";
 
 export const LANGFLOW_SUPPORTED_TYPES = new Set([
   "str",
@@ -685,50 +664,45 @@ export const OUTPUT_TYPES = new Set([
   // "TableOutput",
 ]);
 
-export const CHAT_FIRST_INITIAL_TEXT =
-  "Start a conversation and click the agent's memories";
+export const CHAT_FIRST_INITIAL_TEXT = "开始对话并点击代理的记忆";
 
-export const TOOLTIP_OUTDATED_NODE =
-  "Your component is outdated. Click to update (data may be lost)";
+export const TOOLTIP_OUTDATED_NODE = "您的组件已过时。点击更新（数据可能会丢失）";
 
-export const CHAT_SECOND_INITIAL_TEXT = "to inspect previous messages.";
+export const CHAT_SECOND_INITIAL_TEXT = "以检查先前的消息。";
 
-export const TOOLTIP_OPEN_HIDDEN_OUTPUTS = "Expand hidden outputs";
-export const TOOLTIP_HIDDEN_OUTPUTS = "Collapse hidden outputs";
+export const TOOLTIP_OPEN_HIDDEN_OUTPUTS = "展开隐藏的输出";
+export const TOOLTIP_HIDDEN_OUTPUTS = "折叠隐藏的输出";
 
-export const ZERO_NOTIFICATIONS = "No new notifications";
+export const ZERO_NOTIFICATIONS = "没有新通知";
 
-export const SUCCESS_BUILD = "Built sucessfully ✨";
+export const SUCCESS_BUILD = "构建成功 ✨";
 
-export const ALERT_SAVE_WITH_API =
-  "Caution: Unchecking this box only removes API keys from fields specifically designated for API keys.";
+export const ALERT_SAVE_WITH_API = "注意：取消选中此框只会从专门指定用于API密钥的字段中删除API密钥。";
 
-export const SAVE_WITH_API_CHECKBOX = "Save with my API keys";
-export const EDIT_TEXT_MODAL_TITLE = "Edit Text";
-export const EDIT_TEXT_PLACEHOLDER = "Type message here.";
-export const INPUT_HANDLER_HOVER = "Avaliable input components:";
-export const OUTPUT_HANDLER_HOVER = "Avaliable output components:";
-export const TEXT_INPUT_MODAL_TITLE = "Inputs";
-export const OUTPUTS_MODAL_TITLE = "Outputs";
-export const LANGFLOW_CHAT_TITLE = "Langflow Chat";
-export const CHAT_INPUT_PLACEHOLDER =
-  "No chat input variables found. Click to run your flow.";
-export const CHAT_INPUT_PLACEHOLDER_SEND = "Send a message...";
-export const EDIT_CODE_TITLE = "Edit Code";
-export const MY_COLLECTION_DESC =
-  "Manage your projects. Download and upload entire collections.";
-export const STORE_DESC = "Explore community-shared flows and components.";
-export const STORE_TITLE = "Langflow Store";
-export const NO_API_KEY = "You don't have an API key.";
-export const INSERT_API_KEY = "Insert your Langflow API key.";
-export const INVALID_API_KEY = "Your API key is not valid. ";
-export const CREATE_API_KEY = `Don't have an API key? Sign up at`;
-export const STATUS_BUILD = "Build to validate status.";
-export const STATUS_INACTIVE = "Execution blocked";
-export const STATUS_BUILDING = "Building...";
-export const SAVED_HOVER = "Last saved: ";
-export const RUN_TIMESTAMP_PREFIX = "Last Run: ";
-export const STARTER_FOLDER_NAME = "Starter Projects";
+export const SAVE_WITH_API_CHECKBOX = "保存我的API密钥";
+export const EDIT_TEXT_MODAL_TITLE = "编辑文本";
+export const EDIT_TEXT_PLACEHOLDER = "在此输入信息。";
+export const INPUT_HANDLER_HOVER = "可用的输入组件：";
+export const OUTPUT_HANDLER_HOVER = "可用的输出组件：";
+export const TEXT_INPUT_MODAL_TITLE = "输入";
+export const OUTPUTS_MODAL_TITLE = "输出";
+export const LANGFLOW_CHAT_TITLE = "Langflow 聊天";
+export const CHAT_INPUT_PLACEHOLDER = "未找到聊天输入变量。点击运行您的工作流。";
+export const CHAT_INPUT_PLACEHOLDER_SEND = "发送消息...";
+export const EDIT_CODE_TITLE = "编辑代码";
+export const MY_COLLECTION_DESC = "管理您的项目。下载和上传整个集合。";
+export const STORE_DESC = "探索社区共享的工作流和组件。";
+export const STORE_TITLE = "Langflow 商店";
+export const NO_API_KEY = "您没有API密钥。";
+export const INSERT_API_KEY = "插入您的Langflow API密钥。";
+export const INVALID_API_KEY = "您的API密钥无效。";
+export const CREATE_API_KEY = `没有API密钥？请注册于`;
+export const STATUS_BUILD = "构建以验证状态。";
+export const STATUS_INACTIVE = "执行已阻止";
+export const STATUS_BUILDING = "构建中...";
+export const SAVED_HOVER = "最后保存：";
+export const RUN_TIMESTAMP_PREFIX = "上次运行：";
+export const STARTER_FOLDER_NAME = "入门项目";
 export const PRIORITY_SIDEBAR_ORDER = [
   "saved_components",
   "inputs",
@@ -762,8 +736,7 @@ export const AUTHORIZED_DUPLICATE_REQUESTS = [
   "/auto_login",
 ];
 
-export const BROKEN_EDGES_WARNING =
-  "Some connections were removed because they were invalid:";
+export const BROKEN_EDGES_WARNING = "由于无效，某些连接已被删除：";
 
 export const SAVE_DEBOUNCE_TIME = 300;
 
@@ -771,92 +744,92 @@ export const IS_MAC = navigator.userAgent.toUpperCase().includes("MAC");
 
 export const defaultShortcuts = [
   {
-    display_name: "Controls",
+    display_name: "控制",
     name: "Advanced Settings",
     shortcut: "mod+shift+a",
   },
   {
-    display_name: "Search Components on Sidebar",
+    display_name: "在侧边栏搜索组件",
     name: "Search Components Sidebar",
     shortcut: "/",
   },
   {
-    display_name: "Minimize",
+    display_name: "最小化",
     name: "Minimize",
     shortcut: "mod+.",
   },
   {
-    display_name: "Code",
+    display_name: "代码",
     name: "Code",
     shortcut: "space",
   },
   {
-    display_name: "Copy",
+    display_name: "复制",
     name: "Copy",
     shortcut: "mod+c",
   },
   {
-    display_name: "Duplicate",
+    display_name: "复制",
     name: "Duplicate",
     shortcut: "mod+d",
   },
   {
-    display_name: "Component Share",
+    display_name: "组件分享",
     name: "Component Share",
     shortcut: "mod+shift+s",
   },
   {
-    display_name: "Docs",
+    display_name: "文档",
     name: "Docs",
     shortcut: "mod+shift+d",
   },
   {
-    display_name: "Changes Save",
+    display_name: "保存更改",
     name: "Changes Save",
     shortcut: "mod+s",
   },
   {
-    display_name: "Save Component",
+    display_name: "保存组件",
     name: "Save Component",
     shortcut: "mod+alt+s",
   },
   {
-    display_name: "Delete",
+    display_name: "删除",
     name: "Delete",
     shortcut: "backspace",
   },
   {
-    display_name: "Open Playground",
+    display_name: "打开 Playground",
     name: "Open Playground",
     shortcut: "mod+k",
   },
   {
-    display_name: "Undo",
+    display_name: "撤销",
     name: "Undo",
     shortcut: "mod+z",
   },
   {
-    display_name: "Redo",
+    display_name: "重做",
     name: "Redo",
     shortcut: "mod+y",
   },
   {
-    display_name: "Redo (alternative)",
+    display_name: "重做（替代）",
     name: "Redo Alt",
     shortcut: "mod+shift+z",
   },
   {
-    display_name: "Group",
+    display_name: "分组",
     name: "Group",
     shortcut: "mod+g",
   },
   {
-    display_name: "Cut",
+    display_name: "剪切",
     name: "Cut",
     shortcut: "mod+x",
   },
   {
-    display_name: "Paste",
+    display_name: "粘贴",
     name: "Paste",
     shortcut: "mod+v",
   },
@@ -866,55 +839,54 @@ export const defaultShortcuts = [
     shortcut: "r",
   },
   {
-    display_name: "Download",
+    display_name: "下载",
     name: "Download",
     shortcut: "mod+j",
   },
   {
-    display_name: "Update",
+    display_name: "更新",
     name: "Update",
     shortcut: "mod+u",
   },
   {
-    display_name: "Freeze",
+    display_name: "冻结",
     name: "Freeze Path",
     shortcut: "mod+shift+f",
   },
   {
-    display_name: "Flow Share",
+    display_name: "工作流分享",
     name: "Flow Share",
     shortcut: "mod+shift+b",
   },
   {
-    display_name: "Play",
+    display_name: "播放",
     name: "Play",
     shortcut: "p",
   },
   {
-    display_name: "Output Inspection",
+    display_name: "输出检查",
     name: "Output Inspection",
     shortcut: "o",
   },
   {
-    display_name: "Tool Mode",
+    display_name: "工具模式",
     name: "Tool Mode",
     shortcut: "mod+shift+m",
   },
   {
-    display_name: "Toggle Sidebar",
+    display_name: "切换侧边栏",
     name: "Toggle Sidebar",
     shortcut: "mod+b",
   },
 ];
 
-export const DEFAULT_TABLE_ALERT_MSG = `Oops! It seems there's no data to display right now. Please check back later.`;
+export const DEFAULT_TABLE_ALERT_MSG = `抱歉！目前似乎没有数据可显示。请稍后再查看。`;
 
-export const DEFAULT_TABLE_ALERT_TITLE = "No Data Available";
+export const DEFAULT_TABLE_ALERT_TITLE = "无可用数据";
 
-export const NO_COLUMN_DEFINITION_ALERT_TITLE = "No Column Definitions";
+export const NO_COLUMN_DEFINITION_ALERT_TITLE = "无列定义";
 
-export const NO_COLUMN_DEFINITION_ALERT_DESCRIPTION =
-  "There are no column definitions available for this table.";
+export const NO_COLUMN_DEFINITION_ALERT_DESCRIPTION = "此表格没有可用的列定义。";
 
 export const LOCATIONS_TO_RETURN = ["/flow/", "/settings/"];
 
@@ -927,18 +899,15 @@ export const ALLOWED_IMAGE_INPUT_EXTENSIONS = ["png", "jpg", "jpeg"];
 
 export const componentsToIgnoreUpdate = ["CustomComponent"];
 
-export const FS_ERROR_TEXT =
-  "Please ensure your file has one of the following extensions:";
+export const FS_ERROR_TEXT = "请确保您的文件具有以下扩展名之一：";
 export const SN_ERROR_TEXT = ALLOWED_IMAGE_INPUT_EXTENSIONS.join(", ");
 
-export const ERROR_UPDATING_COMPONENT =
-  "An unexpected error occurred while updating the Component. Please try again.";
-export const TITLE_ERROR_UPDATING_COMPONENT =
-  "Error while updating the Component";
+export const ERROR_UPDATING_COMPONENT = "更新组件时发生意外错误。请重试。";
+export const TITLE_ERROR_UPDATING_COMPONENT = "更新组件时出错";
 
-export const EMPTY_INPUT_SEND_MESSAGE = "No input message provided.";
+export const EMPTY_INPUT_SEND_MESSAGE = "未提供输入消息。";
 
-export const EMPTY_OUTPUT_SEND_MESSAGE = "Message empty.";
+export const EMPTY_OUTPUT_SEND_MESSAGE = "消息为空。";
 
 export const TABS_ORDER = [
   "curl",
@@ -1005,19 +974,19 @@ export const GRADIENT_CLASS_DISABLED =
   "linear-gradient(to right, hsl(var(--muted) / 0.3), hsl(var(--muted)))";
 
 export const RECEIVING_INPUT_VALUE = "Receiving input";
-export const SELECT_AN_OPTION = "Select an option";
+export const SELECT_AN_OPTION = "选择一个选项";
 
 export const ICON_STROKE_WIDTH = 1.5;
 
-export const DEFAULT_PLACEHOLDER = "Type something...";
+export const DEFAULT_PLACEHOLDER = "输入内容...";
 
-export const DEFAULT_TOOLSET_PLACEHOLDER = "Used as a tool";
+export const DEFAULT_TOOLSET_PLACEHOLDER = "用作Tool";
 
-export const SAVE_API_KEY_ALERT = "API key saved successfully";
+export const SAVE_API_KEY_ALERT = "已成功保存 API key";
 export const PLAYGROUND_BUTTON_NAME = "Playground";
 export const POLLING_MESSAGES = {
-  ENDPOINT_NOT_AVAILABLE: "Endpoint not available",
-  STREAMING_NOT_SUPPORTED: "Streaming not supported",
+  ENDPOINT_NOT_AVAILABLE: "终端节点不可用",
+  STREAMING_NOT_SUPPORTED: "不支持流式处理",
 } as const;
 
 export const POLLING_INTERVAL = 100;

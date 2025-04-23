@@ -95,7 +95,7 @@ export default function InputFileComponent({
                       onError: (error) => {
                         console.error(CONSOLE_ERROR_MSG);
                         setErrorData({
-                          title: "Error uploading file",
+                          title: "上传文件时出错",
                           list: [error.response?.data?.detail],
                         });
                         resolve(null);

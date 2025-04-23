@@ -52,7 +52,7 @@ const MicrophoneSelect = ({
           }
         }
       } catch (error) {
-        console.error("Error accessing media devices:", error);
+        console.error("访问媒体设备时出错:", error);
       }
     };
 
@@ -74,8 +74,8 @@ const MicrophoneSelect = ({
       data-testid="voice-assistant-settings-modal-microphone-select"
     >
       <span className="flex w-full items-center text-sm">
-        Audio Input
-        <ShadTooltip content="Select which microphone to use for voice input">
+        音频输入
+        <ShadTooltip content="选择要用于语音输入的麦克风">
           <div>
             <IconComponent
               name="Info"
@@ -88,7 +88,7 @@ const MicrophoneSelect = ({
 
       <Select value={selectedMicrophone} onValueChange={handleSetMicrophone}>
         <SelectTrigger className="h-9 w-full">
-          <SelectValue placeholder="Select microphone" />
+          <SelectValue placeholder="选择麦克风" />
         </SelectTrigger>
         <SelectContent className="max-h-[200px]">
           <SelectGroup>
@@ -96,13 +96,13 @@ const MicrophoneSelect = ({
               <SelectItem key={device?.deviceId} value={device?.deviceId}>
                 <div className="max-w-[220px] truncate text-left">
                   {device?.label ||
-                    `Microphone ${device?.deviceId?.slice(0, 5)}...`}
+                    `麦克风 ${device?.deviceId?.slice(0, 5)}...`}
                 </div>
               </SelectItem>
             ))}
             {microphones?.length === 0 && (
               <SelectItem value="no-microphones" disabled>
-                No microphones found
+                未找到麦克风
               </SelectItem>
             )}
           </SelectGroup>

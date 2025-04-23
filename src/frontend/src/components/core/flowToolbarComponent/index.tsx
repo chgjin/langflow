@@ -65,7 +65,7 @@ export default function FlowToolbar(): JSX.Element {
         <ShadTooltip
           content={
             !hasApiKey || !validApiKey || !hasStore
-              ? "Store API Key Required"
+              ? "需要 Store API key"
               : ""
           }
           side="bottom"

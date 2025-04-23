@@ -444,7 +444,7 @@
               "input_value": {
                 "_input_type": "MessageInput",
                 "advanced": false,
-                "display_name": "Input",
+                "display_name": "用户输入",
                 "dynamic": false,
                 "info": "",
                 "input_types": [
@@ -536,9 +536,9 @@
               "stream": {
                 "_input_type": "BoolInput",
                 "advanced": true,
-                "display_name": "Stream",
+                "display_name": "流式响应",
                 "dynamic": false,
-                "info": "Stream the response from the model. Streaming works only in Chat.",
+                "info": "流式传输来自模型的响应。流式传输仅在 Chat 中有效。",
                 "list": false,
                 "list_add_label": "Add More",
                 "name": "stream",
@@ -554,9 +554,9 @@
               "system_message": {
                 "_input_type": "MultilineInput",
                 "advanced": false,
-                "display_name": "System Message",
+                "display_name": "系统消息",
                 "dynamic": false,
-                "info": "System message to pass to the model.",
+                "info": "要传递给模型的 System 消息。",
                 "input_types": [
                   "Message"
                 ],
@@ -776,7 +776,7 @@
               "input_value": {
                 "_input_type": "MessageInput",
                 "advanced": false,
-                "display_name": "Input",
+                "display_name": "用户输入",
                 "dynamic": false,
                 "info": "",
                 "input_types": [
@@ -868,9 +868,9 @@
               "stream": {
                 "_input_type": "BoolInput",
                 "advanced": true,
-                "display_name": "Stream",
+                "display_name": "流式响应",
                 "dynamic": false,
-                "info": "Stream the response from the model. Streaming works only in Chat.",
+                "info": "流式传输来自模型的响应。流式传输仅在 Chat 中有效。",
                 "list": false,
                 "list_add_label": "Add More",
                 "name": "stream",
@@ -886,9 +886,9 @@
               "system_message": {
                 "_input_type": "MultilineInput",
                 "advanced": false,
-                "display_name": "System Message",
+                "display_name": "系统消息",
                 "dynamic": false,
-                "info": "System message to pass to the model.",
+                "info": "要传递给模型的 System 消息。",
                 "input_types": [
                   "Message"
                 ],
@@ -2460,12 +2460,12 @@
       "zoom": 0.4655801942877969
     }
   },
-  "description": "This template transforms PDF or TXT resume documents into structured JSON, generating a portfolio website HTML code from the structured data.",
+  "description": "此模板将 PDF 或 TXT 简历文档转换为结构化 JSON，从而从结构化数据生成作品集网站 HTML 代码。",
   "endpoint_name": null,
   "id": "7e497e5b-3b0f-4b11-9cd5-8662efad990b",
   "is_component": false,
   "last_tested_version": "1.2.0",
-  "name": "Portfolio Website Code Generator",
+  "name": "投资组合网站代码生成器",
   "tags": [
     "chatbots",
     "coding"

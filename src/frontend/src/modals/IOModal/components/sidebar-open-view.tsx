@@ -30,7 +30,7 @@ export const SidebarOpenView = ({
               />
               <div className="text-[13px] font-normal">Chat</div>
             </div>
-            <ShadTooltip styleClasses="z-50" content="New Chat">
+            <ShadTooltip styleClasses="z-50" content="新对话">
               <div>
                 <Button
                   data-testid="new-chat"

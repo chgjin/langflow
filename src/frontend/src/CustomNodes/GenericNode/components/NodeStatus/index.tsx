@@ -463,7 +463,7 @@ export default function NodeStatus({
           </div>
         </ShadTooltip>
         {dismissAll && isOutdated && !isUserEdited && (
-          <ShadTooltip content="Update component">
+          <ShadTooltip content="更新组件">
             <div
               className="button-run-bg hit-area-icon ml-1 bg-warning hover:bg-warning/80"
               onClick={(e) => {

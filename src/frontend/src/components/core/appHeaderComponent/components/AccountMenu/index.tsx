@@ -61,7 +61,7 @@ export const AccountMenu = () => {
                     id="menu_version_button"
                     className="text-sm"
                   >
-                    Version
+                    版本
                   </span>
                   <div
                     className={cn(
@@ -87,7 +87,7 @@ export const AccountMenu = () => {
                   data-testid="menu_settings_button"
                   id="menu_settings_button"
                 >
-                  Settings
+                  设置
                 </span>
               </HeaderMenuItemButton>
 
@@ -102,14 +102,14 @@ export const AccountMenu = () => {
                       data-testid="menu_admin_page_button"
                       id="menu_admin_page_button"
                     >
-                      Admin Page
+                      管理员页面
                     </span>
                   </HeaderMenuItemButton>
                 </div>
               )}
               <HeaderMenuItemLink newPage href={DOCS_URL}>
                 <span data-testid="menu_docs_button" id="menu_docs_button">
-                  Docs
+                  文档
                 </span>
               </HeaderMenuItemLink>
             </div>
@@ -152,7 +152,7 @@ export const AccountMenu = () => {
             </div>
 
             <div className="flex items-center justify-between px-4 py-1 text-sm">
-              <span className="">Theme</span>
+              <span className="">主题</span>
               <div className="relative top-[1px] float-right">
                 <ThemeButtons />
               </div>
@@ -161,7 +161,7 @@ export const AccountMenu = () => {
             {!autoLogin && (
               <div>
                 <HeaderMenuItemButton onClick={handleLogout} icon="log-out">
-                  Logout
+                  注销
                 </HeaderMenuItemButton>
               </div>
             )}

@@ -56,13 +56,13 @@ export default function DragFilesComponent({
         if (filesIds.length > 0) {
           onUpload(filesIds);
           setSuccessData({
-            title: `File${filesIds.length > 1 ? "s" : ""} uploaded successfully`,
+            title: `文件${filesIds.length > 1 ? "s" : ""}上传成功`,
           });
         }
       } catch (error: any) {
         setErrorData({
-          title: "Error uploading file",
-          list: [error.message || "An error occurred while uploading the file"],
+          title: "上传文件时出错",
+          list: [error.message || "上传文件时出错"],
         });
       }
     }
@@ -74,13 +74,13 @@ export default function DragFilesComponent({
       if (filesIds.length > 0) {
         onUpload(filesIds);
         setSuccessData({
-          title: `File${filesIds.length > 1 ? "s" : ""} uploaded successfully`,
+          title: `文件${filesIds.length > 1 ? "s" : ""} 上传成功`,
         });
       }
     } catch (error: any) {
       setErrorData({
-        title: "Error uploading file",
-        list: [error.message || "An error occurred while uploading the file"],
+        title: "上传文件时出错",
+        list: [error.message || "上传文件时出错"],
       });
     }
   };
@@ -101,7 +101,7 @@ export default function DragFilesComponent({
         tabIndex={0}
       >
         <h3 className="text-sm font-semibold">
-          {isDragging ? "Drop files here" : "Click or drag files here"}
+          {isDragging ? "将文件拖放到此处" : "单击或拖动文件"}
         </h3>
         <p className="flex items-center gap-1 text-xs text-muted-foreground">
           <span>{types.slice(0, 3).join(", ")}</span>
@@ -115,7 +115,7 @@ export default function DragFilesComponent({
           <span className="font-semibold">
             {formatFileSize(maxFileSizeUpload)}
           </span>
-          <span>max</span>
+          <span>最大</span>
         </p>
         <div className="pointer-events-none absolute inset-0 h-full w-full">
           <svg

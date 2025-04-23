@@ -40,14 +40,14 @@ export default function CollectionPage(): JSX.Element {
       {
         onSuccess: () => {
           setSuccessData({
-            title: "Folder deleted successfully.",
+            title: "已成功删除文件夹。",
           });
           navigate("/all");
         },
         onError: (err) => {
           console.error(err);
           setErrorData({
-            title: "Error deleting folder.",
+            title: "删除文件夹时出错。",
           });
         },
       },

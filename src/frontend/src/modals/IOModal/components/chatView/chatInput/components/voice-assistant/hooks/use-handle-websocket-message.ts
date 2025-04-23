@@ -35,9 +35,9 @@ export const useHandleWebsocketMessage = (
       if (data.response?.status_details?.error?.code) {
         const errorCode =
           data.response?.status_details?.error?.code?.replaceAll("_", " ");
-        setStatus(`API key error: ${errorCode}`);
-        showErrorAlert("API key error: " + errorCode, [
-          "Please check your API key and try again",
+        setStatus(`API key错误: ${errorCode}`);
+        showErrorAlert("API key错误: " + errorCode, [
+          "请检查您的 API key，然后重试",
         ]);
       }
       break;
@@ -62,7 +62,7 @@ export const useHandleWebsocketMessage = (
             playNextAudioChunk();
           }
         } catch (error) {
-          console.error("Error processing audio response:", error);
+          console.error("处理音频响应时出错:", error);
         }
       }
       break;
@@ -119,20 +119,20 @@ export const useHandleWebsocketMessage = (
 
     case "error":
       if (data.code === "api_key_missing") {
-        setStatus("Error: " + "API key is missing");
-        showErrorAlert("API key not valid", [
-          "Please check your API key and try again",
+        setStatus("Error: " + "缺少 API key");
+        showErrorAlert("API key无效", [
+          "请检查您的 API ket，然后重试",
         ]);
         return;
       }
       if (data.error.message.toLowerCase().includes("api key")) {
-        setStatus("Error: " + "API key is missing");
-        showErrorAlert("API key not valid", [
-          "Please check your API key and try again",
+        setStatus("Error: " + "缺少 API key");
+        showErrorAlert("API key无效", [
+          "请检查您的 API key，然后重试",
         ]);
         return;
       }
-      data.error.message === "Cancellation failed: no active response found"
+      data.error.message === "取消失败：未找到活动响应"
         ? interruptPlayback()
         : setStatus("Error: " + data.error);
       break;

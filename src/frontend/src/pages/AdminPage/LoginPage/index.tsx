@@ -57,7 +57,7 @@ export default function LoginAdminPage() {
             handleInput({ target: { name: "username", value } });
           }}
           className="bg-background"
-          placeholder="Username"
+          placeholder="用户名"
         />
         <Input
           type="password"
@@ -65,7 +65,7 @@ export default function LoginAdminPage() {
             handleInput({ target: { name: "password", value } });
           }}
           className="bg-background"
-          placeholder="Password"
+          placeholder="密码"
         />
         <Button
           onClick={() => {

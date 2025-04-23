@@ -34,7 +34,7 @@ const useFileDrop = (type?: string) => {
           })
             .then(() => {
               setSuccessData({
-                title: `All files uploaded successfully`,
+                title: `所有文件上传成功`,
               });
             })
             .catch((error) => {

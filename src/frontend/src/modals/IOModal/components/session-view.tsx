@@ -36,12 +36,12 @@ export default function SessionView({
       deleteMessagesStore(selectedRows);
       setSelectedRows([]);
       setSuccessData({
-        title: "Messages deleted successfully.",
+        title: "已成功删除消息。",
       });
     },
     onError: () => {
       setErrorData({
-        title: "Error deleting messages.",
+        title: "删除消息时出错。",
       });
     },
   });
@@ -63,12 +63,12 @@ export default function SessionView({
           updateMessage(data);
           // Set success message
           setSuccessData({
-            title: "Messages updated successfully.",
+            title: "消息更新成功。",
           });
         },
         onError: () => {
           setErrorData({
-            title: "Error updating messages.",
+            title: "更新消息时出错。",
           });
           event.data[field] = event.oldValue;
           event.api.refreshCells();
@@ -103,7 +103,7 @@ export default function SessionView({
       editable={[
         { field: "text", onUpdate: handleUpdateMessage, editableCell: false },
       ]}
-      overlayNoRowsTemplate="No data available"
+      overlayNoRowsTemplate="无可用数据"
       onSelectionChanged={(event: SelectionChangedEvent) => {
         setSelectedRows(event.api.getSelectedRows().map((row) => row.id));
       }}

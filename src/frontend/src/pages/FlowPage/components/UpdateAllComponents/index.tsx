@@ -14,13 +14,13 @@ import { cn } from "@/utils/utils";
 import { useUpdateNodeInternals } from "@xyflow/react";
 import { useEffect, useMemo, useRef, useState } from "react";
 
-const ERROR_MESSAGE_UPDATING_COMPONENTS = "Error updating components";
+const ERROR_MESSAGE_UPDATING_COMPONENTS = "更新组件时出错";
 const ERROR_MESSAGE_UPDATING_COMPONENTS_LIST = [
-  "There was an error updating the components.",
-  "If the error persists, please report it on our Discord or GitHub.",
+  "更新组件时出错。",
+  "如果错误仍然存在，请在我们的 Discord 或 GitHub 上报告。",
 ];
 const ERROR_MESSAGE_EDGES_LOST =
-  "Some edges were lost after updating the components. Please review the flow and reconnect them.";
+  "更新组件后，一些边丢失。请查看工作流并重新连接它们。";
 
 export default function UpdateAllComponents({}: {}) {
   const { componentsToUpdate, nodes, edges, setNodes } = useFlowStore();
@@ -57,7 +57,7 @@ export default function UpdateAllComponents({}: {}) {
 
   const getSuccessTitle = (updatedCount: number) => {
     resetEdgesUpdateRef();
-    return `Successfully updated ${updatedCount} component${
+    return `已成功更新 ${updatedCount} 组件 ${
       updatedCount > 1 ? "s" : ""
     }`;
   };
@@ -160,8 +160,8 @@ export default function UpdateAllComponents({}: {}) {
           strokeWidth={1.5}
         />
         <span>
-          {componentsToUpdate.length} component
-          {componentsToUpdate.length > 1 ? "s are" : " is"} ready to update
+          有{componentsToUpdate.length} 组件
+          {/*{componentsToUpdate.length > 1 ? "s are" : " is"} 准备更新*/}
         </span>
       </div>
       <div className="flex items-center gap-4">

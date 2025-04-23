@@ -90,7 +90,7 @@ export default function CodeTabsComponent({
                   tabs.find((tab) => tab.name.toLowerCase() === "tweaks") &&
                   tabs[activeTab].hasTweaks && (
                     <div className="flex items-center gap-2">
-                      <ShadTooltip content="Makes temporary adjustments managed in 'Tweaks'">
+                      <ShadTooltip content="进行在“调整”中管理的临时调整">
                         <div className="flex items-center gap-2">
                           <Label
                             className={"text-xs font-medium text-white"}

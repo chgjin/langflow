@@ -861,7 +861,7 @@
               "input_value": {
                 "_input_type": "MessageInput",
                 "advanced": false,
-                "display_name": "Input",
+                "display_name": "用户输入",
                 "dynamic": false,
                 "info": "",
                 "input_types": [
@@ -1031,9 +1031,9 @@
               "stream": {
                 "_input_type": "BoolInput",
                 "advanced": true,
-                "display_name": "Stream",
+                "display_name": "流式响应",
                 "dynamic": false,
-                "info": "Stream the response from the model. Streaming works only in Chat.",
+                "info": "流式传输来自模型的响应。流式传输仅在 Chat 中有效。",
                 "list": false,
                 "list_add_label": "Add More",
                 "name": "stream",
@@ -1049,9 +1049,9 @@
               "system_message": {
                 "_input_type": "MultilineInput",
                 "advanced": false,
-                "display_name": "System Message",
+                "display_name": "系统消息",
                 "dynamic": false,
-                "info": "System message to pass to the model.",
+                "info": "要传递给模型的 System 消息。",
                 "input_types": [
                   "Message"
                 ],
@@ -1515,12 +1515,12 @@
       "zoom": 0.525810790842613
     }
   },
-  "description": "Auto-generate a customized blog post from instructions and referenced articles.",
+  "description": "根据说明和参考文章自动生成自定义博客文章。",
   "endpoint_name": null,
   "id": "6b792874-e7e4-4ef5-bb3f-ac22a44342a4",
   "is_component": false,
   "last_tested_version": "1.2.0",
-  "name": "Blog Writer",
+  "name": "博客作者",
   "tags": [
     "chatbots",
     "content-generation"

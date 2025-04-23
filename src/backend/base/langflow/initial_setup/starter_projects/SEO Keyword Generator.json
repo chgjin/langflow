@@ -966,7 +966,7 @@
               "input_value": {
                 "_input_type": "MessageInput",
                 "advanced": false,
-                "display_name": "Input",
+                "display_name": "用户输入",
                 "dynamic": false,
                 "info": "",
                 "input_types": [
@@ -1136,9 +1136,9 @@
               "stream": {
                 "_input_type": "BoolInput",
                 "advanced": true,
-                "display_name": "Stream",
+                "display_name": "流式响应",
                 "dynamic": false,
-                "info": "Stream the response from the model. Streaming works only in Chat.",
+                "info": "流式传输来自模型的响应。流式传输仅在 Chat 中有效。",
                 "list": false,
                 "list_add_label": "Add More",
                 "name": "stream",
@@ -1154,9 +1154,9 @@
               "system_message": {
                 "_input_type": "MultilineInput",
                 "advanced": false,
-                "display_name": "System Message",
+                "display_name": "系统消息",
                 "dynamic": false,
-                "info": "System message to pass to the model.",
+                "info": "要传递给模型的 System 消息。",
                 "input_types": [
                   "Message"
                 ],
@@ -1247,12 +1247,12 @@
       "zoom": 0.7759242611491008
     }
   },
-  "description": "Generates targeted SEO keywords based on product information, pain points, and customer profiles for strategic marketing.",
+  "description": "根据产品信息、痛点和客户画像生成有针对性的 SEO 关键词，用于战略营销。",
   "endpoint_name": null,
   "id": "0908c10f-b941-4e96-89be-1c65337bbfbd",
   "is_component": false,
   "last_tested_version": "1.2.0",
-  "name": "SEO Keyword Generator",
+  "name": "SEO 关键字生成器",
   "tags": [
     "chatbots",
     "assistants"

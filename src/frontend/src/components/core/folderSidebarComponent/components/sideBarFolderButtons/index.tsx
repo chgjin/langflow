@@ -126,7 +126,7 @@ const SideBarFoldersButtonsComponent = ({
         if (objects.every((flow) => flow.data?.nodes)) {
           uploadFlow({ files }).then(() => {
             setSuccessData({
-              title: "Uploaded successfully",
+              title: "上传成功",
             });
           });
         } else {
@@ -138,13 +138,13 @@ const SideBarFoldersButtonsComponent = ({
               {
                 onSuccess: () => {
                   setSuccessData({
-                    title: "Folder uploaded successfully.",
+                    title: "文件夹上传成功。",
                   });
                 },
                 onError: (err) => {
                   console.log(err);
                   setErrorData({
-                    title: `Error on uploading your folder, try dragging it into an existing folder.`,
+                    title: `上传文件夹时出错，请尝试将其拖动到现有文件夹中。`,
                     list: [err["response"]["data"]["message"]],
                   });
                 },
@@ -184,11 +184,11 @@ const SideBarFoldersButtonsComponent = ({
           link.remove();
           window.URL.revokeObjectURL(url);
 
-          track("Folder Exported", { folderId: id });
+          track("导出的文件夹", { folderId: id });
         },
         onError: () => {
           setErrorData({
-            title: `An error occurred while downloading folder.`,
+            title: `下载文件夹时出错。`,
           });
         },
       },
@@ -199,14 +199,14 @@ const SideBarFoldersButtonsComponent = ({
     mutateAddFolder(
       {
         data: {
-          name: "New Folder",
+          name: "新建文件夹",
           parent_id: null,
           description: "",
         },
       },
       {
         onSuccess: (folder) => {
-          track("Create New Folder");
+          track("创建新文件夹");
           handleChangeFolder!(folder.id);
         },
       },
@@ -455,7 +455,7 @@ const SideBarFoldersButtonsComponent = ({
               className="text-[13px]"
             >
               <ForwardedIconComponent name="File" />
-              My Files
+              我的文件
             </SidebarMenuButton>
           </div>
         </SidebarFooter>

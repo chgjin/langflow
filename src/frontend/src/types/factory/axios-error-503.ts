@@ -11,10 +11,10 @@ export const createNewError503 = (): AxiosError => {
     headers: headers,
   };
 
-  const error = new AxiosError("Server Busy", "ECONNABORTED", config, null, {
+  const error = new AxiosError("服务器繁忙", "ECONNABORTED", config, null, {
     status: 503,
-    statusText: "Service Unavailable",
-    data: "Server is currently busy, please try again later.",
+    statusText: "服务不可用",
+    data: "服务器当前正忙，请稍后重试。",
     headers: {},
     config: config,
   });

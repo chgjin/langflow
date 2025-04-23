@@ -130,7 +130,7 @@ export default function FilesContextMenuComponent({
               aria-hidden="true"
               className="mr-2 h-4 w-4"
             />
-            {isLocal ? "Delete" : "Remove"}
+            {isLocal ? "删除" : "移除"}
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
@@ -138,17 +138,17 @@ export default function FilesContextMenuComponent({
         open={showDeleteConfirmation}
         onClose={() => setShowDeleteConfirmation(false)}
         onCancel={() => setShowDeleteConfirmation(false)}
-        title={isLocal ? "Delete File" : "Remove File"}
-        titleHeader={`Are you sure you want to ${isLocal ? "delete" : "remove"} "${file.name}"?`}
-        cancelText="Cancel"
+        title={isLocal ? "删除文件" : "移除文件"}
+        titleHeader={`您确定要 ${isLocal ? "删除" : "移除"} "${file.name}"?`}
+        cancelText="取消"
         size="x-small"
-        confirmationText={isLocal ? "Delete" : "Remove"}
+        confirmationText={isLocal ? "删除" : "移除"}
         icon={isLocal ? "Trash2" : "ListX"}
         destructive
         onConfirm={() => {
           deleteFile();
           setSuccessData({
-            title: "The file has been deleted successfully",
+            title: "已成功删除文件",
           });
           setShowDeleteConfirmation(false);
         }}
@@ -156,8 +156,8 @@ export default function FilesContextMenuComponent({
         <ConfirmationModal.Content>
           <div className="text-sm text-muted-foreground">
             {isLocal
-              ? "This action cannot be undone. The file will be permanently deleted."
-              : "This will remove the file from your list. You can add it back later if needed."}
+              ? "此作无法撤消。该文件将被永久删除。"
+              : "这会从列表中删除该文件。如果需要，您可以稍后重新添加它。"}
           </div>
         </ConfirmationModal.Content>
       </ConfirmationModal>

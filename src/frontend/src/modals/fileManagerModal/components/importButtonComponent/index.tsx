@@ -30,6 +30,6 @@ export default function ImportButtonComponent({
   ];
 
   return (
-    <MorphingMenu variant={variant} trigger="Import from..." items={items} />
+    <MorphingMenu variant={variant} trigger="导入自..." items={items} />
   );
 }

@@ -83,7 +83,7 @@ export default function ChatView({
           try {
             files = JSON.parse(files);
           } catch (error) {
-            console.error("Error parsing files:", error);
+            console.error("解析文件时出错:", error);
             files = [];
           }
         }
@@ -208,14 +208,14 @@ export default function ChatView({
                   />
                   <div className="flex flex-col items-center justify-center">
                     <h3 className="mt-2 pb-2 text-2xl font-semibold text-primary">
-                      New chat
+                      新对话
                     </h3>
                     <p
                       className="text-lg text-muted-foreground"
                       data-testid="new-chat-text"
                     >
                       <TextEffectPerChar>
-                        Test your flow with a chat prompt
+                        使用聊天提示测试工作流
                       </TextEffectPerChar>
                     </p>
                   </div>
@@ -243,7 +243,7 @@ export default function ChatView({
           noInput={!inputTypes.includes("ChatInput")}
           sendMessage={({ repeat, files }) => {
             sendMessage({ repeat, files });
-            track("Playground Message Sent");
+            track("Playground 消息已发送");
           }}
           inputRef={ref}
           files={files}

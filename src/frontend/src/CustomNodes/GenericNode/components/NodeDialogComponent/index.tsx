@@ -126,7 +126,7 @@ export const NodeDialog: React.FC<NodeDialogProps> = ({
 
     if (missingRequiredFields.length > 0) {
       handleErrorData({
-        title: "Missing required fields",
+        title: "缺少必填字段",
         list: missingRequiredFields,
       });
       return;
@@ -151,7 +151,7 @@ export const NodeDialog: React.FC<NodeDialogProps> = ({
         new_database_name: databaseName,
         ...otherFields
       } = fieldValues;
-      track("Database Created", {
+      track("已创建数据库", {
         nodeId,
         cloudProvider,
         databaseName,

@@ -255,7 +255,7 @@ export default function CodeAreaModal({
               id="checkAndSaveBtn"
               disabled={readonly}
             >
-              Check & Save
+              检查并保存
             </Button>
           </div>
         </div>
@@ -269,8 +269,8 @@ export default function CodeAreaModal({
           }}
           size="x-small"
           icon="AlertTriangle"
-          confirmationText="Check & Save"
-          cancelText="Discard Changes"
+          confirmationText="检查并保存"
+          cancelText="放弃更改"
           open={openConfirmation}
           onCancel={() => setOpen(false)}
           onConfirm={() => {
@@ -280,7 +280,7 @@ export default function CodeAreaModal({
           title="Caution"
         >
           <ConfirmationModal.Content>
-            <p>Are you sure you want to exit without saving your changes?</p>
+            <p>是否确实要退出而不保存更改？</p>
           </ConfirmationModal.Content>
         </ConfirmationModal>
       </BaseModal.Content>

@@ -34,16 +34,16 @@ const GeneralDeleteConfirmationModal = ({
           },
           onError: () => {
             setErrorData({
-              title: "Error deleting variable",
-              list: [cn("ID not found for variable: ", key)],
+              title: "删除变量时出错",
+              list: [cn("找不到变量的 ID: ", key)],
             });
           },
         },
       );
     } else {
       setErrorData({
-        title: "Error deleting variable",
-        list: [cn("ID not found for variable: ", key)],
+        title: "删除变量时出错",
+        list: [cn("找不到变量的 ID: ", key)],
       });
     }
   }

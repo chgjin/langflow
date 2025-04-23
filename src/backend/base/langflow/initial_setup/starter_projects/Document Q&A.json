@@ -1328,7 +1328,7 @@
               "input_value": {
                 "_input_type": "MessageInput",
                 "advanced": false,
-                "display_name": "Input",
+                "display_name": "用户输入",
                 "dynamic": false,
                 "info": "",
                 "input_types": [
@@ -1498,9 +1498,9 @@
               "stream": {
                 "_input_type": "BoolInput",
                 "advanced": true,
-                "display_name": "Stream",
+                "display_name": "流式响应",
                 "dynamic": false,
-                "info": "Stream the response from the model. Streaming works only in Chat.",
+                "info": "流式传输来自模型的响应。流式传输仅在 Chat 中有效。",
                 "list": false,
                 "list_add_label": "Add More",
                 "name": "stream",
@@ -1516,9 +1516,9 @@
               "system_message": {
                 "_input_type": "MultilineInput",
                 "advanced": false,
-                "display_name": "System Message",
+                "display_name": "系统消息",
                 "dynamic": false,
-                "info": "System message to pass to the model.",
+                "info": "要传递给模型的 System 消息。",
                 "input_types": [
                   "Message"
                 ],
@@ -1783,12 +1783,12 @@
       "zoom": 0.6386710713834723
     }
   },
-  "description": "Integrates PDF reading with a language model to answer document-specific questions. Ideal for small-scale texts, it facilitates direct queries with immediate insights.",
+  "description": "将 PDF 阅读与语言模型集成，以回答特定于文档的问题。它非常适合小规模文本，有助于直接查询并获得即时见解。",
   "endpoint_name": null,
   "id": "e088aa15-23da-4839-b3f0-eb733b973a8b",
   "is_component": false,
   "last_tested_version": "1.2.0",
-  "name": "Document Q&A",
+  "name": "文档问答 Q&A",
   "tags": [
     "rag",
     "q-a",

@@ -640,7 +640,7 @@
               "input_value": {
                 "_input_type": "MessageInput",
                 "advanced": false,
-                "display_name": "Input",
+                "display_name": "用户输入",
                 "dynamic": false,
                 "info": "",
                 "input_types": [
@@ -732,9 +732,9 @@
               "stream": {
                 "_input_type": "BoolInput",
                 "advanced": true,
-                "display_name": "Stream",
+                "display_name": "流式响应",
                 "dynamic": false,
-                "info": "Stream the response from the model. Streaming works only in Chat.",
+                "info": "流式传输来自模型的响应。流式传输仅在 Chat 中有效。",
                 "list": false,
                 "list_add_label": "Add More",
                 "name": "stream",
@@ -750,9 +750,9 @@
               "system_message": {
                 "_input_type": "MultilineInput",
                 "advanced": false,
-                "display_name": "System Message",
+                "display_name": "系统消息",
                 "dynamic": false,
-                "info": "System message to pass to the model.",
+                "info": "要传递给模型的 System 消息。",
                 "input_types": [
                   "Message"
                 ],
@@ -1961,12 +1961,12 @@
       "zoom": 0.4882257444235303
     }
   },
-  "description": "This template iterates over search results using LoopComponent and translates each result into Portuguese automatically. 🚀",
+  "description": "此模板使用 LoopComponent 迭代搜索结果，并自动将每个结果转换为葡萄牙语。 🚀",
   "endpoint_name": null,
   "id": "16326186-363a-46b4-aba2-08f76e31e38c",
   "is_component": false,
   "last_tested_version": "1.2.0",
-  "name": "Research Translation Loop",
+  "name": "研究翻译循环",
   "tags": [
     "chatbots",
     "content-generation"

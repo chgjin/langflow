@@ -74,6 +74,7 @@ const HeaderComponent = ({
             <div className="w-full border-b dark:border-border" />
             {["components", "flows"].map((type) => (
               <Button
+
                 key={type}
                 unstyled
                 id={`${type}-btn`}
@@ -86,7 +87,8 @@ const HeaderComponent = ({
                 } px-3 pb-2 text-sm`}
               >
                 <div className={flowType === type ? "-mb-px" : ""}>
-                  {type.charAt(0).toUpperCase() + type.slice(1)}
+                  {type==="flows"?"工作流":"组件"}
+                  {/*{type.charAt(0).toUpperCase() + type.slice(1)}*/}
                 </div>
               </Button>
             ))}
@@ -98,7 +100,7 @@ const HeaderComponent = ({
                 icon="Search"
                 data-testid="search-store-input"
                 type="text"
-                placeholder={`Search ${flowType}...`}
+                placeholder={`查找 ${flowType==="flows"?"工作流":"组件"}...`}
                 className="mr-2"
                 value={debouncedSearch}
                 onChange={handleSearch}
@@ -135,7 +137,7 @@ const HeaderComponent = ({
                 ))}
               </div>
             </div>
-            <ShadTooltip content="New Flow" side="bottom">
+            <ShadTooltip content="新建工作流" side="bottom">
               <Button
                 variant="default"
                 className="!px-3 md:!px-4 md:!pl-3.5"
@@ -149,7 +151,7 @@ const HeaderComponent = ({
                   className="h-4 w-4"
                 />
                 <span className="hidden whitespace-nowrap font-semibold md:inline">
-                  New Flow
+                  新建工作流
                 </span>
               </Button>
             </ShadTooltip>

@@ -7,7 +7,7 @@ from langflow.graph import Graph
 
 def basic_prompting_graph(template: str | None = None):
     if template is None:
-        template = """Answer the user as if you were a pirate.
+        template = """像海盗一样回答用户。
 
 User: {user_input}
 

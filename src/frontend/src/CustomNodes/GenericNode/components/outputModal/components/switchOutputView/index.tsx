@@ -121,10 +121,10 @@ const SwitchOutputView: React.FC<SwitchOutputViewProps> = ({
               name="AlertCircle"
               className="h-5 w-5 text-primary"
             />
-            <AlertTitle>{"Streaming is not supported"}</AlertTitle>
+            <AlertTitle>{"不支持流式处理"}</AlertTitle>
             <AlertDescription>
               {
-                "Use the playground to interact with components that stream data"
+                "使用 Playground 与流式传输数据的组件进行交互"
               }
             </AlertDescription>
           </Alert>

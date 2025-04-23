@@ -29,7 +29,7 @@ const DropdownComponent = ({
 
   const handleExport = () => {
     downloadFlow(flowData, flowData.name, flowData.description);
-    setSuccessData({ title: `${flowData.name} exported successfully` });
+    setSuccessData({ title: `${flowData.name} 导出成功` });
   };
   const { handleSelectOptionsChange } = useSelectOptionsChange(
     [flowData.id],
@@ -55,7 +55,7 @@ const DropdownComponent = ({
           aria-hidden="true"
           className="mr-2 h-4 w-4"
         />
-        Edit details
+        编辑
       </DropdownMenuItem>
       <DropdownMenuItem
         onClick={(e) => {
@@ -70,7 +70,7 @@ const DropdownComponent = ({
           aria-hidden="true"
           className="mr-2 h-4 w-4"
         />
-        Download
+        下载
       </DropdownMenuItem>
       <DropdownMenuItem
         onClick={(e) => {
@@ -85,7 +85,7 @@ const DropdownComponent = ({
           aria-hidden="true"
           className="mr-2 h-4 w-4"
         />
-        Duplicate
+        创建副本
       </DropdownMenuItem>
       <DropdownMenuItem
         onClick={(e) => {
@@ -100,7 +100,7 @@ const DropdownComponent = ({
           aria-hidden="true"
           className="mr-2 h-4 w-4"
         />
-        Delete
+        删除
       </DropdownMenuItem>
     </>
   );

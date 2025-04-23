@@ -139,14 +139,14 @@ export default function StoreCardComponent({
                 </ShadTooltip>
                 <div className="flex items-center gap-3">
                   {data.private && (
-                    <ShadTooltip content="Private">
+                    <ShadTooltip content="私有">
                       <span className="flex items-center gap-1.5 text-xs text-muted-foreground">
                         <IconComponent name="Lock" className="h-4 w-4" />
                       </span>
                     </ShadTooltip>
                   )}
                   {!data.is_component && (
-                    <ShadTooltip content="Components">
+                    <ShadTooltip content="组件">
                       <span className="flex items-center gap-1.5 text-xs text-muted-foreground">
                         <IconComponent name="ToyBrick" className="h-4 w-4" />
                         <span data-testid={`total-${data.name}`}>
@@ -155,7 +155,7 @@ export default function StoreCardComponent({
                       </span>
                     </ShadTooltip>
                   )}
-                  <ShadTooltip content="Likes">
+                  <ShadTooltip content="喜欢">
                     <span className="flex items-center gap-1.5 text-xs text-muted-foreground">
                       <IconComponent name="Heart" className={cn("h-4 w-4")} />
                       <span data-testid={`likes-${data.name}`}>
@@ -163,7 +163,7 @@ export default function StoreCardComponent({
                       </span>
                     </span>
                   </ShadTooltip>
-                  <ShadTooltip content="Downloads">
+                  <ShadTooltip content="下载">
                     <span className="flex items-center gap-1.5 text-xs text-muted-foreground">
                       <IconComponent name="DownloadCloud" className="h-4 w-4" />
                       <span data-testid={`downloads-${data.name}`}>
@@ -243,7 +243,7 @@ export default function StoreCardComponent({
               )} */}
               <div className="flex gap-0.5">
                 <ShadTooltip
-                  content={authorized ? "Like" : "Please review your API key."}
+                  content={authorized ? "喜欢" : "请检查您的 API key."}
                 >
                   <Button
                     disabled={isPending}
@@ -276,8 +276,8 @@ export default function StoreCardComponent({
                 <ShadTooltip
                   content={
                     authorized
-                      ? "Install Locally"
-                      : "Please review your API key."
+                      ? "本地安装"
+                      : "请检查您的 API key."
                   }
                 >
                   <Button

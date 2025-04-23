@@ -287,10 +287,10 @@ export default function AdminPage() {
             </div>
             <div>
               <UserManagementModal
-                title="New User"
-                titleHeader={"Add a new user"}
-                cancelText="Cancel"
-                confirmationText="Save"
+                title="新建用户"
+                titleHeader={"添加新用户"}
+                cancelText="取消"
+                confirmationText="保存"
                 icon={"UserPlus2"}
                 onConfirm={(index, user) => {
                   handleNewUser(user);
@@ -308,7 +308,7 @@ export default function AdminPage() {
           ) : userList.current.length === 0 && !isIdle ? (
             <>
               <div className="m-4 flex items-center justify-between text-sm">
-                No users registered.
+                没有用户注册。
               </div>
             </>
           ) : (
@@ -354,11 +354,11 @@ export default function AdminPage() {
                           <TableCell className="relative left-1 truncate py-2 text-align-last-left">
                             <ConfirmationModal
                               size="x-small"
-                              title="Edit"
+                              title="编辑"
                               titleHeader={`${user.username}`}
-                              modalContentTitle="Attention!"
-                              cancelText="Cancel"
-                              confirmationText="Confirm"
+                              modalContentTitle="注意!"
+                              cancelText="取消"
+                              confirmationText="确认"
                               icon={"UserCog2"}
                               data={user}
                               index={index}
@@ -372,8 +372,7 @@ export default function AdminPage() {
                             >
                               <ConfirmationModal.Content>
                                 <span>
-                                  Are you completely confident about the changes
-                                  you are making to this user?
+                                  您对对此用户所做的更改是否完全有信心？
                                 </span>
                               </ConfirmationModal.Content>
                               <ConfirmationModal.Trigger>
@@ -386,11 +385,11 @@ export default function AdminPage() {
                           <TableCell className="relative left-1 truncate py-2 text-align-last-left">
                             <ConfirmationModal
                               size="x-small"
-                              title="Edit"
+                              title="编辑"
                               titleHeader={`${user.username}`}
-                              modalContentTitle="Attention!"
-                              cancelText="Cancel"
-                              confirmationText="Confirm"
+                              modalContentTitle="注意!"
+                              cancelText="取消"
+                              confirmationText="确认"
                               icon={"UserCog2"}
                               data={user}
                               index={index}
@@ -404,8 +403,7 @@ export default function AdminPage() {
                             >
                               <ConfirmationModal.Content>
                                 <span>
-                                  Are you completely confident about the changes
-                                  you are making to this user?
+                                  您对对此用户所做的更改是否完全有信心？
                                 </span>
                               </ConfirmationModal.Content>
                               <ConfirmationModal.Trigger>
@@ -432,10 +430,10 @@ export default function AdminPage() {
                           <TableCell className="flex w-[100px] py-2 text-right">
                             <div className="flex">
                               <UserManagementModal
-                                title="Edit"
+                                title="编辑"
                                 titleHeader={`${user.id}`}
-                                cancelText="Cancel"
-                                confirmationText="Save"
+                                cancelText="取消"
+                                confirmationText="保存"
                                 icon={"UserPlus2"}
                                 data={user}
                                 index={index}
@@ -443,7 +441,7 @@ export default function AdminPage() {
                                   handleEditUser(user.id, editUser);
                                 }}
                               >
-                                <ShadTooltip content="Edit" side="top">
+                                <ShadTooltip content="编辑" side="top">
                                   <IconComponent
                                     name="Pencil"
                                     className="h-4 w-4 cursor-pointer"
@@ -453,11 +451,11 @@ export default function AdminPage() {
 
                               <ConfirmationModal
                                 size="x-small"
-                                title="Delete"
-                                titleHeader="Delete User"
-                                modalContentTitle="Attention!"
-                                cancelText="Cancel"
-                                confirmationText="Delete"
+                                title="删除"
+                                titleHeader="删除用户"
+                                modalContentTitle="注意!"
+                                cancelText="取消"
+                                confirmationText="删除"
                                 icon={"UserMinus2"}
                                 data={user}
                                 index={index}
@@ -467,8 +465,7 @@ export default function AdminPage() {
                               >
                                 <ConfirmationModal.Content>
                                   <span>
-                                    Are you sure you want to delete this user?
-                                    This action cannot be undone.
+                                    是否确实要删除此用户？此作无法撤消。
                                   </span>
                                 </ConfirmationModal.Content>
                                 <ConfirmationModal.Trigger>

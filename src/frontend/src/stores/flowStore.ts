@@ -124,7 +124,7 @@ const useFlowStore = create<FlowStoreType>((set, get) => ({
     set({ isBuilding: false });
     get().revertBuiltStatusFromBuilding();
     useAlertStore.getState().setErrorData({
-      title: "Build stopped",
+      title: "构建已停止",
     });
   },
   isPending: true,
@@ -360,7 +360,7 @@ const useFlowStore = create<FlowStoreType>((set, get) => ({
     get().setNodes(filteredNodes);
 
     if (deletedNode) {
-      track("Component Deleted", { componentType: deletedNode.data.type });
+      track("已删除组件", { componentType: deletedNode.data.type });
     }
   },
   deleteEdge: (edgeId) => {
@@ -371,7 +371,7 @@ const useFlowStore = create<FlowStoreType>((set, get) => ({
           : !edgeId.includes(edge.id),
       ),
     );
-    track("Component Connection Deleted", { edgeId });
+    track("已删除组件连接", { edgeId });
   },
   paste: (selection, position) => {
     if (
@@ -379,7 +379,7 @@ const useFlowStore = create<FlowStoreType>((set, get) => ({
       checkChatInput(get().nodes)
     ) {
       useAlertStore.getState().setNoticeData({
-        title: "You can only have one Chat Input component in a flow.",
+        title: "一个工作流中只能有一个 ChatInput 组件。",
       });
       selection.nodes = selection.nodes.filter(
         (node) => node.data.type !== "ChatInput",
@@ -631,7 +631,7 @@ const useFlowStore = create<FlowStoreType>((set, get) => ({
     }
     if (error) {
       get().setIsBuilding(false);
-      throw new Error("Invalid components");
+      throw new Error("无效的组件");
     }
 
     function validateSubgraph(nodes: string[]) {
@@ -650,7 +650,7 @@ const useFlowStore = create<FlowStoreType>((set, get) => ({
         const ids = errorsObjs.map((obj) => obj.id).flat();
 
         get().updateBuildStatus(ids, BuildStatus.ERROR);
-        throw new Error("Invalid components");
+        throw new Error("无效的组件");
       }
       // get().updateEdgesRunningByNodes(nodes, true);
     }
@@ -761,7 +761,7 @@ const useFlowStore = create<FlowStoreType>((set, get) => ({
       stopNodeId,
       onGetOrderSuccess: () => {
         if (!silent) {
-          setNoticeData({ title: "Running components" });
+          setNoticeData({ title: "运行组件" });
         }
       },
       onBuildComplete: (allNodesValid) => {
@@ -773,7 +773,7 @@ const useFlowStore = create<FlowStoreType>((set, get) => ({
                 ? `${
                     get().nodes.find((node) => node.id === nodeId)?.data.node
                       ?.display_name
-                  } built successfully`
+                  } 构建成功`
                 : FLOW_BUILD_SUCCESS_ALERT,
             });
           }
@@ -797,7 +797,7 @@ const useFlowStore = create<FlowStoreType>((set, get) => ({
         if (get().componentsToUpdate.length > 0)
           setErrorData({
             title:
-              "There are outdated components in the flow. The error could be related to them.",
+              "工作流中存在过时的组件。该错误可能与它们有关。",
           });
         get().updateEdgesRunningByNodes(
           get().nodes.map((n) => n.id),

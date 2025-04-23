@@ -634,7 +634,7 @@
               "input_value": {
                 "_input_type": "MessageInput",
                 "advanced": false,
-                "display_name": "Input",
+                "display_name": "用户输入",
                 "dynamic": false,
                 "info": "",
                 "input_types": [
@@ -809,9 +809,9 @@
               "stream": {
                 "_input_type": "BoolInput",
                 "advanced": true,
-                "display_name": "Stream",
+                "display_name": "流式响应",
                 "dynamic": false,
-                "info": "Stream the response from the model. Streaming works only in Chat.",
+                "info": "流式传输来自模型的响应。流式传输仅在 Chat 中有效。",
                 "list": false,
                 "list_add_label": "Add More",
                 "name": "stream",
@@ -827,9 +827,9 @@
               "system_message": {
                 "_input_type": "MultilineInput",
                 "advanced": false,
-                "display_name": "System Message",
+                "display_name": "系统消息",
                 "dynamic": false,
-                "info": "System message to pass to the model.",
+                "info": "要传递给模型的 System 消息。",
                 "input_types": [
                   "Message"
                 ],
@@ -1238,12 +1238,12 @@
       "zoom": 0.8640597928279287
     }
   },
-  "description": "Enter your daily food intake (food/grams) to receive dietary advice!",
+  "description": "输入您的每日食物摄入量（食物/克）以获得饮食建议！",
   "endpoint_name": null,
   "id": "5616e60d-d21f-4465-83c4-d8d120e075d8",
   "is_component": false,
   "last_tested_version": "1.2.0",
-  "name": "Diet Analysis",
+  "name": "饮食分析",
   "tags": [
     "chatbots",
     "content-generation"

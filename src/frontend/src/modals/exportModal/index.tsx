@@ -107,7 +107,7 @@ const ExportModal = forwardRef(
           </span>
         </BaseModal.Content>
 
-        <BaseModal.Footer submit={{ label: "Export", loading: isBuilding }} />
+        <BaseModal.Footer submit={{ label: "导出", loading: isBuilding }} />
       </BaseModal>
     );
   },

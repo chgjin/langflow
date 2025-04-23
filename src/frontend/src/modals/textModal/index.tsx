@@ -68,7 +68,7 @@ export default function TextModal({
                 setOpen(false);
               }}
             >
-              Save
+              保存
             </Button>
           )}
         </div>

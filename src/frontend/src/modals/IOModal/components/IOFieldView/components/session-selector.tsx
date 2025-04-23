@@ -178,7 +178,7 @@ export default function SessionSelector({
           )}
         </div>
         <Select value={""} onValueChange={handleSelectChange}>
-          <ShadTooltip styleClasses="z-50" side="right" content="Options">
+          <ShadTooltip styleClasses="z-50" side="right" content="选项">
             <SelectTrigger
               onClick={(e) => {
                 e.stopPropagation();

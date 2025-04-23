@@ -23,7 +23,7 @@ export default function HandleTooltipComponent({
   return (
     <div className="font-medium">
       {isSameNode ? (
-        "Can't connect to the same node"
+        "无法连接到同一节点"
       ) : (
         <div className="flex items-center gap-1.5">
           {isConnecting ? (
@@ -32,13 +32,13 @@ export default function HandleTooltipComponent({
                 <span className="font-semibold">Connect</span> to
               </span>
             ) : (
-              <span>Incompatible with</span>
+              <span>不兼容</span>
             )
           ) : (
             <span className="text-xs">
               {isInput
-                ? `Input${plural} type${plural}`
-                : `Output${plural} type${plural}`}
+                ? `输入${plural} 类型${plural}`
+                : `输出${plural} 类型${plural}`}
               :{" "}
             </span>
           )}
@@ -59,7 +59,7 @@ export default function HandleTooltipComponent({
               {word}
             </Badge>
           ))}
-          {isConnecting && <span>{isInput ? `input` : `output`}</span>}
+          {isConnecting && <span>{isInput ? `输入` : `输出`}</span>}
         </div>
       )}
       {!isConnecting && (

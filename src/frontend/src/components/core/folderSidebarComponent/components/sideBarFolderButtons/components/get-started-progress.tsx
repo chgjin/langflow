@@ -84,7 +84,7 @@ export const GetStartedProgress: FC<{
   return (
     <div className="h-[180px] w-full">
       <div className="mb-2 flex items-center justify-between">
-        <span className="font-[14px]">Get started</span>
+        <span className="font-[14px]">开始使用</span>
         <button
           onClick={() => handleUserTrack("dialog_dismissed")}
           className="text-muted-foreground hover:text-foreground"
@@ -147,7 +147,7 @@ export const GetStartedProgress: FC<{
                 isGithubStarredChild && "text-muted-foreground line-through",
               )}
             >
-              Star repo for updates
+              为 GitHub 仓库加星
             </span>
           </div>
         </Button>
@@ -189,7 +189,7 @@ export const GetStartedProgress: FC<{
                 isDiscordJoinedChild && "text-muted-foreground line-through",
               )}
             >
-              Join the community
+              加入社区
             </span>
           </div>
         </Button>
@@ -216,7 +216,7 @@ export const GetStartedProgress: FC<{
               />
             </span>
             <span className={cn("text-sm", hasFlows && "line-through")}>
-              Create a flow
+              创建工作流
             </span>
           </div>
         </Button>

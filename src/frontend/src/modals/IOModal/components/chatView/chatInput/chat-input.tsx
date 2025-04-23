@@ -104,7 +104,7 @@ export default function ChatInput({
         !ALLOWED_IMAGE_INPUT_EXTENSIONS.includes(fileExtension)
       ) {
         setErrorData({
-          title: "Error uploading file",
+          title: "上传文件时出错",
           list: [FS_ERROR_TEXT, SN_ERROR_TEXT],
         });
         return;
@@ -141,7 +141,7 @@ export default function ChatInput({
               return newFiles;
             });
             setErrorData({
-              title: "Error uploading file",
+              title: "上传文件时出错",
               list: [error.response?.data?.detail],
             });
           },

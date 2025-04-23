@@ -31,8 +31,8 @@ export default function TableAdvancedToggleCellRender({
       <ShadTooltip
         content={
           disabled
-            ? "Cannot change visibility of connected handles"
-            : "Change visibility of the field"
+            ? "无法更改已连接句柄的可见性"
+            : "更改字段的可见性"
         }
         styleClasses="z-50"
       >

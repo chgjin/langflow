@@ -55,7 +55,7 @@ export default function SignUp(): JSX.Element {
 
     mutateAddUser(newUser, {
       onSuccess: (user) => {
-        track("User Signed Up", user);
+        track("用户已注册", user);
         setSuccessData({
           title: SIGN_UP_SUCCESS,
         });
@@ -95,12 +95,12 @@ export default function SignUp(): JSX.Element {
             className="mb-4 h-10 w-10 scale-[1.5]"
           />
           <span className="mb-6 text-2xl font-semibold text-primary">
-            Sign up for Langflow
+            注册 Langflow
           </span>
           <div className="mb-3 w-full">
             <Form.Field name="username">
               <Form.Label className="data-[invalid]:label-invalid">
-                Username <span className="font-medium text-destructive">*</span>
+                用户名 <span className="font-medium text-destructive">*</span>
               </Form.Label>
 
               <Form.Control asChild>
@@ -117,14 +117,14 @@ export default function SignUp(): JSX.Element {
               </Form.Control>
 
               <Form.Message match="valueMissing" className="field-invalid">
-                Please enter your username
+                请输入您的用户名
               </Form.Message>
             </Form.Field>
           </div>
           <div className="mb-3 w-full">
             <Form.Field name="password" serverInvalid={password != cnfPassword}>
               <Form.Label className="data-[invalid]:label-invalid">
-                Password <span className="font-medium text-destructive">*</span>
+                密码 <span className="font-medium text-destructive">*</span>
               </Form.Label>
               <InputComponent
                 onChange={(value) => {
@@ -134,17 +134,17 @@ export default function SignUp(): JSX.Element {
                 isForm
                 password={true}
                 required
-                placeholder="Password"
+                placeholder="密码"
                 className="w-full"
               />
 
               <Form.Message className="field-invalid" match="valueMissing">
-                Please enter a password
+                请输入密码
               </Form.Message>
 
               {password != cnfPassword && (
                 <Form.Message className="field-invalid">
-                  Passwords do not match
+                  密码不匹配
                 </Form.Message>
               )}
             </Form.Field>
@@ -155,7 +155,7 @@ export default function SignUp(): JSX.Element {
               serverInvalid={password != cnfPassword}
             >
               <Form.Label className="data-[invalid]:label-invalid">
-                Confirm your password{" "}
+                确认您的密码{" "}
                 <span className="font-medium text-destructive">*</span>
               </Form.Label>
 
@@ -167,12 +167,12 @@ export default function SignUp(): JSX.Element {
                 isForm
                 password={true}
                 required
-                placeholder="Confirm your password"
+                placeholder="确认您的密码"
                 className="w-full"
               />
 
               <Form.Message className="field-invalid" match="valueMissing">
-                Please confirm your password
+                请确认您的密码
               </Form.Message>
             </Form.Field>
           </div>
@@ -186,14 +186,14 @@ export default function SignUp(): JSX.Element {
                   handleSignup();
                 }}
               >
-                Sign up
+                注册
               </Button>
             </Form.Submit>
           </div>
           <div className="w-full">
             <CustomLink to="/login">
               <Button className="w-full" variant="outline">
-                Already have an account?&nbsp;<b>Sign in</b>
+                已有帐户?&nbsp;<b>登录</b>
               </Button>
             </CustomLink>
           </div>

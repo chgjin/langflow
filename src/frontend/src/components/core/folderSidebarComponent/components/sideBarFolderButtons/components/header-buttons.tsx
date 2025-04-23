@@ -27,7 +27,7 @@ export const HeaderButtons = ({
     useState(userDismissedDialog);
 
   const handleDismissDialog = () => {
-    setIsDismissedDialog(true);
+    setIsDismissedDialog(false);
   };
 
   return (
@@ -52,7 +52,7 @@ export const HeaderButtons = ({
           <IconComponent name="PanelLeftClose" className="h-4 w-4" />
         </SidebarTrigger>
 
-        <div className="flex-1 text-sm font-semibold">Folders</div>
+        <div className="flex-1 text-sm font-semibold">工作空间</div>
         <div className="flex items-center gap-1">
           <UploadFolderButton
             onClick={handleUploadFlowsToFolder}

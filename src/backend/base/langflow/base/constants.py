@@ -8,7 +8,7 @@ Constants:
 
 import orjson
 
-STREAM_INFO_TEXT = "Stream the response from the model. Streaming works only in Chat."
+STREAM_INFO_TEXT = "流式传输来自模型的响应。流式传输仅在 Chat 中有效。"
 
 NODE_FORMAT_ATTRIBUTES = [
     "beta",

@@ -1924,12 +1924,12 @@
       "zoom": 0.7205422604177993
     }
   },
-  "description": "Your AI Agent Accountant - Leverage Needle with Langflows Agent.",
+  "description": "您的 AI 代理会计师 - 将 Needle 与 Langflows 智能体结合使用。",
   "endpoint_name": null,
   "id": "58b6fe7e-22f9-47d8-b0aa-d7a9c752d423",
   "is_component": false,
   "last_tested_version": "1.2.0",
-  "name": "Invoice Summarizer",
+  "name": "发票汇总器",
   "tags": [
     "chatbots",
     "content-generation",

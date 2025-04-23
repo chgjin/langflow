@@ -36,7 +36,7 @@ const ApiKeyHeaderComponent = ({
           >
             <Button data-testid="api-key-button-store" variant="primary">
               <ForwardedIconComponent name="Plus" className="w-4" />
-              Add New
+              新增
             </Button>
           </SecretKeyModal>
         </div>

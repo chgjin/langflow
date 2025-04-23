@@ -2342,7 +2342,7 @@
               "input_value": {
                 "_input_type": "MessageInput",
                 "advanced": false,
-                "display_name": "Input",
+                "display_name": "用户输入",
                 "dynamic": false,
                 "info": "",
                 "input_types": [
@@ -2418,9 +2418,9 @@
               "stream": {
                 "_input_type": "BoolInput",
                 "advanced": true,
-                "display_name": "Stream",
+                "display_name": "流式响应",
                 "dynamic": false,
-                "info": "Stream the response from the model. Streaming works only in Chat.",
+                "info": "流式传输来自模型的响应。流式传输仅在 Chat 中有效。",
                 "list": false,
                 "list_add_label": "Add More",
                 "name": "stream",
@@ -2436,9 +2436,9 @@
               "system_message": {
                 "_input_type": "MultilineInput",
                 "advanced": false,
-                "display_name": "System Message",
+                "display_name": "系统消息",
                 "dynamic": false,
-                "info": "System message to pass to the model.",
+                "info": "要传递给模型的 System 消息。",
                 "input_types": [
                   "Message"
                 ],
@@ -3841,12 +3841,12 @@
       "zoom": 0.42993669283720065
     }
   },
-  "description": "Financial assistant chatbot that uses specialized agents to research for financial information",
+  "description": "使用专业智能体研究财务信息的财务助理聊天机器人",
   "endpoint_name": null,
   "id": "4f89d881-2ec0-41ac-9c66-865119b0853d",
   "is_component": false,
   "last_tested_version": "1.2.0",
-  "name": "Financial Agent",
+  "name": "财务智能体",
   "tags": [
     "assistants",
     "agents",

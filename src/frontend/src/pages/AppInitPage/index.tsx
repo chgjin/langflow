@@ -44,7 +44,7 @@ export function AppInitPage() {
   }, [isFetched, isConfigFetched]);
 
   return (
-    //need parent component with width and height
+    //需要具有 width 和 height 的父组件
     <>
       {isLoaded ? (
         (isLoading || !isFetched || !isExamplesFetched) && (

@@ -152,10 +152,10 @@ function GenericNode({
           },
           onError: (error) => {
             setErrorData({
-              title: "Error updating Component code",
+              title: "更新 组件 代码时出错",
               list: [
-                "There was an error updating the Component.",
-                "If the error persists, please report it on our Discord or GitHub.",
+                "更新 组件 时出错。",
+                "如果错误仍然存在，请在我们的 Discord 或 GitHub 上报告。",
               ],
             });
             console.error(error);

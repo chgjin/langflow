@@ -23,7 +23,7 @@ export function createFileUpload(props?: {
         try {
           document.body.removeChild(input);
         } catch (error) {
-          console.warn("Error removing input element:", error);
+          console.warn("删除 input 元素时出错:", error);
         }
       }
       input.removeEventListener("change", handleChange);

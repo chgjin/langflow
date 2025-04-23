@@ -25,7 +25,7 @@ export default function SettingsPage(): JSX.Element {
 
   if (showGeneralSettings) {
     sidebarNavItems.push({
-      title: "General",
+      title: "通用",
       href: "/settings/general",
       icon: (
         <ForwardedIconComponent
@@ -38,7 +38,7 @@ export default function SettingsPage(): JSX.Element {
 
   sidebarNavItems.push(
     {
-      title: "Global Variables",
+      title: "全局变量",
       href: "/settings/global-variables",
       icon: (
         <ForwardedIconComponent
@@ -49,7 +49,7 @@ export default function SettingsPage(): JSX.Element {
     },
 
     {
-      title: "Shortcuts",
+      title: "快捷键",
       href: "/settings/shortcuts",
       icon: (
         <ForwardedIconComponent
@@ -59,7 +59,7 @@ export default function SettingsPage(): JSX.Element {
       ),
     },
     {
-      title: "Messages",
+      title: "消息",
       href: "/settings/messages",
       icon: (
         <ForwardedIconComponent
@@ -83,7 +83,7 @@ export default function SettingsPage(): JSX.Element {
         ),
       },
       {
-        title: "Langflow Store",
+        title: "Langflow商店",
         href: "/settings/store",
         icon: (
           <ForwardedIconComponent
@@ -100,8 +100,8 @@ export default function SettingsPage(): JSX.Element {
   return (
     <PageLayout
       backTo={"/"}
-      title="Settings"
-      description="Manage the general settings for Langflow."
+      title="设置"
+      description="管理 Langflow 的常规设置。"
     >
       <SidebarProvider width="15rem" defaultOpen={false}>
         <SideBarButtonsComponent items={sidebarNavItems} />

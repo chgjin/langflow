@@ -40,7 +40,7 @@ const AccordionTrigger = React.forwardRef<
         {children}
         <ShadTooltip
           styleClasses="z-50"
-          content={disabled ? "Empty" : "Open"}
+          content={disabled ? "清空" : "打开"}
           side="top"
         >
           <ChevronDownIcon

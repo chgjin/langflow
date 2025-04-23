@@ -12,7 +12,7 @@ const useColumnDefs = (
   const columnDefs: ColDef[] = useMemo(() => {
     const colDefs: ColDef[] = [
       {
-        headerName: "Field Name",
+        headerName: "字段名称",
         field: "display_name",
         valueGetter: (params) => {
           const templateParam = params.data;
@@ -29,7 +29,7 @@ const useColumnDefs = (
         cellClass: "no-border",
       },
       {
-        headerName: "Description",
+        headerName: "描述",
         field: "info",
         tooltipField: "info",
         wrapText: true,
@@ -39,7 +39,7 @@ const useColumnDefs = (
         cellClass: "no-border",
       },
       {
-        headerName: "Value",
+        headerName: "值",
         field: "value",
         cellRenderer: TableNodeCellRender,
         cellStyle: {
@@ -66,7 +66,7 @@ const useColumnDefs = (
     ];
     if (!hideVisibility) {
       colDefs.push({
-        headerName: "Show",
+        headerName: "显示",
         field: "advanced",
         cellRenderer: TableAdvancedToggleCellRender,
         valueGetter: (params: ValueGetterParams) => {

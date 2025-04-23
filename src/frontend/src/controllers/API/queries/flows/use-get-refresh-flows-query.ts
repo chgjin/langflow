@@ -77,7 +77,7 @@ export const useGetRefreshFlowsQuery: useQueryFunctionType<
     } catch (e) {
       if (e instanceof AxiosError && e.status !== 403) {
         setErrorData({
-          title: "Could not load flows from database",
+          title: "无法从数据库加载工作流",
         });
       }
       throw e;

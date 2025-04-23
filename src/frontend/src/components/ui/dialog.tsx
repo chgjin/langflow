@@ -86,7 +86,7 @@ const DialogContent = React.forwardRef<
           {children}
           <ShadTooltip
             styleClasses="z-50"
-            content="Close"
+            content="关闭"
             side="bottom"
             avoidCollisions
           >

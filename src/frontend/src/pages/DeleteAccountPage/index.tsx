@@ -32,8 +32,8 @@ export default function DeleteAccountPage() {
           setOpen={setShowConfirmation}
           size="x-small"
         >
-          <BaseModal.Header description="This action is irreversible and will permanently erase all your data and information associated with the account. ">
-            <h3>Are you sure ?</h3>
+          <BaseModal.Header description="此作是不可逆的，将永久删除与该帐户关联的所有数据和信息。 ">
+            <h3>是否确定?</h3>
           </BaseModal.Header>
           <BaseModal.Trigger>
             <Button
@@ -41,7 +41,7 @@ export default function DeleteAccountPage() {
               className="w-full hover:bg-status-red"
               onClick={() => setShowConfirmation(true)}
             >
-              Delete account
+              删除账户
             </Button>
           </BaseModal.Trigger>
           <BaseModal.Content>
@@ -51,7 +51,7 @@ export default function DeleteAccountPage() {
                 className="w-full hover:bg-status-red"
                 onClick={() => handleDeleteAccount()}
               >
-                Delete account
+                删除账户
               </Button>
             </div>
           </BaseModal.Content>

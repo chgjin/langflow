@@ -44,7 +44,7 @@ export const SelectItems = memo(
             name="Trash2"
             className="relative top-0.5 mr-2 h-4 w-4"
           />
-          <span>Delete</span>
+          <span>删除</span>
           <span className="absolute right-2 top-2 flex items-center justify-center rounded-sm px-1 py-[0.2]">
             <ForwardedIconComponent
               name="Delete"

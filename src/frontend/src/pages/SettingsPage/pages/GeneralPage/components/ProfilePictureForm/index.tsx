@@ -41,9 +41,9 @@ const ProfilePictureFormComponent = ({
     >
       <Card x-chunk="dashboard-04-chunk-1">
         <CardHeader>
-          <CardTitle>Profile Picture</CardTitle>
+          <CardTitle>个人资料图片</CardTitle>
           <CardDescription>
-            Choose the image that appears as your profile picture.
+            选择显示为个人资料图片的图片。
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -67,7 +67,7 @@ const ProfilePictureFormComponent = ({
         </CardContent>
         <CardFooter className="border-t px-6 py-4">
           <Form.Submit asChild>
-            <Button type="submit">Save</Button>
+            <Button type="submit">保存</Button>
           </Form.Submit>
         </CardFooter>
       </Card>

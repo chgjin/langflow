@@ -563,7 +563,7 @@ export function FormatColumns(columns: ColumnField[]): ColDef<any>[] {
             );
           } catch (error: any) {
             useAlertStore.getState().setErrorData({
-              title: "Error parsing string",
+              title: "解析字符串时出错",
               list: [String(error.message ?? error)],
             });
             return oldValue;

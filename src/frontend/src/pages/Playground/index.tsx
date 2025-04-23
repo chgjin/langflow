@@ -54,7 +54,7 @@ export default function PlaygroundPage() {
   }, [id]);
 
   useEffect(() => {
-    if (id) track("Playground Page Loaded", { flowId: id });
+    if (id) track("Playground 页面已加载", { flowId: id });
     setPlaygroundPage(true);
   }, []);
 

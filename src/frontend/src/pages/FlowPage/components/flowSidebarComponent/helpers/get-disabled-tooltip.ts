@@ -5,10 +5,10 @@ export const getDisabledTooltip = (
   uniqueInputsComponents: UniqueInputsComponents,
 ) => {
   if (SBItemName === "ChatInput" && uniqueInputsComponents.chatInput) {
-    return "Chat input already added";
+    return "已添加聊天输入";
   }
   if (SBItemName === "Webhook" && uniqueInputsComponents.webhookInput) {
-    return "Webhook already added";
+    return "已添加 Webhook";
   }
   return "";
 };

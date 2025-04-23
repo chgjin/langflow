@@ -247,7 +247,7 @@ export default function StorePage(): JSX.Element {
               >
                 Components
               </button>
-              <ShadTooltip content="Coming Soon">
+              <ShadTooltip content="即将推出">
                 <button className="cursor-not-allowed p-3 text-muted-foreground">
                   Bundles
                 </button>

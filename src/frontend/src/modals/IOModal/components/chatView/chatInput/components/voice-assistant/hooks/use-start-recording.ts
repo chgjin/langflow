@@ -47,9 +47,9 @@ export const useStartRecording = async (
         // Check if the error is because the processor is already registered
         if (
           err instanceof DOMException &&
-          err.message.includes("already been loaded")
+          err.message.includes("已加载")
         ) {
-          console.log("AudioWorklet module already loaded, continuing...");
+          console.log("AudioWorklet 模块已加载，继续...");
         } else {
           throw err;
         }
@@ -91,13 +91,13 @@ export const useStartRecording = async (
 
       setIsRecording(true);
     } catch (err) {
-      console.error("AudioWorklet failed to load:", err);
-      setStatus("Error initializing audio: " + (err as Error).message);
+      console.error("AudioWorklet 加载失败:", err);
+      setStatus("初始化音频时出错: " + (err as Error).message);
     } finally {
       URL.revokeObjectURL(workletUrl);
     }
   } catch (err) {
-    console.error("Error accessing microphone:", err);
+    console.error("访问麦克风时出错:", err);
     setStatus("Error: " + (err as Error).message);
   }
 };
