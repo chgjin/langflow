@@ -117,7 +117,7 @@ const ListComponent = ({ flowData }: { flowData: FlowType }) => {
                 <span className="truncate">{flowData.name}</span>
               </div>
               <div className="item-baseline flex text-xs text-muted-foreground">
-                Edited {timeElapsed(flowData.updated_at)} ago
+                在 {timeElapsed(flowData.updated_at)} 之前编辑过
               </div>
             </div>
             <div className="overflow-hidden text-sm text-primary">

@@ -74,12 +74,12 @@ def set_var_for_macos_issue() -> None:
         os.environ["OBJC_DISABLE_INITIALIZE_FORK_SAFETY"] = "YES"
         # https://stackoverflow.com/questions/75747888/uwsgi-segmentation-fault-with-flask-python-app-behind-nginx-after-running-for-2 # noqa: E501
         os.environ["no_proxy"] = "*"  # to avoid error with gunicorn
-        logger.debug("Set OBJC_DISABLE_INITIALIZE_FORK_SAFETY to YES to avoid error")
+        logger.debug("将 OBJC_DISABLE_INITIALIZE_FORK_SAFETY 设置为 YES 以避免错误")
 
 
 def handle_sigterm(signum, frame):  # noqa: ARG001
     """Handle SIGTERM signal gracefully."""
-    logger.info("Received SIGTERM signal. Performing graceful shutdown...")
+    logger.info("收到 SIGTERM 信号。正在执行正常关闭...")
     # Raise SystemExit to trigger graceful shutdown
     sys.exit(0)
 
@@ -93,17 +93,17 @@ def run(
     port: int | None = typer.Option(None, help="Port to listen on.", show_default=False),
     components_path: Path | None = typer.Option(
         Path(__file__).parent / "components",
-        help="Path to the directory containing custom components.",
+        help="包含自定义组件的目录的路径。",
         show_default=False,
     ),
     # .env file param
     env_file: Path | None = typer.Option(
         None,
-        help="Path to the .env file containing environment variables.",
+        help="包含环境变量的 .env 文件的路径。",
         show_default=False,
     ),
-    log_level: str | None = typer.Option(None, help="Logging level.", show_default=False),
-    log_file: Path | None = typer.Option(None, help="Path to the log file.", show_default=False),
+    log_level: str | None = typer.Option(None, help="日志记录级别。", show_default=False),
+    log_file: Path | None = typer.Option(None, help="日志文件的路径。", show_default=False),
     cache: str | None = typer.Option(  # noqa: ARG001
         None,
         help="Type of cache to use. (InMemoryCache, SQLiteCache)",
@@ -117,7 +117,7 @@ def run(
     ),
     open_browser: bool | None = typer.Option(
         None,
-        help="Open the browser after starting the server.",
+        help="启动服务器后打开浏览器。",
         show_default=False,
     ),
     remove_api_keys: bool | None = typer.Option(  # noqa: ARG001
@@ -173,7 +173,7 @@ def run(
         load_dotenv(env_file, override=True)
 
     configure(log_level=log_level, log_file=log_file)
-    logger.debug(f"Loading config from file: '{env_file}'" if env_file else "No env_file provided.")
+    logger.debug(f"从文件加载配置: '{env_file}'" if env_file else "不提供env_file。")
     set_var_for_macos_issue()
     settings_service = get_settings_service()
 
@@ -196,7 +196,7 @@ def run(
             settings_service.set(arg, values[arg])
         elif hasattr(settings_service.auth_settings, arg):
             settings_service.auth_settings.set(arg, values[arg])
-        logger.debug(f"Loading config from cli parameter '{arg}': '{values[arg]}'")
+        logger.debug(f"从 cli 参数加载配置 '{arg}': '{values[arg]}'")
 
     host = settings_service.settings.host
     port = settings_service.settings.port
@@ -243,12 +243,12 @@ def run(
         if process:
             process.join()
     except (KeyboardInterrupt, SystemExit) as e:
-        logger.info("Shutting down server...")
+        logger.info("正在关闭服务器...")
         if process is not None:
             process.terminate()
             process.join(timeout=15)  # Wait up to 15 seconds for process to terminate
             if process.is_alive():
-                logger.warning("Process did not terminate gracefully, forcing...")
+                logger.warning("进程未正常终止，强制...")
                 process.kill()
         raise typer.Exit(0) from e
     except Exception as e:
@@ -259,7 +259,7 @@ def run(
 
 
 def wait_for_server_ready(host, port, protocol) -> None:
-    """Wait for the server to become ready by polling the health endpoint."""
+    """通过轮询运行状况终端节点等待服务器准备就绪。"""
     status_code = 0
     while status_code != httpx.codes.OK:
         try:
@@ -269,7 +269,7 @@ def wait_for_server_ready(host, port, protocol) -> None:
         except HTTPError:
             time.sleep(1)
         except Exception:  # noqa: BLE001
-            logger.opt(exception=True).debug("Error while waiting for the server to become ready.")
+            logger.opt(exception=True).debug("等待服务器准备就绪时出错。")
             time.sleep(1)
 
 
@@ -283,13 +283,13 @@ def run_on_mac_or_linux(host, port, log_level, options, app, protocol):
 
 
 def run_on_windows(host, port, log_level, options, app, protocol) -> None:
-    """Run the Langflow server on Windows."""
+    """在 Windows 上运行 Langflow 服务器。"""
     print_banner(host, port, protocol)
     run_langflow(host, port, log_level, options, app)
 
 
 def is_port_in_use(port, host="localhost"):
-    """Check if a port is in use.
+    """检查端口是否正在使用中。
 
     Args:
         port (int): The port number to check.
@@ -349,7 +349,7 @@ def build_version_notice(current_version: str, package_name: str) -> str:
         latest_version = fetch_latest_version(package_name, include_prerelease=langflow_is_pre_release(current_version))
         if latest_version and pkg_version.parse(current_version) < pkg_version.parse(latest_version):
             release_type = "pre-release" if langflow_is_pre_release(latest_version) else "version"
-            return f"A new {release_type} of {package_name} is available: {latest_version}"
+            return f"新的 {release_type} {package_name} 可用：{latest_version}"
     return ""
 
 
@@ -392,30 +392,30 @@ def print_banner(host: str, port: int, protocol: str) -> None:
 
     # Add pip install command to notices if any package needs an update
     if notices:
-        notices.append(f"Run '{pip_command}' to update.")
+        notices.append(f"运行 '{pip_command}' 进行更新。")
 
     [f"[bold]{notice}[/bold]" for notice in notices if notice]
     styled_package_name = stylize_text(
         package_name, package_name, is_prerelease=any("pre-release" in notice for notice in notices)
     )
 
-    title = f"[bold]Welcome to {styled_package_name}[/bold]\n"
+    title = f"[bold]欢迎来到 {styled_package_name}[/bold]\n"
     info_text = (
         ":star2: GitHub: Star for updates → https://github.com/langflow-ai/langflow\n"
         ":speech_balloon: Discord: Join for support → https://discord.com/invite/EqksyE2EX9"
     )
     telemetry_text = (
         (
-            "We collect anonymous usage data to improve Langflow.\n"
-            "To opt out, set: [bold]DO_NOT_TRACK=true[/bold] in your environment."
+            "我们收集匿名使用数据以改进 Langflow。\n"
+            "如不收集，请在您的环境中设置：[bold]DO_NOT_TRACK=true[/bold]。"
         )
         if os.getenv("DO_NOT_TRACK", os.getenv("LANGFLOW_DO_NOT_TRACK", "False")).lower() != "true"
         else (
-            "We are [bold]not[/bold] collecting anonymous usage data to improve Langflow.\n"
-            "To contribute, set: [bold]DO_NOT_TRACK=false[/bold] in your environment."
+            "我们[bold]不[/bold]收集匿名使用数据来改进 Langflow。\n"
+            "要做出贡献，请在您的环境中设置：[bold]DO_NOT_TRACK=false[/bold]。"
         )
     )
-    access_link = f"[bold]🟢 Open Langflow →[/bold] [link={protocol}://{host}:{port}]{protocol}://{host}:{port}[/link]"
+    access_link = f"[bold]🟢 打开 Langflow →[/bold] [link={protocol}://{host}:{port}]{protocol}://{host}:{port}[/link]"
 
     message = f"{title}\n{info_text}\n\n{telemetry_text}\n\n{access_link}"
 
@@ -448,7 +448,7 @@ def run_langflow(host, port, log_level, options, app) -> None:
 
             click.echo = lambda *args, **kwargs: None  # noqa: ARG005
 
-            logger.info("Gracefully shutting down server...")
+            logger.info("正常关闭服务器...")
             # For Gunicorn workers, we raise SystemExit to trigger graceful shutdown
             raise SystemExit(0)
 
@@ -485,19 +485,19 @@ def superuser(
                 stmt = select(User).where(User.username == username)
                 user: User = (await session.exec(stmt)).first()
                 if user is None or not user.is_superuser:
-                    typer.echo("Superuser creation failed.")
+                    typer.echo("超级用户创建失败。")
                     return
                 # Now create the first folder for the user
                 result = await get_or_create_default_folder(session, user.id)
                 if result:
-                    typer.echo("Default folder created successfully.")
+                    typer.echo("默认文件夹创建成功。")
                 else:
-                    msg = "Could not create default folder."
+                    msg = "无法创建默认文件夹。"
                     raise RuntimeError(msg)
-                typer.echo("Superuser created successfully.")
+                typer.echo("超级用户创建成功。")
 
             else:
-                typer.echo("Superuser creation failed.")
+                typer.echo("超级用户创建失败。")
 
     asyncio.run(_create_superuser())
 
@@ -527,14 +527,14 @@ def copy_db() -> None:
     destination_folder = Path(__file__).parent
     if db_path.exists():
         shutil.copy(db_path, destination_folder)
-        typer.echo(f"Database copied to {destination_folder}")
+        typer.echo(f"数据库复制到 {destination_folder}")
     else:
-        typer.echo("Database not found in the cache directory.")
+        typer.echo("在缓存目录中找不到数据库。")
     if pre_db_path.exists():
         shutil.copy(pre_db_path, destination_folder)
-        typer.echo(f"Pre-release database copied to {destination_folder}")
+        typer.echo(f"Pre-release 数据库复制到 {destination_folder}")
     else:
-        typer.echo("Pre-release database not found in the cache directory.")
+        typer.echo("Pre-release 在缓存目录中找不到数据库。")
 
 
 async def _migration(*, test: bool, fix: bool) -> None:
@@ -548,15 +548,15 @@ async def _migration(*, test: bool, fix: bool) -> None:
 
 @app.command()
 def migration(
-    test: bool = typer.Option(default=True, help="Run migrations in test mode."),  # noqa: FBT001
+    test: bool = typer.Option(default=True, help="在测试模式下运行迁移。"),  # noqa: FBT001
     fix: bool = typer.Option(  # noqa: FBT001
         default=False,
-        help="Fix migrations. This is a destructive operation, and should only be used if you know what you are doing.",
+        help="修复迁移。这是一个破坏性作，只有在您知道自己在做什么时才应该使用.",
     ),
 ) -> None:
     """Run or test migrations."""
     if fix and not typer.confirm(
-        "This will delete all data necessary to fix migrations. Are you sure you want to continue?"
+        "这将删除修复迁移所需的所有数据。您确定要继续吗？"
     ):
         raise typer.Abort
 
@@ -567,7 +567,7 @@ def migration(
 def api_key(
     log_level: str = typer.Option("error", help="Logging level."),
 ) -> None:
-    """Creates an API key for the default superuser if AUTO_LOGIN is enabled.
+    """如果启用了 API 密钥，则为默认超级用户创建 API 密钥AUTO_LOGIN。
 
     Args:
         log_level (str, optional): Logging level. Defaults to "error".
@@ -582,7 +582,7 @@ def api_key(
         settings_service = get_settings_service()
         auth_settings = settings_service.auth_settings
         if not auth_settings.AUTO_LOGIN:
-            typer.echo("Auto login is disabled. API keys cannot be created through the CLI.")
+            typer.echo("自动登录已禁用。无法通过 CLI 创建 API 密钥。")
             return None
 
         async with session_scope() as session:
@@ -592,7 +592,7 @@ def api_key(
             superuser = (await session.exec(stmt)).first()
             if not superuser:
                 typer.echo(
-                    "Default superuser not found. This command requires a superuser and AUTO_LOGIN to be enabled."
+                    "找不到默认超级用户。此命令需要启用超级用户和AUTO_LOGIN。"
                 )
                 return None
             from langflow.services.database.models.api_key import ApiKey, ApiKeyCreate
@@ -644,11 +644,11 @@ def api_key_banner(unmasked_api_key) -> None:
 
     pyperclip.copy(unmasked_api_key.api_key)
     panel = Panel(
-        f"[bold]API Key Created Successfully:[/bold]\n\n"
+        f"[bold]已成功创建 API 密钥:[/bold]\n\n"
         f"[bold blue]{unmasked_api_key.api_key}[/bold blue]\n\n"
-        "This is the only time the API key will be displayed. \n"
-        "Make sure to store it in a secure location. \n\n"
-        f"The API key has been copied to your clipboard. [bold]{['Ctrl', 'Cmd'][is_mac]} + V[/bold] to paste it.",
+        "这是唯一一次显示 API 密钥. \n"
+        "确保将其存放在安全的位置. \n\n"
+        f"API 密钥已复制到您的剪贴板。 [bold]{['Ctrl', 'Cmd'][is_mac]} + V[/bold] 以粘贴它。",
         box=box.ROUNDED,
         border_style="blue",
         expand=False,

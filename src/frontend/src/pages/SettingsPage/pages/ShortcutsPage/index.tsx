@@ -14,7 +14,7 @@ export default function ShortcutsPage() {
   const shortcuts = useShortcutsStore((state) => state.shortcuts);
   const setShortcuts = useShortcutsStore((state) => state.setShortcuts);
 
-  // Column Definitions: Defines the columns to be displayed.
+  // 列定义：定义要显示的列。
   const colDefs: ColDef[] = [
     {
       headerName: "功能",
@@ -22,7 +22,7 @@ export default function ShortcutsPage() {
       flex: 1,
       editable: false,
       resizable: false,
-    }, //This column will be twice as wide as the others
+    }, //此列的宽度是其他列的两倍
     {
       headerName: "快捷键",
       field: "shortcut",

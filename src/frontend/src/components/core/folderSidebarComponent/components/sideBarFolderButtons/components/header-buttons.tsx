@@ -27,7 +27,7 @@ export const HeaderButtons = ({
     useState(userDismissedDialog);
 
   const handleDismissDialog = () => {
-    setIsDismissedDialog(true);
+    setIsDismissedDialog(false);
   };
 
   return (
@@ -41,7 +41,7 @@ export const HeaderButtons = ({
             handleDismissDialog={handleDismissDialog}
           />
 
-          <div className="-mx-4 mt-4 w-[280px]">
+          <div className="-mx-4 mt-1 w-[280px]">
             <hr className="border-t-1 w-full" />
           </div>
         </>

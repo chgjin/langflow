@@ -82,9 +82,17 @@ export const GetStartedProgress: FC<{
   };
 
   return (
-    <div className="h-[180px] w-full">
+    <div className="mt-3 h-[180px] w-full">
       <div className="mb-2 flex items-center justify-between">
-        <span className="font-[14px]">Get started</span>
+        <span className="text-sm font-semibold">
+          {percentageGetStarted >= 100 ? (
+            <>
+              <span>All Set</span> <span className="pl-1"> 🎉 </span>
+            </>
+          ) : (
+            "开始使用"
+          )}
+        </span>
         <button
           onClick={() => handleUserTrack("dialog_dismissed")}
           className="text-muted-foreground hover:text-foreground"
@@ -94,7 +102,7 @@ export const GetStartedProgress: FC<{
         </button>
       </div>
 
-      <div className="mb-1 flex items-center justify-between gap-3">
+      <div className="mb-1 mt-2 flex items-center justify-between gap-3">
         <div className="h-1 w-full rounded-full bg-muted">
           <div
             className="h-1 w-[33%] rounded-full bg-accent-pink-foreground"
@@ -143,11 +151,11 @@ export const GetStartedProgress: FC<{
             )}
             <span
               className={cn(
-                "text-sm",
+                "text-xs",
                 isGithubStarredChild && "text-muted-foreground line-through",
               )}
             >
-              Star repo for updates
+              为 GitHub 仓库加星
             </span>
           </div>
         </Button>
@@ -185,11 +193,11 @@ export const GetStartedProgress: FC<{
             )}
             <span
               className={cn(
-                "text-sm",
+                "text-xs",
                 isDiscordJoinedChild && "text-muted-foreground line-through",
               )}
             >
-              Join the community
+              加入社区
             </span>
           </div>
         </Button>
@@ -215,8 +223,8 @@ export const GetStartedProgress: FC<{
                 )}
               />
             </span>
-            <span className={cn("text-sm", hasFlows && "line-through")}>
-              Create a flow
+            <span className={cn("text-xs", hasFlows && "line-through")}>
+              创建工作流
             </span>
           </div>
         </Button>

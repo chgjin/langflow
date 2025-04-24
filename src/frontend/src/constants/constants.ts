@@ -974,19 +974,19 @@ export const GRADIENT_CLASS_DISABLED =
   "linear-gradient(to right, hsl(var(--muted) / 0.3), hsl(var(--muted)))";
 
 export const RECEIVING_INPUT_VALUE = "Receiving input";
-export const SELECT_AN_OPTION = "Select an option";
+export const SELECT_AN_OPTION = "选择一个选项";
 
 export const ICON_STROKE_WIDTH = 1.5;
 
-export const DEFAULT_PLACEHOLDER = "Type something...";
+export const DEFAULT_PLACEHOLDER = "输入内容...";
 
-export const DEFAULT_TOOLSET_PLACEHOLDER = "Used as a tool";
+export const DEFAULT_TOOLSET_PLACEHOLDER = "用作Tool";
 
-export const SAVE_API_KEY_ALERT = "API key saved successfully";
+export const SAVE_API_KEY_ALERT = "已成功保存 API key";
 export const PLAYGROUND_BUTTON_NAME = "Playground";
 export const POLLING_MESSAGES = {
-  ENDPOINT_NOT_AVAILABLE: "Endpoint not available",
-  STREAMING_NOT_SUPPORTED: "Streaming not supported",
+  ENDPOINT_NOT_AVAILABLE: "终端节点不可用",
+  STREAMING_NOT_SUPPORTED: "不支持流式处理",
 } as const;
 
 export const POLLING_INTERVAL = 100;
@@ -1042,5 +1042,7 @@ export const DISCORD_URL = "https://discord.com/invite/EqksyE2EX9";
 export const GITHUB_URL = "https://github.com/langflow-ai/langflow";
 export const TWITTER_URL = "https://x.com/langflow_ai";
 export const DOCS_URL = "https://docs.langflow.org";
+export const DATASTAX_DOCS_URL =
+  "https://docs.datastax.com/en/langflow/index.html";
 
 export const UUID_PARSING_ERROR = "uuid_parsing";
