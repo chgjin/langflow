@@ -115,7 +115,7 @@ const HeaderComponent = ({
               >
                 <div className={flowType === type ? "-mb-px" : ""}>
                   {type === "mcp"
-                    ? "MCP Server"
+                    ? "MCP 服务器"
                     : type.charAt(0).toUpperCase() + type.slice(1)}
                 </div>
               </Button>

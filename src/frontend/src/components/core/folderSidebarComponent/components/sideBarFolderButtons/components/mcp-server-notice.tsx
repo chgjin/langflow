@@ -20,11 +20,11 @@ export const MCPServerNotice: FC<{
       <div className="flex flex-col gap-3">
         <div className="flex flex-col gap-1">
           <div className="font-mono text-sm text-muted-foreground">New</div>
-          <div className="">Projects as MCP Servers</div>
+          <div className="">作为 MCP 服务器的项目</div>
         </div>
         <img src={MCPLangflow} alt="MCP Notice Modal" className="rounded-xl" />
         <p className="text-sm text-secondary-foreground">
-          Expose flows as actions from clients like Cursor or Claude.
+          将工作流作为来自像 Cursor 或 Claude 这样的客户端的动作进行展示。
         </p>
       </div>
 
@@ -36,7 +36,7 @@ export const MCPServerNotice: FC<{
           }}
           className="w-full"
         >
-          <span>Go to Server</span>
+          <span>转到服务器</span>
         </Button>
       </div>
     </div>

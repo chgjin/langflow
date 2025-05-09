@@ -124,8 +124,7 @@ const McpServerTab = ({ folderName }: { folderName: string }) => {
         MCP Server
       </div>
       <div className="pb-4 text-sm text-muted-foreground">
-        Access your Project's flows as Actions within a MCP Server. Learn more
-        in our
+        在 MCP 服务器中将项目的流程作为作进行访问。在我们的
         <a
           className="text-accent-pink-foreground"
           href={MCP_SERVER_DEPLOY_TUTORIAL_LINK}
@@ -133,7 +132,7 @@ const McpServerTab = ({ folderName }: { folderName: string }) => {
           rel="noreferrer"
         >
           {" "}
-          Projects as MCP Servers guide.
+          项目作为 MCP 服务器指南。
         </a>
       </div>
       <div className="flex flex-row">
@@ -156,11 +155,11 @@ const McpServerTab = ({ folderName }: { folderName: string }) => {
           <div className="flex flex-row flex-wrap gap-2 pt-2">
             <ToolsComponent
               value={flowsMCPData}
-              title="MCP Server Actions"
-              description="Select actions to add to this server"
+              title="MCP 服务器 Actions"
+              description="选择要添加到此服务器的操作"
               handleOnNewValue={handleOnNewValue}
               id="mcp-server-tools"
-              button_description="Edit Actions"
+              button_description="编辑 Actions"
               editNode={false}
               isAction
               disabled={false}
@@ -189,8 +188,8 @@ const McpServerTab = ({ folderName }: { folderName: string }) => {
                         />
                         <span>
                           {apiKey === ""
-                            ? "Generate API key"
-                            : "API key generated"}
+                            ? "生成 API key"
+                            : "已生成 API key"}
                         </span>
                       </Button>
                     )}
@@ -218,14 +217,14 @@ const McpServerTab = ({ folderName }: { folderName: string }) => {
             </SyntaxHighlighter>
           </div>
           <div className="p-2 text-sm text-muted-foreground">
-            Add this config to your client of choice. Need help? See the{" "}
+            将此配置添加到您选择的客户端。需要帮助？请参阅{" "}
             <a
               href={MCP_SERVER_TUTORIAL_LINK}
               target="_blank"
               rel="noreferrer"
               className="text-accent-pink-foreground"
             >
-              setup guide
+              setup 指南
             </a>
             .
           </div>

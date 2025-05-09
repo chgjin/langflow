@@ -134,7 +134,7 @@ export default function PublishDropdown() {
                   name="Mcp"
                   className={`${groupStyle} icon-size mr-2 fill-muted-foreground group-hover:fill-foreground`}
                 />
-                <span>MCP Server</span>
+                <span>MCP 服务器</span>
                 <IconComponent
                   name="ExternalLink"
                   className={`${groupStyle} icon-size ml-auto hidden group-hover:block`}
