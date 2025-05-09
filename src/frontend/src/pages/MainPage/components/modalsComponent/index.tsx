@@ -29,7 +29,7 @@ const ModalsComponent = ({
         }}
         description="folder"
         note={
-          "删除所选文件夹将删除所有关联的工作流和组件。"
+          "删除所选项目将删除所有关联的工作流和组件。"
         }
       >
         <></>

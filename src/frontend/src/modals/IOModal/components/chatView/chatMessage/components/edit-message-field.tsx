@@ -66,7 +66,7 @@ export default function EditMessageField({
               取消
             </Button>
           </div>
-          <div className="text-[13px] font-medium text-muted-foreground word-break-break-word">
+          <div className="text-mmd font-medium text-muted-foreground word-break-break-word">
             编辑消息将更新内存，但不会重新开始对话。
           </div>
         </div>
