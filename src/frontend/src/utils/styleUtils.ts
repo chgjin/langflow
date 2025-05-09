@@ -207,7 +207,7 @@ export const SIDEBAR_CATEGORIES = [
   { display_name: "Saved", name: "saved_components", icon: "GradientSave" },
   { display_name: "输入", name: "inputs", icon: "Download" },
   { display_name: "输出", name: "outputs", icon: "Upload" },
-  { display_name: "提示调工程", name: "prompts", icon: "TerminalSquare" },
+  { display_name: "提示词工程", name: "prompts", icon: "TerminalSquare" },
   { display_name: "数据", name: "data", icon: "Database" },
   { display_name: "加工", name: "processing", icon: "ListFilter" },
   { display_name: "模型", name: "models", icon: "BrainCircuit" },
