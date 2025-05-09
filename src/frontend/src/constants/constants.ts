@@ -536,7 +536,8 @@ export const NOUNS: string[] = [
  */
 export const USER_PROJECTS_HEADER = "我的收藏";
 
-export const DEFAULT_FOLDER = "My Projects";
+export const DEFAULT_FOLDER = "Starter Project";
+export const DEFAULT_FOLDER_DEPRECATED = "My Projects";
 
 /**
  * 管理员页面的标题文本
@@ -638,6 +639,7 @@ export const LANGFLOW_SUPPORTED_TYPES = new Set([
   "connect",
   "auth",
   "query",
+  "tools",
 ]);
 
 export const FLEX_VIEW_TYPES = ["bool"];
@@ -740,7 +742,9 @@ export const BROKEN_EDGES_WARNING = "由于无效，某些连接已被删除："
 
 export const SAVE_DEBOUNCE_TIME = 300;
 
-export const IS_MAC = navigator.userAgent.toUpperCase().includes("MAC");
+export const IS_MAC =
+  typeof navigator !== "undefined" &&
+  navigator.userAgent.toUpperCase().includes("MAC");
 
 export const defaultShortcuts = [
   {
@@ -989,7 +993,7 @@ export const POLLING_MESSAGES = {
   STREAMING_NOT_SUPPORTED: "不支持流式处理",
 } as const;
 
-export const POLLING_INTERVAL = 100;
+export const BUILD_POLLING_INTERVAL = 25;
 
 export const IS_AUTO_LOGIN =
   !process?.env?.LANGFLOW_AUTO_LOGIN ||

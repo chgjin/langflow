@@ -26,10 +26,10 @@ export const EmptyPage = ({ setOpenModal }: EmptyPageProps) => {
               className="pt-5 font-chivo text-2xl font-semibold text-foreground"
               data-testid="mainpage_title"
             >
-              {folders?.length > 1 ? "空文件夹" : "开始构建"}
+              {folders?.length > 1 ? "空项目" : "开始构建"}
             </h3>
             <p
-              data-testid="empty-folder-description"
+              data-testid="empty-project-description"
               className="pb-5 text-sm text-secondary-foreground"
             >
               可以使用模板，或从头开始。
