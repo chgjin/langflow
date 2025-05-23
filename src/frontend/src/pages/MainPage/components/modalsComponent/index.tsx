@@ -28,9 +28,7 @@ const ModalsComponent = ({
           setOpenDeleteFolderModal(false);
         }}
         description="folder"
-        note={
-          "删除所选项目将删除所有关联的工作流和组件。"
-        }
+        note={"以及所有关联的工作流工组件"}
       >
         <></>
       </DeleteConfirmationModal>
