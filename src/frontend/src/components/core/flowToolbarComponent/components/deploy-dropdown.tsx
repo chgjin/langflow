@@ -90,7 +90,7 @@ export default function PublishDropdown() {
             className="!px-2.5 font-medium"
             data-testid="publish-button"
           >
-            Share
+            发布
             <IconComponent name="ChevronDown" className="!h-5 !w-5" />
           </Button>
         </DropdownMenuTrigger>
