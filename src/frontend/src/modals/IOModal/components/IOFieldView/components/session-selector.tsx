@@ -172,7 +172,7 @@ export default function SessionSelector({
                     : "truncate-muted dark:truncate-canvas",
                 )}
               >
-                {session === currentFlowId ? "Default Session" : session}
+                {session === currentFlowId ? "默认会话" : session}
               </div>
             </ShadTooltip>
           )}

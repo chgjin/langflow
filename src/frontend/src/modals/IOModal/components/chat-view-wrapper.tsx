@@ -61,7 +61,7 @@ export const ChatViewWrapper = ({
             )}
           >
             {visibleSession === currentFlowId
-              ? "Default Session"
+              ? "默认会话"
               : `${visibleSession}`}
           </div>
         )}
