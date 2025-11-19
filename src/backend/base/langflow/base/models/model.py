@@ -129,7 +129,7 @@ class LCModelComponent(Component):
             anthropic_keys = ["model", "usage", "stop_reason"]
             inner_anthropic_keys = ["input_tokens", "output_tokens"]
             if all(key in response_metadata for key in openai_keys) and all(
-                key in response_metadata["token_usage"] for key in inner_openai_keys
+                    key in response_metadata["token_usage"] for key in inner_openai_keys
             ):
                 token_usage = response_metadata["token_usage"]
                 status_message = {
@@ -143,7 +143,7 @@ class LCModelComponent(Component):
                 }
 
             elif all(key in response_metadata for key in anthropic_keys) and all(
-                key in response_metadata["usage"] for key in inner_anthropic_keys
+                    key in response_metadata["usage"] for key in inner_anthropic_keys
             ):
                 usage = response_metadata["usage"]
                 status_message = {
@@ -161,12 +161,12 @@ class LCModelComponent(Component):
         return status_message
 
     def get_chat_result(
-        self,
-        *,
-        runnable: LanguageModel,
-        stream: bool,
-        input_value: str | Message,
-        system_message: str | None = None,
+            self,
+            *,
+            runnable: LanguageModel,
+            stream: bool,
+            input_value: str | Message,
+            system_message: str | None = None,
     ):
         if getattr(self, "detailed_thinking", False):
             system_message = DETAILED_THINKING_PREFIX + (system_message or "")
@@ -179,12 +179,12 @@ class LCModelComponent(Component):
         )
 
     def _get_chat_result(
-        self,
-        *,
-        runnable: LanguageModel,
-        stream: bool,
-        input_value: str | Message,
-        system_message: str | None = None,
+            self,
+            *,
+            runnable: LanguageModel,
+            stream: bool,
+            input_value: str | Message,
+            system_message: str | None = None,
     ):
         messages: list[BaseMessage] = []
         if not input_value and not system_message:
@@ -294,7 +294,7 @@ class LCModelComponent(Component):
             raise ValueError(msg) from e
 
     def build_llm_model_from_inputs(
-        self, component: Component, inputs: list[InputTypes], prefix: str = ""
+            self, component: Component, inputs: list[InputTypes], prefix: str = ""
     ) -> LanguageModel:
         """Build LLM model from component and inputs.
 

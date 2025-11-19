@@ -35,6 +35,7 @@ TEXT_FILE_TYPES = [
 
 IMG_FILE_TYPES = ["jpg", "jpeg", "png", "bmp", "image"]
 
+EXCEL_FILE_TYPES = ["xlsx","xls"]
 
 def normalize_text(text):
     return unicodedata.normalize("NFKD", text)

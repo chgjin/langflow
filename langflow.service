@@ -1,0 +1,19 @@
+[Unit]
+Description=LangFlow Environment Service
+After=network.target
+Requires=network.target
+
+[Service]
+Type=simple
+User=zzkj
+WorkingDirectory=/app/langflow
+ExecStart=/app/langflow/start.sh
+Restart=on-failure
+RestartSec=5
+TimeoutStartSec=300
+Environment=PATH=/usr/bin:/usr/local/bin:/app/langflow/bin
+Environment=LANG=en_US.UTF-8
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target

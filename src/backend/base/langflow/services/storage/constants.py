@@ -25,4 +25,7 @@ EXTENSION_TO_CONTENT_TYPE = {
     "xml": "application/xml",
     "yaml": "application/x-yaml",
     "yml": "application/x-yaml",
+    "md": "text/markdown",
+    "mdx": "text/markdown",
+    "sql": "application/sql",
 }
